@@ -42,7 +42,7 @@ extensions = [
     "sphinx_rtd_theme",
     'sphinx.ext.autodoc',
     'recommonmark',
-    'sphinx_markdown_tables',
+#    'sphinx_markdown_tables',
 ]
 
 
