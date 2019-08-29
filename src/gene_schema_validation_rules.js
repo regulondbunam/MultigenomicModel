@@ -1,12 +1,4 @@
-/*
-	schema_version
-	mongodb_version
-	author
-	date
-	description
-	design patterns: extended references, schema_version
-*/
-db.createCollection( "gene", { 
+db.createCollection("gene", { 
 	validator: { 
 		$jsonSchema: { 
 			bsonType: "object",
@@ -31,7 +23,80 @@ db.createCollection( "gene", {
 					description: ""
 				},
 				"positions": {
-					bsonType: ["int"],
+					bsonType: ["object"],
+					items: {
+						bsonType: "object",
+						oneOf: [
+							{
+								bsonType: "object",
+								required: [
+									"left_position",
+									"right_position"
+								],
+								properties: {
+									"left_position": {
+										bsonType: "int",
+										description: ""
+									},
+									"right_position": {
+										bsonType: "int",
+										description: ""
+									}
+								}
+							},
+							{
+								bsonType: "object",
+								required: [
+									"gene_fragments"
+								],
+								properties: {
+									"gene_fragments": {
+										bsonType: ["array"],
+										uniqueItems: true,
+										items: {
+											bsonType: "object",
+											required: [
+												"left_position",
+												"right_position",
+												"strand"
+											],
+											properties: {
+												"strand": {
+													bsonType: "string",
+													enum: ["reverse", "forward"],
+													description: ""
+												},
+												"left_position": {
+													bsonType: "int",
+													description: ""
+												},
+												"right_position": {
+													bsonType: "int",
+													description: ""
+												},
+												"name": {
+													bsonType: "string",
+													description: ""
+												},
+												"bnumber": {
+													bsonType: "string",
+													description: ""
+												},
+												"synonyms": {
+													bsonType: ["string"],
+													description: ""
+												},
+												"centisome_position": {
+													bsonType: "double",
+													description: ""
+												}
+											}
+										}
+									}
+								}
+							}
+						]
+					}
 				},
 				"gene_strand": {
 					bsonType: "string",
@@ -77,12 +142,38 @@ db.createCollection( "gene", {
 					bsonType: "bool",
 					description: ""
 				},
+				"multifun_parent": {
+					bsonType: "string",
+					description: ""
+				},
 				"synonyms": {
 					bsonType: ["string"],
 					description: ""
 				},
+				"evidence_reference": {
+					bsonType: ["array"],
+					uniqueItems: true,
+					items: {
+						bsonType: "object",
+						properties: {
+							"publication_id": {
+								bsonType: "string",
+								description: ""
+							},
+							"source_id": {
+								bsonType: "string",
+								description: ""
+							},
+							"external_database_id": {
+								bsonType: "string",
+								description: ""
+							}
+						}
+					}
+				},
 				"external_databases": {
 					bsonType: ["array"],
+					uniqueItems: true,
 					items: {
 						bsonType: "object",
 						required: [
@@ -97,19 +188,43 @@ db.createCollection( "gene", {
 							"database_url": {
 								bsonType: "string",
 								description: ""
+							},
+							"object_id": {
+								bsonType: "string",
+								description: ""
 							}
 						}
 					}
 				},
-				"multifun_parent": {
-					bsonType: "string",
-					description: ""
+				"products":{
+					bsonType: ["array"],
+					uniqueItems: true,
+					items: {
+						bsonType: "object",
+						required: [
+							"$ref",
+							"$id"
+						],
+						properties: {
+							"$ref": {
+								bsonType: "string",
+								description: ""
+							},
+							"$id": {
+								bsonType: "objectId",
+								description: ""
+							}
+						}
+					}
 				},
 				"schema_version": {
 					bsonType: "string",
 					description: ""
 				}
 			}
-		}
-	}
+		},
+		additionalProperties: false,
+	},
+	validationLevel: "strict",
+	validationAction: "error"
 })
