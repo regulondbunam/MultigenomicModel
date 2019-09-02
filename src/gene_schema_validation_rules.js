@@ -3,11 +3,8 @@ db.createCollection("gene", {
 		$jsonSchema: { 
 			bsonType: "object",
 			required: [
-				"_id", 
 				"gene_id",  
-				"positions",
 				"gene_strand",
-				"gene_sequence",
 				"gc_content",
 				"organism_id", 
 				"gene_type",
@@ -15,77 +12,77 @@ db.createCollection("gene", {
 				"evidence_reference",
 				"schema_version"
 			],
+			oneOf: [
+				{
+					required: ["leftPosition", "rightPosition", "gene_sequence"]
+				},
+				{
+					required: [ "fragments" ],
+					not: { required: [ "gene_sequence" ] }
+				}
+			],
 			properties: {
 				"_id": {
 					bsonType: "objectId",
 					description: ""
 				},
 				"gene_id": {
-					bsonType: "objectId",
+					bsonType: "string",
 					description: ""
 				}, 
 				"gene_name": {
 					bsonType: "string",
 					description: ""
 				},
-				"positions": {
-					bsonType: "object",
-                    oneOf: [
-                        {
-                            required: ["leftPosition", "rightPosition"]
-                        },
-                        {
-                            required: [ "fragments" ]
-                        }
-					],
-					properties: {
-                        "leftPosition": {
-                            bsonType: "int"
-                        },
-                        "rightPosition": {
-                            bsonType: "int"
-                        },
-                        "fragments": {
-							bsonType: "array",
-							uniqueItems: true,
-							items:{
-								bsonType: "object",
-								required: [
-									"left_position",
-									"right_position",
-									"strand"
-								],
-								properties:{
-									"strand": {
-										bsonType: "string",
-										enum: ["reverse", "forward"],
-										description: ""
-									},
-									"left_position": {
-										bsonType: "int",
-										description: ""
-									},
-									"right_position": {
-										bsonType: "int",
-										description: ""
-									},
-									"name": {
-										bsonType: "string",
-										description: ""
-									},
-									"bnumber": {
-										bsonType: "string",
-										description: ""
-									},
-									"synonyms": {
-										bsonType: ["string"],
-										description: ""
-									},
-									"centisome_position": {
-										bsonType: "double",
-										description: ""
-									}
-								}
+				"leftPosition": {
+                    bsonType: "int"
+                },
+                "rightPosition": {
+                    bsonType: "int"
+                },
+                "fragments": {
+					bsonType: ["array"],
+					uniqueItems: true,
+					items:{
+						bsonType: "object",
+						required: [
+							"leftPosition",
+							"rightPosition",
+							"strand"
+						],
+						properties:{
+							"strand": {
+								bsonType: "string",
+								enum: ["reverse", "forward"],
+								description: ""
+							},
+							"leftPosition": {
+								bsonType: "int",
+								description: ""
+							},
+							"rightPosition": {
+								bsonType: "int",
+								description: ""
+							},
+							"name": {
+								bsonType: "string",
+								description: ""
+							},
+							"bnumber": {
+								bsonType: "string",
+								description: ""
+							},
+							"synonyms": {
+								bsonType: "array",
+								uniqueItems: true,
+								items: {
+									bsonType: "string",
+								},
+								description: ""
+							},
+							"centisome_position": {
+								bsonType: "double",
+								description: ""
 							}
                         }
 					}
@@ -135,15 +132,23 @@ db.createCollection("gene", {
 					description: ""
 				},
 				"multifun_direct_parents": {
-					bsonType: ["string"],
+					bsonType: "array",
+					uniqueItems: true,
+					items: {
+						bsonType: "string",
+					},
 					description: ""
 				},
 				"synonyms": {
-					bsonType: ["string"],
+					bsonType: "array",
+					uniqueItems: true,
+					items: {
+						bsonType: "string",
+					},
 					description: ""
 				},
 				"evidence_reference": {
-					bsonType: ["array"],
+					bsonType: "array",
 					uniqueItems: true,
 					items: {
 						bsonType: "object",
@@ -203,7 +208,7 @@ db.createCollection("gene", {
 								description: ""
 							},
 							"$id": {
-								bsonType: "objectId",
+								bsonType: "string",
 								description: ""
 							}
 						}
@@ -213,9 +218,9 @@ db.createCollection("gene", {
 					bsonType: "double",
 					description: ""
 				}
-			}
-		},
-		additionalProperties: false,
+			},
+			additionalProperties: false
+		}
 	},
 	validationLevel: "strict",
 	validationAction: "error"
