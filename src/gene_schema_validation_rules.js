@@ -35,12 +35,12 @@ db.createCollection("gene", {
 					description: ""
 				},
 				"leftPosition": {
-                    bsonType: "int"
-                },
-                "rightPosition": {
-                    bsonType: "int"
-                },
-                "fragments": {
+					bsonType: "int"
+				},
+				"rightPosition": {
+					bsonType: "int"
+				},
+				"fragments": {
 					bsonType: ["array"],
 					uniqueItems: true,
 					items:{
