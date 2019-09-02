@@ -84,7 +84,7 @@ db.createCollection("gene", {
 								bsonType: "double",
 								description: ""
 							}
-                        }
+						}
 					}
 				},
 				"gene_strand": {
