@@ -1,4 +1,4 @@
-db.createCollection("gene", { 
+db.createCollection( "gene", { 
 	validator: { 
 		$jsonSchema: { 
 			bsonType: "object",
@@ -143,12 +143,13 @@ db.createCollection("gene", {
 					bsonType: "array",
 					uniqueItems: true,
 					items: {
-						bsonType: "string",
+						bsonType: "string"
 					},
 					description: ""
 				},
 				"evidence_reference": {
 					bsonType: "array",
+					description: "",
 					uniqueItems: true,
 					items: {
 						bsonType: "object",
@@ -170,6 +171,7 @@ db.createCollection("gene", {
 				},
 				"external_databases": {
 					bsonType: "array",
+					description: "",
 					uniqueItems: true,
 					items: {
 						bsonType: "object",
@@ -193,8 +195,9 @@ db.createCollection("gene", {
 						}
 					}
 				},
-				"products":{
-					bsonType: ["array"],
+				"products": {
+					bsonType: "array",
+					description: "",
 					uniqueItems: true,
 					items: {
 						bsonType: "object",

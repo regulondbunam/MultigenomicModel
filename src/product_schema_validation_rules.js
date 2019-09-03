@@ -1,15 +1,18 @@
-db.createCollection( "product", { 
+db.createCollection( "product", { 
 	validator: { 
 		$jsonSchema: { 
 			bsonType: "object",
 			required: [
 				"product_id",
-				"organism_id",
 				"product_type",
 				"organism_id",
 				"genes"
 			],
 			properties: {
+				"_id": {
+					bsonType: "objectId",
+					description: ""
+				},
 				"product_id": {
 					bsonType: "string",
 					description: ""
@@ -70,14 +73,19 @@ db.createCollection( "product", {
 					bsonType: "string",
 					description: ""
 				},
-				"genes":{
-					bsonType: ["array"],
+				"genes": {
+					bsonType: "array",
+					description: "",
+					uniqueItems: true,
 					items: {
 						bsonType: "object",
-						required: ["gene_id", "gene_name"],
+						required: [
+							"gene_id", 
+							"gene_name"
+						],
 						properties: {
 							"gene_id": {
-								bsonType: "objectId"
+								bsonType: "string"
 							},
 							"gene_name": {
 								bsonType: "string"
@@ -86,11 +94,39 @@ db.createCollection( "product", {
 					}
 				},
 				"synonyms": {
-					bsonType: ["string"],
+					bsonType: "array",
+					uniqueItems: true,
+					items: {
+						bsonType: "string"
+					},
 					description: ""
 				},
+				"evidence_reference": {
+					bsonType: "array",
+					description: "",
+					uniqueItems: true,
+					items: {
+						bsonType: "object",
+						properties: {
+							"publication_id": {
+								bsonType: "string",
+								description: ""
+							},
+							"source_id": {
+								bsonType: "int",
+								description: ""
+							},
+							"external_database_id": {
+								bsonType: "string",
+								description: ""
+							}
+						}
+					}
+				},
 				"external_databases": {
-					bsonType: ["array"],
+					bsonType: "array",
+					description: "",
+					uniqueItems: true,
 					items: {
 						bsonType: "object",
 						required: [
@@ -105,11 +141,22 @@ db.createCollection( "product", {
 							"database_url": {
 								bsonType: "string",
 								description: ""
+							},
+							"object_id": {
+								bsonType: "string",
+								description: ""
 							}
 						}
 					}
+				},
+				"schema_version": {
+					bsonType: "double",
+					description: ""
 				}
-			}
+			},
+			additionalProperties: false
 		}
-	}
+	},
+	validationLevel: "strict",
+	validationAction: "error"
 })
