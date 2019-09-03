@@ -169,7 +169,7 @@ db.createCollection("gene", {
 					}
 				},
 				"external_databases": {
-					bsonType: ["array"],
+					bsonType: "array",
 					uniqueItems: true,
 					items: {
 						bsonType: "object",
