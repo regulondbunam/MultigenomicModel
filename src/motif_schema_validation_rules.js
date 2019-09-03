@@ -1,4 +1,4 @@
-db.createCollection( "motif", { 
+db.createCollection( "motif", { 
 	validator: { 
 		$jsonSchema: { 
 			bsonType: "object",
@@ -11,6 +11,10 @@ db.createCollection( "motif", {
 				"organism_id"
 			],
 			properties: {
+				"_id": {
+					bsonType: "objectId",
+					description: ""
+				},
 				"motif_id": {
 					bsonType: "string",
 					description: ""
@@ -68,11 +72,17 @@ db.createCollection( "motif", {
 					description: ""
 				},
 				"synonyms": {
-					bsonType: ["string"],
+					bsonType: "array",
+					uniqueItems: true,
+					items: {
+						bsonType: "string"
+					},
 					description: ""
 				},
 				"external_databases": {
-					bsonType: ["array"],
+					bsonType: "array",
+					description: "",
+					uniqueItems: true,
 					items: {
 						bsonType: "object",
 						required: [
@@ -87,11 +97,22 @@ db.createCollection( "motif", {
 							"database_url": {
 								bsonType: "string",
 								description: ""
+							},
+							"object_id": {
+								bsonType: "string",
+								description: ""
 							}
 						}
 					}
+				},
+				"schema_version": {
+					bsonType: "double",
+					description: ""
 				}
-			}
+			},
+			additionalProperties: false
 		}
-	}
+	},
+	validationLevel: "strict",
+	validationAction: "error"
 })
