@@ -1,8 +1,8 @@
-db.createCollection( "motif", { 
-	validator: { 
-		$jsonSchema: { 
-			bsonType: "object",
-			required: [ 
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
 				"motif_id",
 				"product_id",
 				"motif_posleft",
@@ -10,109 +10,109 @@ db.createCollection( "motif", {
 				"motif_sequence",
 				"organism_id"
 			],
-			properties: {
+			"properties": {
 				"_id": {
-					bsonType: "objectId",
-					description: ""
+					"bsonType": "objectId",
+					"description": ""
 				},
 				"motif_id": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"product_id": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"motif_posleft": {
-					bsonType: "int",
-					description: ""
+					"bsonType": "int",
+					"description": ""
 				},
 				"motif_posright": {
-					bsonType: "int",
-					description: ""
+					"bsonType": "int",
+					"description": ""
 				},
 				"motif_sequence": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"motif_description": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"motif_note": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"motif_internal_comment": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"organism_id": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"data_source": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"residue_number": {
-					bsonType: "double",
-					description: ""
+					"bsonType": "double",
+					"description": ""
 				},
 				"attached_group": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"homology_motif": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"alternate_sequence": {
-					bsonType: "string",
-					description: ""
+					"bsonType": "string",
+					"description": ""
 				},
 				"synonyms": {
-					bsonType: "array",
-					uniqueItems: true,
-					items: {
-						bsonType: "string"
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
 					},
-					description: ""
+					"description": ""
 				},
 				"external_databases": {
-					bsonType: "array",
-					description: "",
-					uniqueItems: true,
-					items: {
-						bsonType: "object",
-						required: [
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"required": [
 							"database_name",
 							"database_url"
 						],
-						properties: {
+						"properties": {
 							"database_name": {
-								bsonType: "string",
-								description: ""
+								"bsonType": "string",
+								"description": ""
 							},
 							"database_url": {
-								bsonType: "string",
-								description: ""
+								"bsonType": "string",
+								"description": ""
 							},
 							"object_id": {
-								bsonType: "string",
-								description: ""
+								"bsonType": "string",
+								"description": ""
 							}
 						}
 					}
 				},
 				"schema_version": {
-					bsonType: "double",
-					description: ""
+					"bsonType": "double",
+					"description": ""
 				}
 			},
-			additionalProperties: false
+			"additionalProperties": false
 		}
 	},
-	validationLevel: "strict",
-	validationAction: "error"
-})
+	"validationLevel": "strict",
+	"validationAction": "error"
+}
