@@ -227,5 +227,5 @@
 		}
 	},
 	"validationLevel": "strict",
-	"validationActio": "error"
+	"validationAction": "error"
 }
