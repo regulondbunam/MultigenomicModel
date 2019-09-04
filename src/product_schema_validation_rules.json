@@ -155,8 +155,8 @@
 				}
 			},
 			"additionalProperties": false
-		}
-	},
-	"validationLevel": "strict",
-	"validationAction": "error"
+		},
+		"validationLevel": "strict",
+		"validationAction": "error"
+	}
 }
