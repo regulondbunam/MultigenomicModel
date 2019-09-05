@@ -9,7 +9,6 @@
 				"organism_id",
 				"gene_type",
 				"centisome_position",
-				"evidence_reference",
 				"schema_version"
 			],
 			"oneOf": [{
