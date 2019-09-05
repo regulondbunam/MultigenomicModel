@@ -15,10 +15,7 @@
 					"required": ["leftPosition", "rightPosition", "gene_sequence","gene_strand"]
 				},
 				{
-					"required": ["fragments"],
-					"not": {
-						"required": ["gene_sequence"]
-					}
+					"required": ["fragments"]
 				}
 			],
 			"properties": {
@@ -163,6 +160,10 @@
 								"description": ""
 							},
 							"external_database_id": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"publication_url": {
 								"bsonType": "string",
 								"description": ""
 							}
