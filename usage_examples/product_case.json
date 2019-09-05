@@ -1,0 +1,109 @@
+{
+	"product_id": "ECK120004526",
+	"product_name": "DNA-binding transcriptional dual regulator AraC",
+	"molecular_weight": 33.384,
+	"isoelectric_point": 6.956,
+	"location": "cytosol",
+	"product_sequence": "MAEAQNDPLLPGYSFNAHLVAGLTPIEANGYLDFFIDRPLGMKGYILNLTIRGQGVVKNQGREFVCRPGDILLFPPGEIHHYGRHPEAREWYHQWVYFRPRAYWHEWLNWPSIFANTGFFRPDEAHQPHFSDLFGQIINAGQGEGRYSELLAINLLEQLLLRRMEAINESLHPPMDNRVREACQYISDHLADSNFDIASVAQHVCLSPSRLSHLFRQQLGISVLSWREDQRISQAKLLLSTTRMPIATVGRNVGFDDQLYFSRVFKKCTGASPSEFRAGCEEKVNDVAVKLS",
+	"product_note": "The \"<b>ara</b>binose regulator,\" AraC, is a transcription factor that regulates transcription of several genes and operons involved in arabinose catabolism and transport. It coregulates with another transcriptional regulator, CRP; both are transcription factors involved in l-arabinose degradation. These regulators bind cooperatively to activate transcription of five operons related to transport, catabolism, and autoregulation of l-arabinose. Transcription of these operons is induced when <i>E. coli</i> is grown in the absence of glucose and when the physiological inducer, l-arabinose, binds to the AraC regulator. In the absence of glucose, cellular cyclic AMP levels are high and cyclic AMP forms a dimeric complex with CRP to coregulate with AraC |CITS:[9409145][1744033][6319708][1400237][9600836][2231717][6377308]|.\n\nAraC binds to five target sites in the <i>araB</i>p region. AraC binds to the less-conserved site (-42.5) with less strength; this binding occurs only in the presence of arabinose, and it is absolutely required for expression of <i>araB</i>p |CITS:[2237403][3279415][2962192][3520549][8428590]|. AraC binding to the distal site (-123.5) has been shown to down-regulate expression of <i>araB</i>p and <i>araC</i>p |CITS:[1560456][3279415]|. \n\nIn the absence of arabinose, AraC is unable to activate <i>araB</i>p, but it regulates its own expression by repressing <i>araC</i>p and <i>araB</i>p simultaneously |CITS:[2237403][3279415][3520549]|. Arabinose triggers AraC-dependent activation of <i>araB</i>p and relieves AraC-dependent repression of <i>araC</i>p |CITS:[3279415][3520549]|. The <i>araBAD</i> operon is located upstream of <i>araC</i> and in the opposite direction.\n\nIn the presence of arabinose, this regulator activates transcription by overlapping the -35 box of the core promoters, and the central position of the binding site is located near bp -41.5. The binding targets for AraC consist of 17-nucleotide-long direct repeat sequences that possess conserved motifs; each monomer binds to one of these conserved sequences |CITS:[9409145][8980677]|. \n\nThe AraC regulator belongs to the AraC/XylS family and occurs as both a monomer and a homodimer. It is composed of two domains. The solution structure of the C-terminal DNA-binding domain has been solved. It consists of two helix-turn-helix regions connected by an &alpha;-helix |CITS:[19422057]|. The N-terminal domain is responsible for dimerization and L-arabinose binding |CITS:[9409145][8451183]|. A new domain, between the dimerization domain and DNA-binding domains of the dimeric AraC protein, facilitates repression of the <i>araBAD</i> operon by AraC in the absence of arabinose |CITS:[22383259]|. Its crystal structure |CITS:[9367758][9103202]| reveals that the sugar molecule is bound within a &beta;-barrel, buried by the N-terminal arm of the protein. It has been suggested that this N-terminal arm plays a key role in the regulation of the arabinose-dependent DNA-binding properties of the protein. In the absence of arabinose it interacts with the DNA-binding domain and constrains this domain, and it releases it in the presence of arabinose |CITS:[9103202][18561170]|. This interaction appears to be affected by a mutation in the interdomain linker |CITS: [21840981]|. On the other hand, the function of AraC is largely unaffected by several other mutations in the interdomain linker |CITS:[26800223]|",
+	"organism_id": "ECK12",
+	"molecular_weight_kd": 33.384,
+	"component_of": "PC00003",
+	"genes": [{
+		"gene_id": "ECK120000050",
+		"gene_name": "araC"
+	}],
+	"synonyms": [
+		"AraC"
+	],
+	"evidence_reference": [{
+			"publication_id": "GID000005302",
+			"source_id": 2231717,
+			"external_database_id": "GID000000048",
+			"publication_url": "http://www.ncbi.nlm.nih.gov/pubmed/2231717"
+		},
+		{
+			"publication_id": "GID000023518",
+			"source_id": 7768852,
+			"external_database_id": "GID000000048",
+			"publication_url": "http://www.ncbi.nlm.nih.gov/pubmed/7768852"
+		}
+	],
+	"external_databases": [{
+			"database_name": "Prosite",
+			"database_url": "http://prosite.expasy.org/cgi-bin/prosite/nicedoc.pl?PS00041",
+			"object_externaldb_id": "PS00041"
+		},
+		{
+			"database_name": "Protein Ontology",
+			"database_url": "http://pir.georgetown.edu/cgi-bin/pro/entry_pro?id=PRO_000022116",
+			"object_externaldb_id": "PRO_000022116"
+		},
+		{
+			"database_name": "NCBI Reference Sequences Database",
+			"database_url": "http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?val=NP_414606",
+			"object_externaldb_id": "NP_414606"
+		},
+		{
+			"database_name": "Database of Interacting Proteins",
+			"database_url": "http://dip.doe-mbi.ucla.edu/dip/Browse.cgi?ID=DIP-9125N",
+			"object_externaldb_id": "DIP-9125N"
+		},
+		{
+			"database_name": "Pfam",
+			"database_url": "http://pfam.xfam.org/family/PF12833",
+			"object_externaldb_id": "PF12833"
+		},
+		{
+			"database_name": "Protein Data Bank",
+			"database_url": "http://www.rcsb.org/pdb/cgi/explore.cgi?pdbId=2ARC",
+			"object_externaldb_id": "2ARC"
+		},
+		{
+			"database_name": "Pride",
+			"database_url": " http://www.ebi.ac.uk/pride/searchSummary.do?queryTypeSelected=identification%20accession%20number&identificationAccessionNumber=P0A9E0",
+			"object_externaldb_id": "P0A9E0"
+		},
+		{
+			"database_name": "MODBASE",
+			"database_url": "http://modbase.compbio.ucsf.edu/modbase-cgi/model_search.cgi?searchkw=name&kword=P0A9E0",
+			"object_externaldb_id": "P0A9E0"
+		},
+		{
+			"database_name": "InterPro",
+			"database_url": "http://www.ebi.ac.uk/interpro/entry/IPR009057",
+			"object_externaldb_id": "IPR009057"
+		},
+		{
+			"database_name": "Prints",
+			"database_url": " http://www.bioinf.manchester.ac.uk/cgi-bin/dbbrowser/sprint/searchprintss.cgi?display_opts=Prints&category=None&queryform=false&prints_accn=PR00032",
+			"object_externaldb_id": "PR00032"
+		},
+		{
+			"database_name": "Smart",
+			"database_url": "http://smart.embl.de/smart/do_annotation.pl?DOMAIN=SM00342",
+			"object_externaldb_id": "SM00342"
+		},
+		{
+			"database_name": "SWISS-MODEL",
+			"database_url": "http://swissmodel.expasy.org/repository/smr.php?sptr_ac=P0A9E0",
+			"object_externaldb_id": "P0A9E0"
+		},
+		{
+			"database_name": "UniProt",
+			"database_url": "https://www.uniprot.org/uniprot/P0A9E0",
+			"object_externaldb_id": "P0A9E0"
+		},
+		{
+			"database_name": "EcoliWiki",
+			"database_url": "http://ecoliwiki.net/colipedia/index.php/b0064",
+			"object_externaldb_id": "b0064"
+		},
+		{
+			"database_name": "Protein Model Portal",
+			"database_url": "http://www.proteinmodelportal.org/query/uniprot/P0A9E0",
+			"object_externaldb_id": "P0A9E0"
+		}
+	],
+	"schema_version": 1.0
+}
