@@ -4,7 +4,6 @@
 			"bsonType": "object",
 			"required": [
 				"product_id",
-				"product_type",
 				"organism_id",
 				"genes"
 			],
@@ -117,6 +116,10 @@
 								"description": ""
 							},
 							"external_database_id": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"publication_url": {
 								"bsonType": "string",
 								"description": ""
 							}
