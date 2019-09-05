@@ -1,0 +1,65 @@
+{
+	"gene_id": "ECK120000050",
+	"gene_name": "araC",
+	"leftPosition": 70387,
+	"rightPosition": 71265,
+	"gene_sequence": "ATGGCTGAAGCGCAAAATGATCCCCTGCTGCCGGGATACTCGTTTAACGCCCATCTGGTGGCGGGTTTAACGCCGATTGAGGCCAACGGTTATCTCGATTTTTTTATCGACCGACCGCTGGGAATGAAAGGTTATATTCTCAATCTCACCATTCGCGGTCAGGGGGTGGTGAAAAATCAGGGACGAGAATTTGTCTGCCGACCGGGTGATATTTTGCTGTTCCCGCCAGGAGAGATTCATCACTACGGTCGTCATCCGGAGGCTCGCGAATGGTATCACCAGTGGGTTTACTTTCGTCCGCGCGCCTACTGGCATGAATGGCTTAACTGGCCGTCAATATTTGCCAATACGGGTTTCTTTCGCCCGGATGAAGCGCACCAGCCGCATTTCAGCGACCTGTTTGGGCAAATCATTAACGCCGGGCAAGGGGAAGGGCGCTATTCGGAGCTGCTGGCGATAAATCTGCTTGAGCAATTGTTACTGCGGCGCATGGAAGCGATTAACGAGTCGCTCCATCCACCGATGGATAATCGGGTACGCGAGGCTTGTCAGTACATCAGCGATCACCTGGCAGACAGCAATTTTGATATCGCCAGCGTCGCACAGCATGTTTGCTTGTCGCCGTCGCGTCTGTCACATCTTTTCCGCCAGCAGTTAGGGATTAGCGTCTTAAGCTGGCGCGAGGACCAACGCATTAGTCAGGCGAAGCTGCTTTTGAGCACTACCCGGATGCCTATCGCCACCGTCGGTCGCAATGTTGGTTTTGACGATCAACTCTATTTCTCGCGAGTATTTAAAAAATGCACCGGGGCCAGCCCGAGCGAGTTTCGTGCCGGTTGTGAAGAAAAAGTGAATGATGTAGCCGTCAAGTTGTCATAA",
+	"gene_strand": "forward",
+	"gc_content": 52.56,
+	"organism_id": "ECK12",
+	"gene_type": "gene",
+	"centisome_position": 1.5164213,
+	"interrupted": false,
+	"multifun_direct_parents": [
+		"carbon compounds",
+		"Transcription related",
+		"operon",
+		"repressor"
+	],
+	"synonyms": [
+		"b0064",
+		"ECK0065",
+		"EG10054"
+	],
+	"external_databases": [{
+			"database_name": "String",
+			"database_url": "http://string-db.org/newstring_cgi/show_network_section.pl?identifier=511145.b3075",
+			"object_externaldb_id": "511145.b3075"
+		},
+		{
+			"database_name": "ASAP",
+			"database_url": "http://asap.ahabs.wisc.edu/asap/feature_info.php?FeatureID=ABE-0010099",
+			"object_externaldb_id": "ABE-0010099"
+		},
+		{
+			"database_name": "OU-Microarray",
+			"database_url": "https://genexpdb.okstate.edu/databases/genexpdb/?query=b3075",
+			"object_externaldb_id": "b3075"
+		},
+		{
+			"database_name": "Coli Genetic Stock Center",
+			"database_url": "http://cgsc.biology.yale.edu/Site.php?ID=829",
+			"object_externaldb_id": "829"
+		},
+		{
+			"database_name": "PortEco",
+			"database_url": "http://porteco.org/AjaxSearch.jsp?searchString=ebgR",
+			"object_externaldb_id": "ebgR"
+		},
+		{
+			"database_name": "EchoBASE",
+			"database_url": "http://www.york.ac.uk/res/thomas/Gene.cfm?recordID=EB0250",
+			"object_externaldb_id": "EB0250"
+		},
+		{
+			"database_name": "RegulonDB",
+			"database_url": "http://regulondb.ccg.unam.mx/search?term=b3075&organism=ECK12&type=All",
+			"object_externaldb_id": "b3075"
+		}
+	],
+	"products": [{
+		"product_id": "ECK120004526",
+		"product_name": "DNA-binding transcriptional dual regulator AraC"
+	}],
+	"schema_version": 1.0
+}
