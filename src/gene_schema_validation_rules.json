@@ -3,19 +3,18 @@
 		"$jsonSchema": { 
 			"bsonType": "object",
 			"required": [
-				"gene_id",
-				"gene_strand",
-				"gc_content",
-				"organism_id",
-				"gene_type",
-				"centisome_position",
-				"schema_version"
+				"regulondbId",
+				"gcContent",
+				"organismId",
+				"type",
+				"centisomePosition",
+				"schemaVersion"
 			],
 			"oneOf": [{
-					"required": ["leftPosition", "rightPosition", "gene_sequence","gene_strand"]
+					"required": [ "leftPosition", "rightPosition", "sequence", "strand"]
 				},
 				{
-					"required": ["fragments"]
+					"required": [ "fragments" ]
 				}
 			],
 			"properties": {
@@ -23,11 +22,11 @@
 					"bsonType": "objectId",
 					"description": ""
 				},
-				"gene_id": {
+				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"gene_name": {
+				"name": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -77,40 +76,40 @@
 								},
 								"description": ""
 							},
-							"centisome_position": {
+							"centisomePosition": {
 								"bsonType": "double",
 								"description": ""
 							}
 						}
 					}
 				},
-				"gene_strand": {
+				"strand": {
 					"bsonType": "string",
 					"description": "",
 					"enum": ["forward", "reverse"]
 				},
-				"gene_sequence": {
+				"sequence": {
 					"bsonType": "string",
 					"description": "",
 					"pattern": "^[ATCGatcg]+$"
 				},
-				"gc_content": {
+				"gcContent": {
 					"bsonType": "double",
 					"description": ""
 				},
-				"gene_note": {
+				"note": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"gene_internal_comment": {
+				"internalComment": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"organism_id": {
+				"organismId": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"gene_type": {
+				"type": {
 					"bsonType": "string",
 					"description": "",
 					"enum": [
@@ -120,7 +119,7 @@
 						"truncated"
 					]
 				},
-				"centisome_position": {
+				"centisomePosition": {
 					"bsonType": "double",
 					"description": ""
 				},
@@ -128,7 +127,7 @@
 					"bsonType": "bool",
 					"description": ""
 				},
-				"multifun_direct_parents": {
+				"multifunDirectParents": {
 					"bsonType": "array",
 					"uniqueItems": true,
 					"items": {
@@ -144,52 +143,53 @@
 					},
 					"description": ""
 				},
-				"evidence_reference": {
+				"evidenceReferences": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
 						"properties": {
-							"publication_id": {
+							"publicationId": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"source_id": {
+							"sourceId": {
 								"bsonType": "int",
 								"description": ""
 							},
-							"external_database_id": {
+							"externalDatabaseId": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"publication_url": {
+							"publicationUrl": {
 								"bsonType": "string",
 								"description": ""
 							}
 						}
 					}
 				},
-				"external_databases": {
+				"externalDatabases": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"database_name",
-							"database_url"
+							"name",
+							"url",
+							"externaldbObjectId"
 						],
 						"properties": {
-							"database_name": {
+							"name": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"database_url": {
+							"url": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"object_id": {
+							"externaldbObjectId": {
 								"bsonType": "string",
 								"description": ""
 							}
@@ -203,22 +203,22 @@
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"product_id",
-							"product_name"
+							"regulondbId",
+							"name"
 						],
 						"properties": {
-							"product_id": {
+							"regulondbId": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"product_name": {
+							"name": {
 								"bsonType": "string",
 								"description": ""
 							}
 						}
 					}
 				},
-				"schema_version": {
+				"schemaVersion": {
 					"bsonType": "double",
 					"description": ""
 				}

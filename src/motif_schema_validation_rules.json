@@ -3,71 +3,71 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-				"motif_id",
-				"product_id",
-				"motif_posleft",
-				"motif_posright",
-				"motif_sequence",
-				"organism_id"
+				"regulondbId",
+				"productRegulondbId",
+				"leftPosition",
+				"rightPosition",
+				"sequence",
+				"organismId"
 			],
 			"properties": {
 				"_id": {
 					"bsonType": "objectId",
 					"description": ""
 				},
-				"motif_id": {
+				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"product_id": {
+				"productRegulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"motif_posleft": {
+				"leftPosition": {
 					"bsonType": "int",
 					"description": ""
 				},
-				"motif_posright": {
+				"rightPosition": {
 					"bsonType": "int",
 					"description": ""
 				},
-				"motif_sequence": {
+				"sequence": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"motif_description": {
+				"description": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"motif_note": {
+				"note": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"motif_internal_comment": {
+				"internalComment": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"organism_id": {
+				"organismId": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"data_source": {
+				"dataSource": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"residue_number": {
+				"residueNumber": {
 					"bsonType": "double",
 					"description": ""
 				},
-				"attached_group": {
+				"attachedGroup": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"homology_motif": {
+				"homologyMotif": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"alternate_sequence": {
+				"alternateSequence": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -79,33 +79,34 @@
 					},
 					"description": ""
 				},
-				"external_databases": {
+				"externalDatabases": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"database_name",
-							"database_url"
+							"name",
+							"url",
+							"externaldbObjectId"
 						],
 						"properties": {
-							"database_name": {
+							"databaseName": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"database_url": {
+							"databaseUrl": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"object_id": {
+							"externaldbObjectId": {
 								"bsonType": "string",
 								"description": ""
 							}
 						}
 					}
 				},
-				"schema_version": {
+				"schemaVersion": {
 					"bsonType": "double",
 					"description": ""
 				}
