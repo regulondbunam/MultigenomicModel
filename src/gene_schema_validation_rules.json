@@ -79,6 +79,36 @@
 							"centisomePosition": {
 								"bsonType": "double",
 								"description": ""
+							},
+							"evidenceReferences": {
+								"bsonType": "array",
+								"description": "",
+								"uniqueItems": true,
+								"items": {
+									"bsonType": "object",
+									"properties": {
+										"publicationId": {
+											"bsonType": "string",
+											"description": ""
+										},
+										"sourceId": {
+											"bsonType": "int",
+											"description": ""
+										},
+										"externalDatabaseId": {
+											"bsonType": "string",
+											"description": ""
+										},
+										"publicationUrl": {
+											"bsonType": "string",
+											"description": ""
+										},
+										"evidenceId": {
+											"bsonType": "string",
+											"description": ""
+										}
+									}
+								}
 							}
 						}
 					}
@@ -163,6 +193,10 @@
 								"description": ""
 							},
 							"publicationUrl": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"evidenceId": {
 								"bsonType": "string",
 								"description": ""
 							}
