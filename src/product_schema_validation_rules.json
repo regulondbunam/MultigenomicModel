@@ -3,8 +3,8 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-				"product_id",
-				"organism_id",
+				"regulondbId",
+				"organismId",
 				"genes"
 			],
 			"properties": {
@@ -12,19 +12,19 @@
 					"bsonType": "objectId",
 					"description": ""
 				},
-				"product_id": {
+				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"product_name": {
+				"name": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"molecular_weight": {
+				"molecularWeight": {
 					"bsonType": "double",
 					"description": ""
 				},
-				"isoelectric_point": {
+				"isoelectricPoint": {
 					"bsonType": "double",
 					"description": ""
 				},
@@ -36,35 +36,35 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"product_sequence": {
+				"sequence": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"product_note": {
+				"note": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"product_internal_comment": {
+				"internalComment": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"organism_id": {
+				"organismId": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"product_type": {
+				"type": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"modified_form": {
+				"modifiedForm": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"molecular_weight_kd": {
+				"molecularWeightKd": {
 					"bsonType": "double",
 					"description": ""
 				},
-				"component_of": {
+				"componentOf": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -79,14 +79,14 @@
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"gene_id",
-							"gene_name"
+							"regulondbId",
+							"name"
 						],
 						"properties": {
-							"gene_id": {
+							"regulondbId": {
 								"bsonType": "string"
 							},
-							"gene_name": {
+							"name": {
 								"bsonType": "string"
 							}
 						}
@@ -100,59 +100,60 @@
 					},
 					"description": ""
 				},
-				"evidence_reference": {
+				"evidenceReferences": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
 						"properties": {
-							"publication_id": {
+							"publicationId": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"source_id": {
+							"sourceId": {
 								"bsonType": "int",
 								"description": ""
 							},
-							"external_database_id": {
+							"externalDatabaseId": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"publication_url": {
+							"publicationUrl": {
 								"bsonType": "string",
 								"description": ""
 							}
 						}
 					}
 				},
-				"external_databases": {
+				"externalDatabases": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"database_name",
-							"database_url"
+							"name",
+							"url",
+							"externaldbObjectId"
 						],
 						"properties": {
-							"database_name": {
+							"databaseName": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"database_url": {
+							"databaseUrl": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"object_id": {
+							"externaldbObjectId": {
 								"bsonType": "string",
 								"description": ""
 							}
 						}
 					}
 				},
-				"schema_version": {
+				"schemaVersion": {
 					"bsonType": "double",
 					"description": ""
 				}

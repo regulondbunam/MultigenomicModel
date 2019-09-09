@@ -1,14 +1,14 @@
 {
-	"gene_id": "ECK120002581",
-	"gene_name": "sraF",
+	"regulondbId": "ECK120002581",
+	"name": "sraF",
 	"leftPosition": 3238374,
 	"rightPosition": 3238561,
-	"gene_strand": "forward",
-	"gene_sequence": "GCAAAGGGGAGTAACTTCATTGCCGGTCGATCGTCATTACGATGTGTGAAAAAACACATCCGGTCACCGGGCAACCCGAAAGGAATACGCAGACGTATTCCTTTTTTGTTGTAAGTGAGACCTTGCCGGAAGGCGAGGTCTATGCATAAAAAGCAGCGGCTGACGTCTTCCGACGTTGGCCGTTTTTT",
-	"gc_content": 49.47,
-	"organism_id": "ECK12",
-	"gene_type": "phantom",
-	"centisome_position": 69.754776,
+	"strand": "forward",
+	"sequence": "GCAAAGGGGAGTAACTTCATTGCCGGTCGATCGTCATTACGATGTGTGAAAAAACACATCCGGTCACCGGGCAACCCGAAAGGAATACGCAGACGTATTCCTTTTTTGTTGTAAGTGAGACCTTGCCGGAAGGCGAGGTCTATGCATAAAAAGCAGCGGCTGACGTCTTCCGACGTTGGCCGTTTTTT",
+	"gcContent": 49.47,
+	"organismId": "ECK12",
+	"type": "phantom",
+	"centisomePosition": 69.754776,
 	"synonyms": [
 		"psrA14",
 		"tpk1",
@@ -17,32 +17,32 @@
 		"b4448",
 		"ECK3078"
 	],
-	"evidence_reference": [{
-		"publication_id": "GID000002550",
-		"source_id": 11448770,
-		"external_database_id": "GID000000048",
-		"publication_url": "http://www.ncbi.nlm.nih.gov/pubmed/11448770"
+	"evidenceReferences": [{
+		"publicationId": "GID000002550",
+		"sourceId": 11448770,
+		"externalDatabaseId": "GID000000048",
+		"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/11448770"
 	}],
-	"external_databases": [{
-			"database_name": "PortEco",
-			"database_url": "http://porteco.org/AjaxSearch.jsp?searchString=psrN",
-			"object_externaldb_id": "psrN"
+	"externalDatabases": [{
+			"name": "PortEco",
+			"url": "http://porteco.org/AjaxSearch.jsp?searchString=psrN",
+			"externaldbObjectId": "psrN"
 		},
 		{
-			"database_name": "ASAP",
-			"database_url": "http://asap.ahabs.wisc.edu/asap/feature_info.php?FeatureID=ABE-0047268",
-			"object_externaldb_id": "ABE-0047268"
+			"name": "ASAP",
+			"url": "http://asap.ahabs.wisc.edu/asap/feature_info.php?FeatureID=ABE-0047268",
+			"externaldbObjectId": "ABE-0047268"
 		},
 		{
-			"database_name": "EchoBASE",
-			"database_url": "http://www.york.ac.uk/res/thomas/Gene.cfm?recordID=EB4535",
-			"object_externaldb_id": "EB4535"
+			"name": "EchoBASE",
+			"url": "http://www.york.ac.uk/res/thomas/Gene.cfm?recordID=EB4535",
+			"externaldbObjectId": "EB4535"
 		},
 		{
-			"database_name": "RegulonDB",
-			"database_url": "http://regulondb.ccg.unam.mx/search?term=b4448&organism=ECK12&type=All",
-			"object_externaldb_id": "b4448"
+			"name": "RegulonDB",
+			"url": "http://regulondb.ccg.unam.mx/search?term=b4448&organism=ECK12&type=All",
+			"externaldbObjectId": "b4448"
 		}
 	],
-	"schema_version": 1.0
+	"schemaVersion": 1.0
 }
