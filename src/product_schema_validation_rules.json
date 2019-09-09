@@ -122,6 +122,10 @@
 							"publicationUrl": {
 								"bsonType": "string",
 								"description": ""
+							},
+							"evidenceId": {
+								"bsonType": "string",
+								"description": ""
 							}
 						}
 					}
