@@ -1,0 +1,112 @@
+{
+    "validator": { 
+		"$jsonSchema": { 
+			"bsonType": "object",
+			"required": [
+                "regulondbId",
+                "leftPosition",
+                "rightPosition",
+                "sequence",
+                "class"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "objectId",
+					"description": ""
+				},
+				"regulondbId": {
+					"bsonType": "string",
+					"description": ""
+                },
+				"leftPosition": {
+                    "bsonType": "int",
+                    "description": ""
+				},
+				"rightPosition": {
+                    "bsonType": "int",
+                    "description": ""
+                },
+				"sequence": {
+					"bsonType": "string",
+                    "description": "",
+                    "pattern": "^[ATCGatcg]+$"
+				},
+                "class": {
+                    "bsonType": "string",
+                    "description": "",
+                    "enum": [
+                        "rho-independent",
+                        "rho-dependent"
+                    ]
+                },
+                "transcriptionUnits": {
+                    "bsonType": "array",
+                    "description": "",
+                    "uniqueItems": true,
+                    "items": {
+                        "bsonType": "object",
+                        "properties": {
+                            "regulondbId": {
+                                "bsonType": "string",
+                                "description": ""
+                            },
+                            "name": {
+                                "bsonType": "string",
+                                "description": ""
+                            }
+                        }
+                    }
+                },
+                "note": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"internalComment": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"organismId": {
+					"bsonType": "string",
+					"description": ""
+                },
+				"evidenceReferences": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"publicationId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"sourceId": {
+								"bsonType": "int",
+								"description": ""
+							},
+							"externalDatabaseId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"publicationUrl": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"evidenceId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"schemaVersion": {
+					"bsonType": "double",
+					"description": ""
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}
