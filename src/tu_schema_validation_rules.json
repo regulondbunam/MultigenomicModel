@@ -62,7 +62,20 @@
                             }
                         }
                     }
-                },
+				},
+				"terminators":{
+					"bsonType": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "bsonType": "object",
+                        "properties": {
+                            "regulondbId": {
+                                "bsonType": "string",
+                                "description": ""
+                            }
+                        }
+                    }
+				},
                 "note": {
 					"bsonType": "string",
 					"description": ""
