@@ -1,13 +1,14 @@
 {
-    "validator": { 
-		"$jsonSchema": { 
+	"validator": {
+		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-                "regulondbId",
-                "leftPosition",
-                "rightPosition",
-                "sequence",
-                "class"
+				"regulondbId",
+				"leftPosition",
+				"rightPosition",
+				"sequence",
+				"class",
+				"transcriptionUnits"
 			],
 			"properties": {
 				"_id": {
@@ -17,47 +18,47 @@
 				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
-                },
+				},
 				"leftPosition": {
-                    "bsonType": "int",
-                    "description": ""
+					"bsonType": "int",
+					"description": ""
 				},
 				"rightPosition": {
-                    "bsonType": "int",
-                    "description": ""
-                },
+					"bsonType": "int",
+					"description": ""
+				},
 				"sequence": {
 					"bsonType": "string",
-                    "description": "",
-                    "pattern": "^[ATCGatcg]+$"
+					"description": "",
+					"pattern": "^[ATCGatcg]+$"
 				},
-                "class": {
-                    "bsonType": "string",
-                    "description": "",
-                    "enum": [
-                        "rho-independent",
-                        "rho-dependent"
-                    ]
-                },
-                "transcriptionUnits": {
-                    "bsonType": "array",
-                    "description": "",
-                    "uniqueItems": true,
-                    "items": {
-                        "bsonType": "object",
-                        "properties": {
-                            "regulondbId": {
-                                "bsonType": "string",
-                                "description": ""
-                            },
-                            "name": {
-                                "bsonType": "string",
-                                "description": ""
-                            }
-                        }
-                    }
-                },
-                "note": {
+				"class": {
+					"bsonType": "string",
+					"description": "",
+					"enum": [
+						"rho-independent",
+						"rho-dependent"
+					]
+				},
+				"transcriptionUnits": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"regulondbId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"name": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"note": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -68,7 +69,7 @@
 				"organismId": {
 					"bsonType": "string",
 					"description": ""
-                },
+				},
 				"evidenceReferences": {
 					"bsonType": "array",
 					"description": "",
