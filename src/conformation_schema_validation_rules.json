@@ -1,0 +1,190 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"regulondbId",
+				"finalState",
+				"organismId"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "objectId",
+					"description": ""
+				},
+				"regulondbId": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"finalState": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"interactionType": {
+					"bsonType": "string",
+					"description": "",
+					"enum": [
+						"Covalent",
+						"Allosteric",
+						null
+					]
+				},
+				"conformationType?=!?=??))$)$": {
+					"bsonType": "string",
+					"description": "",
+					"enum": [
+						"Active",
+						"Inactive"
+					]
+				},
+				"proteinForm?¿?¿?¿?¿?form¿?!¿?!¿?!": {
+					"bsonType": "string",
+					"description": "",
+					"enum": [
+						"Alo",
+						"Hopo"
+					]
+				},
+				"note": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"internalComment": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"organismId": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"synonyms": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					},
+					"description": ""
+				},
+				"evidenceReferences": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"publicationId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"sourceId": {
+								"bsonType": "int",
+								"description": ""
+							},
+							"externalDatabaseId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"publicationUrl": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"evidenceId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"externalDatabases": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"required": [
+							"name",
+							"url",
+							"externaldbObjectId"
+						],
+						"properties": {
+							"name": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"url": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"externaldbObjectId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"transcriptionFactor": {
+					"bsonType": "object",
+					"description": "",
+					"properties": {
+						"regulondbId": {
+							"bsonType": "string",
+							"description": ""
+						},
+						"name": {
+							"bsonType": "string",
+							"description": ""
+						}
+					}
+				},
+				"regulatoryInteractions": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"regulondbIds": {
+								"bsonType": "array",
+								"uniqueItems": true,
+								"items": {
+									"bsonType": "string"
+								},
+								"description": ""
+							},
+							"type": {
+								"bsonType": "string",
+								"description": "",
+								"enum": ["promoter", "transcription unit"]
+							}
+						}
+					}
+				},
+				"effectors": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"regulondbId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"name": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"schemaVersion": {
+					"bsonType": "double",
+					"description": ""
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

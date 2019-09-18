@@ -1,0 +1,125 @@
+{
+	"regulondbId": "ECK120026318",
+	"name": "AscG",
+	"siteLength": [
+		6,
+		14
+	],
+	"consensusSequence": [
+		"GTTTCA",
+		"TGAAACCGGTTTCA"
+	],
+	"symmetry": [
+		"asymmetric",
+		"inverted-repeat"
+	],
+	"note": "The AscG, \"<b>A</b>rbutin-<b>s</b>alicin-<b>c</b>ellibiose,\" transcriptional regulator represses the expression of a cryptic operon (<i>ascFB</i>) whose genes are involved in transport and utilization of the &beta;-glucoside sugars arbutin, salicin, and cellibiose. This operon is activated only when the repressor is inactivated through the interruption of the gene by an insertion sequence |CITS:[1630307]|. AscG also regulates <i>prpBC</i> for propionate catabolism |CITS:[19633077]|. \n\nAscG is a GalR-type transcription factor and has a helix-turn-helix motif |CITS:[1630307][19633077]|. AscG recognizes and binds the consensus palindromic sequence TGAAACCGGTTTCA |CITS:[19633077]|.\n\nThe <i>ascG</i> gene is transcribed divergently from the operon it regulates |CITS:[1630307]|. <i>ascG</i> is paralogous to <i>galR</i> |CITS:[19633077]|. A high level of AscG is always present in wild-type <i>Escherichia coli</i> cells |CITS:[19633077]|.",
+	"organismId": "ECK12",
+	"synonyms": [
+		"DNA-binding transcriptional repressor AscG",
+		"Sac"
+	],
+	"evidenceReferences": [{
+			"publicationId": "GID000004618",
+			"sourceId": 1630307,
+			"externalDatabaseId": "GID000000048",
+			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/1630307",
+			"evidenceId": "GID000000020"
+		},
+		{
+			"publicationId": "GID000004618",
+			"sourceId": 1630307,
+			"externalDatabaseId": "GID000000048",
+			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/1630307",
+			"evidenceId": "GID000000007"
+		},
+		{
+			"publicationId": "GID000031134",
+			"sourceId": 19633077,
+			"externalDatabaseId": "GID000000048",
+			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/19633077",
+			"evidenceId": "GID000028666"
+		},
+		{
+			"publicationId": "GID000004618",
+			"sourceId": 1630307,
+			"externalDatabaseId": "GID000000048",
+			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/1630307"
+		}
+	],
+	"externalDatabases": [{
+			"name": "Prosite",
+			"url": "http://prosite.expasy.org/cgi-bin/prosite/nicedoc.pl?PS00356",
+			"externaldbObjectId": "PS00356"
+		},
+		{
+			"name": "Protein Ontology",
+			"url": "http://pir.georgetown.edu/cgi-bin/pro/entry_pro?id=PRO_000022163",
+			"externaldbObjectId": "PRO_000022163"
+		},
+		{
+			"name": "NCBI Reference Sequences Database",
+			"url": "http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?val=NP_417194",
+			"externaldbObjectId": "NP_417194"
+		},
+		{
+			"name": "MODBASE",
+			"url": "http://modbase.compbio.ucsf.edu/modbase-cgi/model_search.cgi?searchkw=name&kword=P24242",
+			"externaldbObjectId": "P24242"
+		},
+		{
+			"name": "Pfam",
+			"url": "http://pfam.xfam.org/family/PF00356",
+			"externaldbObjectId": "PF00356"
+		},
+		{
+			"name": "Protein Data Bank",
+			"url": "http://www.rcsb.org/pdb/cgi/explore.cgi?pdbId=3BRQ",
+			"externaldbObjectId": "3BRQ"
+		},
+		{
+			"name": "Pride",
+			"url": " http://www.ebi.ac.uk/pride/searchSummary.do?queryTypeSelected=identification%20accession%20number&identificationAccessionNumber=P24242",
+			"externaldbObjectId": "P24242"
+		},
+		{
+			"name": "InterPro",
+			"url": "http://www.ebi.ac.uk/interpro/entry/IPR010982",
+			"externaldbObjectId": "IPR010982"
+		},
+		{
+			"name": "Smart",
+			"url": "http://smart.embl.de/smart/do_annotation.pl?DOMAIN=SM00354",
+			"externaldbObjectId": "SM00354"
+		},
+		{
+			"name": "SWISS-MODEL",
+			"url": "http://swissmodel.expasy.org/repository/smr.php?sptr_ac=P24242",
+			"externaldbObjectId": "P24242"
+		},
+		{
+			"name": "UniProt",
+			"url": "https://www.uniprot.org/uniprot/P24242",
+			"externaldbObjectId": "P24242"
+		},
+		{
+			"name": "EcoliWiki",
+			"url": "http://ecoliwiki.net/colipedia/index.php/b2714",
+			"externaldbObjectId": "b2714"
+		},
+		{
+			"name": "Protein Model Portal",
+			"url": "http://www.proteinmodelportal.org/query/uniprot/P24242",
+			"externaldbObjectId": "P24242"
+		}
+	],
+	"products": [{
+		"regulondbId": "ECK120004559",
+		"name": "DNA-binding transcriptional repressor AscG"
+	}],
+	"conformations": [{
+		"regulondbId": "ECK125269373",
+		"name": "AscG"
+	}],
+	"schemaVersion": 1.0
+}
