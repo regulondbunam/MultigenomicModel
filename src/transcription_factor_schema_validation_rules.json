@@ -1,0 +1,175 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"regulondbId",
+				"name",
+				"products",
+				"conformations",
+				"organismId"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "objectId",
+					"description": ""
+				},
+				"regulondbId": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"name": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"siteLength": {
+					"bsonType": "array",
+					"items": {
+						"bsonType": "int"
+					},
+					"description": ""
+				},
+				"consensusSequence": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					},
+					"description": ""
+				},
+				"symmetry": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					},
+					"description": ""
+				},
+				"note": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"internalComment": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"organismId": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"synonyms": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					},
+					"description": ""
+				},
+				"evidenceReferences": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"publicationId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"sourceId": {
+								"bsonType": "int",
+								"description": ""
+							},
+							"externalDatabaseId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"publicationUrl": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"evidenceId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"externalDatabases": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"required": [
+							"name",
+							"url",
+							"externaldbObjectId"
+						],
+						"properties": {
+							"name": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"url": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"externaldbObjectId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"products": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"regulondbId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"name": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"coefficient": {
+								"bsonType": "int",
+								"description": ""
+							}
+						}
+					}
+				},
+				"conformations": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"regulondbId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"name": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"schemaVersion": {
+					"bsonType": "double",
+					"description": ""
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

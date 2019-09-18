@@ -1,0 +1,186 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"regulondbId",
+				"organismId"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "objectId",
+					"description": ""
+				},
+				"regulondbId": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"centerPosition": {
+					"bsonType": "double",
+					"description": ""
+				},
+				"function": {
+					"bsonType": "string",
+					"description": "",
+					"enum": [
+						"activator",
+						"repressor",
+						"dual"
+					]
+				},
+				"note": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"internalComment": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"organismId": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"evidenceReferences": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"publicationId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"sourceId": {
+								"bsonType": "int",
+								"description": ""
+							},
+							"externalDatabaseId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"publicationUrl": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"evidenceId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"externalDatabases": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"required": [
+							"name",
+							"url",
+							"externaldbObjectId"
+						],
+						"properties": {
+							"name": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"url": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"externaldbObjectId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"conformation": {
+					"bsonType": "object",
+					"description": "",
+					"properties": {
+						"regulondbId": {
+							"bsonType": "string",
+							"description": ""
+						},
+						"name": {
+							"bsonType": "string",
+							"description": ""
+						}
+					}
+				},
+				"regulatedEntity": {
+					"bsonType": "object",
+					"description": "",
+					"properties": {
+						"regulondbId": {
+							"bsonType": "string",
+							"description": ""
+						},
+						"name": {
+							"bsonType": "string",
+							"description": ""
+						},
+						"type": {
+							"bsonType": "string",
+							"description": ""
+						}
+					}
+				},
+				"site": {
+					"bsonType": "object",
+					"properties": {
+						"regulondbId": {
+							"bsonType": "string",
+							"description": ""
+						},
+						"evidenceReferences": {
+							"quedan pendientes": "¿se pasaran a la RI o se deja a nivel de sitio?"
+						}
+					}
+				},
+				"firstGene": {
+					"regulondbId": {
+						"bsonType": "string",
+						"description": ""
+					},
+					"distance": {
+						"bsonType": "double",
+						"description": ""
+					}
+				},
+				"affinityExp": {
+					"bsonType": "string",
+					"description": "este valor viene como nulo en la base de datos"
+				},
+				"orientation": {
+					"bsonType": "string",
+					"description": "",
+					"enum": [
+						"Reverse-Complement",
+						"Forward-Directed"
+					]
+				},
+				"sequence": {
+					"bsonType": "string",
+					"description": "",
+					"pattern": "^[ATCGatcg]+$"
+				},
+				"sequenceOrientation": {
+					"bsonType": "string",
+					"description": "",
+					"pattern": "^[ATCGatcg]+$"
+				},
+				"schemaVersion": {
+					"bsonType": "double",
+					"description": ""
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

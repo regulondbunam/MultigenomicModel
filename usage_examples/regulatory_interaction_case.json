@@ -1,0 +1,70 @@
+{
+    "regulondbId": "ECK120051661",
+    "centerPosition": -72.5,
+    "function": "repressor",
+    "organismId": "ECK12",
+    "evidenceReferences": [
+        {
+            "publicationId": "GID000004618",
+            "sourceId": 0,
+            "externalDatabaseId": "",
+            "publicationUrl": ""
+        },
+        {
+            "publicationId": "GID000031134",
+            "sourceId": 0,
+            "externalDatabaseId": "",
+            "publicationUrl": ""
+        },
+        {
+            "publicationId": "GID000004618",
+            "sourceId": 0,
+            "externalDatabaseId": "",
+            "publicationUrl": "",
+            "evidenceId": "GID000000020"
+        },
+        {
+            "publicationId": "GID000031134",
+            "sourceId": 0,
+            "externalDatabaseId": "",
+            "publicationUrl": "",
+            "evidenceId": "GID000000030"
+        },
+        {
+            "publicationId": "GID000031134",
+            "sourceId": 0,
+            "externalDatabaseId": "",
+            "publicationUrl": "",
+            "evidenceId": "GID000000009"
+        },
+        {
+            "publicationId": "GID000031134",
+            "sourceId": 0,
+            "externalDatabaseId": "",
+            "publicationUrl": "",
+            "evidenceId": "GID000000020"
+        }
+    ],
+    "conformation": {
+        "regulondbId": "ECK125269373",
+        "name": "AscG"
+    },
+    "regulatedEntity": {
+        "regulondbId": "ECK120016938",
+        "name": "AscGp",
+        "type": "promoter"
+    },
+    "site": {
+        "regulondbId": "ECK120026357",
+        "evidenceReferences": []
+    },
+    "firstGene": {
+        "regulondbId": "",
+        "distance": 0
+    },
+    "affinityExp": "",
+    "orientation": "",
+    "sequence": "",
+    "sequenceOrientation": "",
+    "schemaVersion": 1.0
+}
