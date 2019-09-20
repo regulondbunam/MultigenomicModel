@@ -36,6 +36,10 @@
 					"description": "",
 					"pattern": "^[ATCGatcg]+$"
 				},
+				"sigmaFactor": {
+					"bsonType": "string",
+					"description": ""
+				},
 				"note": {
 					"bsonType": "string",
 					"description": ""
@@ -153,16 +157,7 @@
 							"bindsSigmaFactor": {
 								"bsonType": "object",
 								"description": "",
-								"uniqueItems": true,
 								"properties": {
-									"sigmaFactorRegulondbId": {
-										"bsonType": "string",
-										"description": ""
-									},
-									"name": {
-										"bsonType": "string",
-										"description": ""
-									},
 									"evidenceReferences": {
 										"bsonType": "array",
 										"description": "",

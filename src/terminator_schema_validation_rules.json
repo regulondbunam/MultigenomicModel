@@ -4,11 +4,11 @@
 			"bsonType": "object",
 			"required": [
 				"regulondbId",
-				"productRegulondbId",
 				"leftPosition",
 				"rightPosition",
 				"sequence",
-				"organismId"
+				"class",
+				"transcriptionUnits"
 			],
 			"properties": {
 				"_id": {
@@ -18,20 +18,6 @@
 				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
-				},
-				"product": {
-					"bsonType": "object",
-					"description": "",
-					"properties": {
-						"regulondbId": {
-							"bsonType": "string",
-							"description": ""
-						},
-						"name": {
-							"bsonType": "string",
-							"description": ""
-						}
-					}
 				},
 				"leftPosition": {
 					"bsonType": "int",
@@ -43,11 +29,34 @@
 				},
 				"sequence": {
 					"bsonType": "string",
-					"description": ""
+					"description": "",
+					"pattern": "^[ATCGatcg]+$"
 				},
-				"description": {
+				"class": {
 					"bsonType": "string",
-					"description": ""
+					"description": "",
+					"enum": [
+						"rho-independent",
+						"rho-dependent"
+					]
+				},
+				"transcriptionUnits": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"regulondbId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"name": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
 				},
 				"note": {
 					"bsonType": "string",
@@ -61,55 +70,30 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"dataSource": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"residueNumber": {
-					"bsonType": "double",
-					"description": ""
-				},
-				"attachedGroup": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"homologyMotif": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"alternateSequence": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"synonyms": {
-					"bsonType": "array",
-					"uniqueItems": true,
-					"items": {
-						"bsonType": "string"
-					},
-					"description": ""
-				},
-				"externalDatabases": {
+				"evidenceReferences": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
-						"required": [
-							"name",
-							"url",
-							"externaldbObjectId"
-						],
 						"properties": {
-							"databaseName": {
+							"publicationId": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"databaseUrl": {
+							"sourceId": {
+								"bsonType": "int",
+								"description": ""
+							},
+							"externalDatabaseId": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"externaldbObjectId": {
+							"publicationUrl": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"evidenceId": {
 								"bsonType": "string",
 								"description": ""
 							}
@@ -122,8 +106,8 @@
 				}
 			},
 			"additionalProperties": false
-		},
-		"validationLevel": "strict",
-		"validationAction": "error"
-	}
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
 }
