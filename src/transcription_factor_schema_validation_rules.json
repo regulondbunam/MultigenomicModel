@@ -41,7 +41,13 @@
 					"bsonType": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "string"
+						"bsonType": "string",
+						"enum": [
+							"asymmetric",
+							"inverted-repeat",
+							"direct-repeat",
+							null
+						]
 					},
 					"description": ""
 				},
