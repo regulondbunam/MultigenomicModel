@@ -20,29 +20,12 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"interactionType": {
-					"bsonType": "string",
-					"description": "",
-					"enum": [
-						"Covalent",
-						"Allosteric",
-						null
-					]
-				},
-				"conformationType?=!?=??))$)$": {
+				"type": {
 					"bsonType": "string",
 					"description": "",
 					"enum": [
 						"Active",
 						"Inactive"
-					]
-				},
-				"proteinForm?¿?¿?¿?¿?form¿?!¿?!¿?!": {
-					"bsonType": "string",
-					"description": "",
-					"enum": [
-						"Alo",
-						"Hopo"
 					]
 				},
 				"note": {
