@@ -1,11 +1,11 @@
 {
-	"validator": { 
-		"$jsonSchema": { 
+	"validator": {
+		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
 				"regulondbId",
-                "organismId",
-                "genes"
+				"organismId",
+				"genes"
 			],
 			"properties": {
 				"_id": {
@@ -19,51 +19,51 @@
 				"name": {
 					"bsonType": "string",
 					"description": ""
-                },
-                "promoter": {
-                    "bsonType": "object",
-                    "properties": {
-                        "regulondbId": {
-                            "bsonType": "string",
-					        "description": ""
-                        },
-                        "name": {
-                            "bsonType": "string",
-					        "description": ""
-                        }
-                    }
-                },
-                "genes": {
-                    "bsonType": "array",
-                    "uniqueItems": true,
-                    "items": {
-                        "bsonType": "object",
-                        "properties": {
-                            "regulondbId": {
-                                "bsonType": "string",
-                                "description": ""
-                            },
-                            "name": {
-                                "bsonType": "string",
-                                "description": ""
-                            }
-                        }
-                    }
 				},
-				"terminators":{
+				"promoter": {
+					"bsonType": "object",
+					"properties": {
+						"regulondbId": {
+							"bsonType": "string",
+							"description": ""
+						},
+						"name": {
+							"bsonType": "string",
+							"description": ""
+						}
+					}
+				},
+				"genes": {
 					"bsonType": "array",
-                    "uniqueItems": true,
-                    "items": {
-                        "bsonType": "object",
-                        "properties": {
-                            "regulondbId": {
-                                "bsonType": "string",
-                                "description": ""
-                            }
-                        }
-                    }
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"regulondbId": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"name": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
 				},
-                "note": {
+				"terminators": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"regulondbId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						}
+					}
+				},
+				"note": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -74,8 +74,8 @@
 				"organismId": {
 					"bsonType": "string",
 					"description": ""
-                },
-                "synonyms": {
+				},
+				"synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
 					"items": {
