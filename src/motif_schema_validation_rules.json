@@ -19,9 +19,19 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"productRegulondbId": {
-					"bsonType": "string",
-					"description": ""
+				"product": {
+					"bsonType": "object",
+					"description": "",
+					"properties": {
+						"regulondbId": {
+							"bsonType": "string",
+							"description": ""
+						},
+						"name": {
+							"bsonType": "string",
+							"description": ""
+						}
+					}
 				},
 				"leftPosition": {
 					"bsonType": "int",
