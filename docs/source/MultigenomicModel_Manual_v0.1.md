@@ -8,56 +8,37 @@ A continuación, se describe cada una de las colecciones que conforman el modelo
 
 ### 1. gene
 
-* Description  
+_Description_  
 
 Esta colección representa al objeto Gene dentro de la regulación transcripcional de un organismo. Un gen posee una serie de propiedades que permiten identificarlo y diferenciarlo de otros, así como de característica que permiten establecer relaciones con otros objetos.  
 
-* Attributes
-
-  AttributeName  
-    gene_id
-
-
-  * Type  
-    string    
+_Attributes_  
+ 
+__1.1 regulondbId__  
 
 
-  * Synonyms  
-    identifier  
+  * Type: string  
 
-  * Usage  
-    requerido  
+  * Synonyms: identifier  
 
+  * Usage: requerido  
 
-  * Example  
+  * Example:  
 
       ```xml
       RDBECOLIGN00001
       ```
 
-      Examples:
-
-| Identifier |Description |
-| ---------- | ---------- |
-| RDBECOLIGR00001   | This is a RegulonDB identifier of the 00001 gene   |
-| RDBECOLIOP00001   | Campo B1   |
+  * Comments: Para conocer más detalle sobre la definición de los identificadores, consultar la sección: Identifiers en el manual de RegulonDB.  
 
 
-  * Comments  
-    Para conocer más detalle sobre la definición de los identificadores, consultar la sección: Identifiers en el manual de RegulonDB.  
+__1.2 name__  
 
+  * Type: string  
 
-  AttributeName  
-    gene_name  
+  * Synonyms: name  
 
-  * Type  
-    string  
-
-  * Synonyms  
-    name
-
-  * Usage:
-    Opcional
+  * Usage: opcional  
 
   * Example:
 
@@ -65,21 +46,17 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       araC
       ```
 
-  * Comments  
+  * Comments:  
     En el caso del nombre de genes se sigue una nomenclatura de nombrado donde se define que la última letra se debe especificar en mayúscula.  
 
 
-  AttributeName  
-    gene_posleft
+__1.3 leftPosition__
 
-  * Type  
-    int
+  * Type: int  
 
-  * Synonyms  
-    genome left position 
+  * Synonyms: genome left position  
 
-  * Usage:
-    requerido
+  * Usage: requerido  
 
   * Example:
 
@@ -87,20 +64,17 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       70387
       ```
 
-  * Comments 
+  * Comments:  
 
 
-  * AttributeName  
-    gene_posright
+ 
+ __1.4 rightPosition__
 
-  * Type  
-    int
+  * Type: int
 
-  * Synonyms  
-    genome right position 
+  * Synonyms: genome right position  
 
-  * Usage:
-    requerido 
+  * Usage: requerido  
 
   * Example:
 
@@ -111,17 +85,30 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
   * Comments 
 
 
-  * AttributeName  
-    gene_strand
+__1.5 sequence__
 
-  * Type  
-    string
+  * Type: string
 
-  * Synonyms  
+  * Synonyms:  
+    
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      ATGGCTGAAGCGCAAAATGATCCCCTGCTGCCGGGATACTCGTTTAACGCCCATCTGGTGGCGGGTTTAACGCCGATTGAGGCCAACGGTTATCTCGATTTTTTTATCGACCGACCGCTGGGAATGAAAGGTTATATTCTCAATCTCACCATTCGCGGTCAGGGGGTGGTGAAAAATCAGGGACGAGAATTTGTCTGCCGACCGGGTGATATTTTGCTGTTCCCGCCAGGAGAGATTCATCACTACGGTCGTCATCCGGAGGCTCGCGAATGGTATCACCAGTGGGTTTACTTTCGTCCGCGCGCCTACTGGCATGAATGGCTTAACTGGCCGTCAATATTTGCCAATACGGGTTTCTTTCGCCCGGATGAAGCGCACCAGCCGCATTTCAGCGACCTGTTTGGGCAAATCATTAACGCCGGGCAAGGGGAAGGGCGCTATTCGGAGCTGCTGGCGATAAATCTGCTTGAGCAATTGTTACTGCGGCGCATGGAAGCGATTAACGAGTCGCTCCATCCACCGATGGATAATCGGGTACGCGAGGCTTGTCAGTACATCAGCGATCACCTGGCAGACAGCAATTTTGATATCGCCAGCGTCGCACAGCATGTTTGCTTGTCGCCGTCGCGTCTGTCACATCTTTTCCGCCAGCAGTTAGGGATTAGCGTCTTAAGCTGGCGCGAGGACCAACGCATTAGTCAGGCGAAGCTGCTTTTGAGCACTACCCGGATGCCTATCGCCACCGTCGGTCGCAATGTTGGTTTTGACGATCAACTCTATTTCTCGCGAGTATTTAAAAAATGCACCGGGGCCAGCCCGAGCGAGTTTCGTGCCGGTTGTGAAGAAAAAGTGAATGATGTAGCCGTCAAGTTGTCATAA
+      ```
+
+  * Comments:  
+
+__1.6 strand__
+
+  * Type: string  
+
+  * Synonyms:  
 
 
-  * Usage:
-    requerido
+  * Usage: requerido  
 
   * Example:
 
@@ -129,40 +116,16 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       forward
       ```
 
-  * Comments 
-      Los valores permitidos para este atributo son: "forward", "reverse", null
+  * Comments: Los valores permitidos para este atributo son: "forward", "reverse", null.  
 
 
-  * AttributeName  
-    gene_sequence
+ __1.7 gcContent__
 
-  * Type  
-    string
+  * Type: double
 
-  * Synonyms  
+  * Synonyms:  
     
-  * Usage:
-    requerido
-
-  * Example:
-
-      ```xml
-      
-      ```
-
-  * Comments 
-
-
-  * AttributeName  
-    gc_content
-
-  * Type  
-    double
-
-  * Synonyms  
-    
-  * Usage:
-    requerido
+  * Usage: requerido  
 
   * Example:
 
@@ -170,20 +133,99 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       52.56
       ```
 
-  * Comments 
+  * Comments:  
 
 
-  * AttributeName  
-    gene_note
+__1.8 organismId__
 
-  * Type  
-    string
+  * Type: string
 
-  * Synonyms  
+  * Synonyms: organism identifier  
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      ECK12
+      ```
+
+  * Comments: 
+
+  __1.9 type__
+
+  * Type: string
+
+  * Synonyms:   
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      gene
+      ```
+
+  * Comments: Los valores permitidos para este atributo son: pseudo, phantom, gene y truncated.  
 
 
-  * Usage:
-    opcional
+__1.10 centisomePosition__
+
+  * Type: double  
+
+  * Synonyms:  
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      1.5164213
+      ```
+
+  * Comments:   
+
+
+__1.11 interrupted__
+
+  * Type: bool  
+
+  * Synonyms:  
+
+  * Usage: opcional  
+
+  * Example:
+
+      ```xml
+      false
+      ```
+
+  * Comments:  
+
+__1.12 multifunDirectParents__
+
+  * Type: array  
+
+  * Synonyms:  
+
+  * Usage: opcional  
+
+  * Example:
+
+      ```xml
+      carbon compounds, Transcription related, operon, repressor
+      ```
+
+  * Comments:  
+
+
+__1.8 gene_note__
+
+  * Type: string  
+
+  * Synonyms:  
+
+  * Usage: opcional  
 
   * Example:
 
@@ -191,20 +233,17 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       
       ```
 
-  * Comments 
+  * Comments:  
 
 
-  * AttributeName  
-    gene_internal_comment
+__1.9 gene_internal_comment__
 
-  * Type  
-    string
+  * Type: string
 
-  * Synonyms  
+  * Synonyms:  
 
 
-  * Usage:
-    opcional
+  * Usage: opcional  
 
   * Example:
 
@@ -212,103 +251,20 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       
       ```
 
-  * Comments 
+  * Comments:  
 
 
-  * AttributeName  
-    organism_id
-
-  * Type  
-    string
-
-  * Synonyms  
-    organism identifier
-
-  * Usage:
-    requerido
-
-  * Example:
-
-      ```xml
-      
-      ```
-
-  * Comments 
-
-  * AttributeName  
-    gene_type
-
-  * Type  
-    string
-
-  * Synonyms  
 
 
-  * Usage:
-    requerido
-
-  * Example:
-
-      ```xml
-      pseudo
-      ```
-
-  * Comments 
-    Los valores permitidos para este atributo son: "pseudo", "phantom", null
 
 
-  * AttributeName  
-    centisome_position
+__1.14 synonyms__
 
-  * Type  
-    double
+  * Type: string
 
-  * Synonyms  
+  * Synonyms: identifier
 
-
-  * Usage:
-    requerido
-
-  * Example:
-
-      ```xml
-      
-      ```
-
-  * Comments 
-
-
-  * AttributeName  
-    interrupted
-
-  * Type  
-    bool
-
-  * Synonyms  
-
-
-  * Usage:
-    opcional
-
-  * Example:
-
-      ```xml
-      
-      ```
-
-  * Comments 
-
-
-  * AttributeName  
-    synonyms
-
-  * Type  
-    string
-
-  * Synonyms  
-    Identifier
-
-  * Usage:
+  * Usage:  
     
   * Example:
 
@@ -316,19 +272,16 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       RDBECOLIGN00065, RDBECOLIGN10054
       ```
 
-  * Comments
+  * Comments:  
 
 
-  * AttributeName  
-    external_databases 
+ __1.15 external_databases__  
 
-  * Type  
-    string
+  * Type: string
 
-  * Synonyms  
+  * Synonyms:   
     
-  * Usage:
-    opcional
+  * Usage: opcional
 
   * Example:
 
@@ -336,19 +289,16 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       ASAP, http://.......
       ```
 
-  * Comments 
+  * Comments:  
 
 
-  * AttributeName  
-    schema_version
+__1.16 schema_version__
 
-  * Type  
-    string
+  * Type: string
 
-  * Synonyms  
+  * Synonyms:  
     
-  * Usage:
-    opcional
+  * Usage: pcional  
 
   * Example:
 
@@ -356,21 +306,16 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       1
       ```
 
-  * Comments 
-    Este atributo es usado para controlar internamente las modificaciones que se hagan en la colección, así como con el uso del modelo por parte de la aplicación Web de RegulonDB.
+  * Comments: Este atributo es usado para controlar internamente las modificaciones que se hagan en la colección, así como con el uso del modelo por parte de la aplicación Web de RegulonDB.  
 
 
-  * AttributeName  
-    multifun_parents
+__1.17 multifun_parents__
 
-  * Type  
-    string
+  * Type: string  
 
-  * Synonyms  
-    multifun family
+  * Synonyms: multifun family  
 
-  * Usage:
-    opcional
+  * Usage: opcional  
 
   * Example:
 
@@ -378,32 +323,33 @@ Esta colección representa al objeto Gene dentro de la regulación transcripcion
       
       ```
 
-  * Comments 
+  * Comments:   
 
-* Desing patterns
+_Desing patterns_  
 
-* Comments
+_Comments:_  
 
-* Example
-
+_Example:_  
 
 ```xml
 Example
 ```
+
 
 ### 2. ColletionName
 
-* Description
+_Description_  
 
-* Attributes
 
-  * AttributeName
+_Attributes_  
 
-  * Type
+__2.1 [AttributeName]__  
 
-  * Synonyms
+  * Type: [value]  
 
-  * Usage:
+  * Synonyms: [value]  
+
+  * Usage: [requerido, opcional]  
 
     Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
@@ -414,74 +360,74 @@ Example
       ```
 
 
-  * Comments  
+  * Comments: [value]    
 
 
-  * AttributeName  
+__2.2 [AttributeName]__  
 
+  * Type: [value]  
 
-  * Type  
+  * Synonyms: [value]  
 
+  * Usage: [requerido, opcional]  
 
-  * Synonyms  
+    Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
-
-  * Usage:
-    
   * Example:
 
       ```xml
-      
+      Example
       ```
 
-  * Comments 
 
-    * AttributeName  
+  * Comments: [value]     
 
+ 
+ __2.3 [AttributeName]__  
 
-  * Type  
+  * Type: [value]  
 
+  * Synonyms: [value]  
 
-  * Synonyms  
+  * Usage: [requerido, opcional]  
 
+    Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
-  * Usage:
-    
   * Example:
 
       ```xml
-      
+      Example
       ```
 
-  * Comments 
+
+  * Comments: [value]    
 
 
-* Desing patterns
+_Desing patterns_  
 
-* Validation rules
+_Comments:_  
 
-* Comments
-
-* Example
-
+_Example:_  
 
 ```xml
 Example
 ```
+
 
 ### 3. ColletionName
 
-* Description
+_Description_  
 
-* Attributes
 
-  * AttributeName
+_Attributes_  
 
-  * Type
+__3.1 [AttributeName]__  
 
-  * Synonyms
+  * Type: [value]  
 
-  * Usage:
+  * Synonyms: [value]  
+
+  * Usage: [requerido, opcional]  
 
     Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
@@ -492,74 +438,74 @@ Example
       ```
 
 
-  * Comments  
+  * Comments: [value]    
 
 
-  * AttributeName  
+__3.2 [AttributeName]__  
 
+  * Type: [value]  
 
-  * Type  
+  * Synonyms: [value]  
 
+  * Usage: [requerido, opcional]  
 
-  * Synonyms  
+    Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
-
-  * Usage:
-    
   * Example:
 
       ```xml
-      
+      Example
       ```
 
-  * Comments 
 
-    * AttributeName  
+  * Comments: [value]     
 
+ 
+ __3.3 [AttributeName]__  
 
-  * Type  
+  * Type: [value]  
 
+  * Synonyms: [value]  
 
-  * Synonyms  
+  * Usage: [requerido, opcional]  
 
+    Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
-  * Usage:
-    
   * Example:
 
       ```xml
-      
+      Example
       ```
 
-  * Comments 
+
+  * Comments: [value]    
 
 
-* Desing patterns
+_Desing patterns_  
 
-* Validation rules
+_Comments:_  
 
-* Comments
-
-* Example
-
+_Example:_  
 
 ```xml
 Example
 ```
+
 
 ### 4. ColletionName
 
-* Description
+_Description_  
 
-* Attributes
 
-  * AttributeName
+_Attributes_  
 
-  * Type
+__4.1 [AttributeName]__  
 
-  * Synonyms
+  * Type: [value]  
 
-  * Usage:
+  * Synonyms: [value]  
+
+  * Usage: [requerido, opcional]  
 
     Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
@@ -570,55 +516,74 @@ Example
       ```
 
 
-  * Comments  
+  * Comments: [value]    
 
 
-  * AttributeName  
+__4.2 [AttributeName]__  
 
+  * Type: [value]  
 
-  * Type  
+  * Synonyms: [value]  
 
+  * Usage: [requerido, opcional]  
 
-  * Synonyms  
+    Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
-
-  * Usage:
-    
   * Example:
 
       ```xml
-      
+      Example
       ```
 
-  * Comments 
+
+  * Comments: [value]     
+
+ 
+ __4.3 [AttributeName]__  
+
+  * Type: [value]  
+
+  * Synonyms: [value]  
+
+  * Usage: [requerido, opcional]  
+
+    Seleccionar uno de los siguientes valores: [Requerido, Opcional]
+
+  * Example:
+
+      ```xml
+      Example
+      ```
 
 
-* Desing patterns
+  * Comments: [value]    
 
-* Validation rules
 
-* Comments
+_Desing patterns_  
 
-* Example
+_Comments:_  
 
+_Example:_  
 
 ```xml
 Example
 ```
+
 
 ### 5. ColletionName
 
-* Description
+_Description_  
 
-* Attributes
 
-  * AttributeName
+_Attributes_  
 
-  * Type
+__5.1 [AttributeName]__  
 
-  * Synonyms
+  * Type: [value]  
 
-  * Usage:
+  * Synonyms: [value]  
+
+  * Usage: [requerido, opcional]  
 
     Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
@@ -629,41 +594,58 @@ Example
       ```
 
 
-  * Comments  
+  * Comments: [value]    
 
 
-  * AttributeName  
+__5.2 [AttributeName]__  
 
+  * Type: [value]  
 
-  * Type  
+  * Synonyms: [value]  
 
+  * Usage: [requerido, opcional]  
 
-  * Synonyms  
+    Seleccionar uno de los siguientes valores: [Requerido, Opcional]
 
-
-  * Usage:
-    
   * Example:
 
       ```xml
-      
+      Example
       ```
 
-  * Comments 
 
-* Desing patterns
+  * Comments: [value]     
 
-* Validation rules
+ 
+ __5.3 [AttributeName]__  
 
-* Comments
+  * Type: [value]  
 
-* Example
+  * Synonyms: [value]  
 
+  * Usage: [requerido, opcional]  
+
+    Seleccionar uno de los siguientes valores: [Requerido, Opcional]
+
+  * Example:
+
+      ```xml
+      Example
+      ```
+
+
+  * Comments: [value]    
+
+
+_Desing patterns_  
+
+_Comments:_  
+
+_Example:_  
 
 ```xml
 Example
 ```
-
 
 
 
