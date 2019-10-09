@@ -3,5 +3,6 @@
     "name": "D-ribose",
     "organism_id": "ECK12",
     "synonyms": ["ribose"],
-    "conformation_ids": ["ECK125269343"]
+    "conformation_ids": ["ECK125269343"],
+    "schemaVersion": 1.0
 }

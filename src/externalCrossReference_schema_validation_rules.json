@@ -1,0 +1,45 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+                "_id",
+                "name",
+                "schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string",
+					"description": ""
+                },
+                "name": {
+                    "bsonType": "string",
+					"description": ""
+                },
+                "description": {
+                    "bsonType": "string",
+					"description": ""
+                },
+                "url": {
+                    "bsonType": "string",
+					"description": ""
+                },
+                "note": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"internalComment": {
+					"bsonType": "string",
+					"description": ""
+                },
+				"schemaVersion": {
+					"bsonType": "double",
+					"description": ""
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

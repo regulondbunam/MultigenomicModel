@@ -5,7 +5,8 @@
 			"required": [
 				"_id",
 				"regulatoryInteraction_ids",
-				"organism_id"
+				"organism_id",
+                "schemaVersion"
 			],
 			"properties": {
 				"_id": {

@@ -8,7 +8,8 @@
 				"leftEndPosition",
 				"rightEndPosition",
 				"sequence",
-				"organism_id"
+				"organism_id",
+                "schemaVersion"
 			],
 			"properties": {
 				"_id": {

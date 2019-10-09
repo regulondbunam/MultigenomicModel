@@ -1,0 +1,13 @@
+{
+    "_id": "GID000000020",
+    "name": "Gene expression analysis",
+    "code": "GEA",
+    "typeObject": [
+        "Regulation",
+        "mRNA-Binding-Sites",
+        "DNA-Binding-Sites"
+    ],
+    "note": "The expression of the gene is analyzed through a transcriptional fusion (i.e. lacZ), and  a difference in expression levels is observed when the regulatory protein is present  (wild type) vs in its absence.  Note that this evidence does not eliminate the possiblity of an indirect effect of the regulator on the regulated gene.",
+    "organism_id": "ECK12",
+    "schemaVersion": 1.0
+}

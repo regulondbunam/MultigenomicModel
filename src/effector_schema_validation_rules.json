@@ -5,11 +5,12 @@
 			"required": [
                 "_id",
                 "name",
-				"organism_id"
+				"organism_id",
+                "schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "object_id",
+					"bsonType": "string",
 					"description": ""
                 },
                 "name": {

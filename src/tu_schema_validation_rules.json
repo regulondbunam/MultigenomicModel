@@ -5,7 +5,8 @@
 			"required": [
 				"_id",
                 "organism_id",
-				"gene_ids"
+				"gene_ids",
+                "schemaVersion"
 			],
 			"properties": {
 				"_id": {
