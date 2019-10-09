@@ -8,7 +8,7 @@
 				"product_ids",
 				"conformation_ids",
 				"organism_id",
-				"schema"
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {

@@ -1,0 +1,9 @@
+{
+    "_id": "GID000000039",
+    "name": "ECOCYC",
+    "description": "EcoCyc",
+    "url": "EcoCyc is a Pathway/Genome database for the bacterium E. coli K-12 strain MG1655",
+    "note": "The expression of the gene is analyzed through a transcriptional fusion (i.e. lacZ), and  a difference in expression levels is observed when the regulatory protein is present  (wild type) vs in its absence.  Note that this evidence does not eliminate the possiblity of an indirect effect of the regulator on the regulated gene.",
+    "internalComment": "http://biocyc.org/ECOLI/new-image?object=",
+    "schemaVersion": 1.0
+}

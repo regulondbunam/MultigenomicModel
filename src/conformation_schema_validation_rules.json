@@ -5,7 +5,8 @@
 			"required": [
 				"_id",
 				"finalState",
-				"organism_id"
+				"organism_id",
+                "schemaVersion"
 			],
 			"properties": {
 				"_id": {

@@ -1,0 +1,56 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+                "_id",
+                "schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string",
+					"description": ""
+                },
+                "referenceId": {
+                    "bsonType": "int",
+					"description": ""
+                },
+                "externalCrossReference_id": {
+                    "bsonType": "string",
+					"description": ""
+                },
+                "author": {
+                    "bsonType": "string",
+                    "description": ""
+                },
+                "title": {
+                    "bsonType": "string",
+                    "description": ""
+                },
+                "source": {
+                    "bsonType": "string",
+                    "description": ""
+                },
+                "year": {
+                    "bsonType": "int",
+                    "description": ""
+                },
+				"note": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"internalComment": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"schemaVersion": {
+					"bsonType": "double",
+					"description": ""
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}
