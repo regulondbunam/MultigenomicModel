@@ -1,0 +1,12 @@
+{
+    "_id": "ECK120026357",
+    "leftEndPosition": 2839350,
+    "rightEndPosition": 2839364,
+    "sequence": "aaaatattcaGGTGACCGGTTTCAcaaatataaa",
+    "length": 14,
+    "organism_id": "ECK12",
+    "regulatoryInteraction_ids": [
+        "ECK120051661"
+    ],
+    "schemaVersion": 1.0
+}

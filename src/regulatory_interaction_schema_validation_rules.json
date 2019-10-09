@@ -3,15 +3,14 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-				"regulondbId",
-				"organismId"
+				"_id",
+				"conformation_id",
+				"regulatedEntity",
+				"organism_id",
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "objectId",
-					"description": ""
-				},
-				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -28,6 +27,14 @@
 						"dual"
 					]
 				},
+				"type": {
+					"bsonType": "string",
+					"description": "",
+					"enum": [
+						"mechanistic",
+						"physiological"
+					]
+				},
 				"note": {
 					"bsonType": "string",
 					"description": ""
@@ -36,140 +43,106 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"organismId": {
+				"conformation_id": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"regulatedEntity": {
+					"bsonType": "object",
+					"oneOf": [
+						{
+							"required": ["gene_id"],
+							"not":{
+								"required": ["transcriptionUnit_id", "promoter_id", "srna_id"]
+							}
+						},
+						{
+							"required": ["transcriptionUnit_id"],
+							"not": {
+								"required": ["gene_id", "promoter_id", "srna_id"]
+							}
+						},
+						{
+							"required": ["promoter_id"],
+							"not": {
+								"required": ["gene_id", "transcriptionUnit_id", "srna_id"]
+							}
+						},
+						{
+							"required": ["srna_id"],
+							"not": {
+								"required": ["gene_id", "transcriptionUnit_id", "promoter_id"]
+							}
+						}
+					],
+					"properties": {
+						"gene_id": {
+							"bsonType": "string",
+							"description": ""
+						},
+						"transcriptionUnit_id":{
+							"bsonType": "string",
+							"description": ""
+						},
+						"promoter_id": {
+							"bsonType": "string",
+							"description": ""
+						},
+						"srna_id": {
+							"bsonType": "string",
+							"description": ""
+						}
+					},
+					"additionalProperties": false
+				},
+				"site_id": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"organism_id": {
 					"bsonType": "string",
 					"description": ""
 				},
 				"evidenceReferences": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "object",
 						"properties": {
-							"publicationId": {
+							"publication_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"sourceId": {
-								"bsonType": "int",
-								"description": ""
-							},
-							"externalDatabaseId": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"publicationUrl": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"evidenceId": {
+							"evidence_id": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
-				"externalDatabases": {
+				"externalCrossReferences": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"name",
-							"url",
-							"externaldbObjectId"
+							"externalCrossReference_id",
+							"objectId"
 						],
 						"properties": {
-							"name": {
+							"externalCrossReference_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"url": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"externaldbObjectId": {
+							"objectId": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
-					}
-				},
-				"conformation": {
-					"bsonType": "object",
-					"description": "",
-					"properties": {
-						"regulondbId": {
-							"bsonType": "string",
-							"description": ""
 						},
-						"name": {
-							"bsonType": "string",
-							"description": ""
-						}
-					}
-				},
-				"regulatedEntity": {
-					"bsonType": "object",
-					"description": "",
-					"properties": {
-						"regulondbId": {
-							"bsonType": "string",
-							"description": ""
-						},
-						"name": {
-							"bsonType": "string",
-							"description": ""
-						},
-						"type": {
-							"bsonType": "string",
-							"description": "",
-							"enum": [
-								"transcription unit",
-								"promoter"
-							]
-						}
-					}
-				},
-				"site": {
-					"bsonType": "object",
-					"properties": {
-						"regulondbId": {
-							"bsonType": "string",
-							"description": ""
-						},
-						"evidenceReferences": {
-							"bsonType": "array",
-							"description": "",
-							"uniqueItems": true,
-							"items": {
-								"bsonType": "object",
-								"properties": {
-									"publicationId": {
-										"bsonType": "string",
-										"description": ""
-									},
-									"sourceId": {
-										"bsonType": "int",
-										"description": ""
-									},
-									"externalDatabaseId": {
-										"bsonType": "string",
-										"description": ""
-									},
-									"publicationUrl": {
-										"bsonType": "string",
-										"description": ""
-									},
-									"evidenceId": {
-										"bsonType": "string",
-										"description": ""
-									}
-								}
-							}
-						}
+						"additionalProperties": false
 					}
 				},
 				"schemaVersion": {

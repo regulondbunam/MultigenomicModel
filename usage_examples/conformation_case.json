@@ -1,110 +1,11 @@
 {
-	"regulondbId": "ECK125269373",
+	"_id": "ECK125269373",
 	"finalState": "AscG",
-	"conformationType": "Active",
-	"organismId": "ECK12",
+	"type": "Active",
+	"organism_id": "ECK12",
 	"synonyms": ["Sac"],
-	"evidenceReferences": [{
-			"publicationId": "GID000004618",
-			"sourceId": 1630307,
-			"externalDatabaseId": "GID000000048",
-			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/1630307",
-			"evidenceId": "GID000000020"
-		},
-		{
-			"publicationId": "GID000004618",
-			"sourceId": 1630307,
-			"externalDatabaseId": "GID000000048",
-			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/1630307",
-			"evidenceId": "GID000000007"
-		},
-		{
-			"publicationId": "GID000031134",
-			"sourceId": 19633077,
-			"externalDatabaseId": "GID000000048",
-			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/",
-			"evidenceId": "GID000028666"
-		},
-		{
-			"publicationId": "GID000004618",
-			"sourceId": 1630307,
-			"externalDatabaseId": "GID000000048",
-			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/1630307"
-		}
-	],
-	"externalDatabases": [{
-			"name": "Prosite",
-			"url": "http://prosite.expasy.org/cgi-bin/prosite/nicedoc.pl?PS00356",
-			"externaldbObjectId": "PS00356"
-		},
-		{
-			"name": "Protein Ontology",
-			"url": "http://pir.georgetown.edu/cgi-bin/pro/entry_pro?id=PRO_000022163",
-			"externaldbObjectId": "PRO_000022163"
-		},
-		{
-			"name": "NCBI Reference Sequences Database",
-			"url": "http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?val=NP_417194",
-			"externaldbObjectId": "NP_417194"
-		},
-		{
-			"name": "MODBASE",
-			"url": "http://modbase.compbio.ucsf.edu/modbase-cgi/model_search.cgi?searchkw=name&kword=P24242",
-			"externaldbObjectId": "P24242"
-		},
-		{
-			"name": "Pfam",
-			"url": "http://pfam.xfam.org/family/PF00356",
-			"externaldbObjectId": "PF00356"
-		},
-		{
-			"name": "Protein Data Bank",
-			"url": "http://www.rcsb.org/pdb/cgi/explore.cgi?pdbId=3BRQ",
-			"externaldbObjectId": "3BRQ"
-		},
-		{
-			"name": "Pride",
-			"url": " http://www.ebi.ac.uk/pride/searchSummary.do?queryTypeSelected=identification%20accession%20number&identificationAccessionNumber=P24242",
-			"externaldbObjectId": "P24242"
-		},
-		{
-			"name": "InterPro",
-			"url": "http://www.ebi.ac.uk/interpro/entry/IPR010982",
-			"externaldbObjectId": "IPR010982"
-		},
-		{
-			"name": "Smart",
-			"url": "http://smart.embl.de/smart/do_annotation.pl?DOMAIN=SM00354",
-			"externaldbObjectId": "SM00354"
-		},
-		{
-			"name": "SWISS-MODEL",
-			"url": "http://swissmodel.expasy.org/repository/smr.php?sptr_ac=P24242",
-			"externaldbObjectId": "P24242"
-		},
-		{
-			"name": "UniProt",
-			"url": "https://www.uniprot.org/uniprot/P24242",
-			"externaldbObjectId": "P24242"
-		},
-		{
-			"name": "EcoliWiki",
-			"url": "http://ecoliwiki.net/colipedia/index.php/b2714",
-			"externaldbObjectId": "b2714"
-		},
-		{
-			"name": "Protein Model Portal",
-			"url": "http://www.proteinmodelportal.org/query/uniprot/P24242",
-			"externaldbObjectId": "P24242"
-		}
-	],
-	"transcriptionFactor": {
-		"regulondbId": "ECK120026318",
-		"name": "AscG"
-	},
-	"regulatoryInteractions": [{
-        "type": "promoter",
-        "regulondbIds": [
+	"transcriptionFactor_id": "ECK120026318",
+	"regulatoryInteraction_ids": [
             "ECK120051479", 
             "ECK120051473", 
             "ECK120051475",
@@ -114,7 +15,75 @@
             "ECK120051471",
             "ECK125145791",
             "ECK125145793"
-        ]}
     ],
+	"evidenceReferences": [{
+			"publication_id": "GID000004618",
+			"evidence_id": "GID000000020"
+		},
+		{
+			"publication_id": "GID000004618",
+			"evidence_id": "GID000000007"
+		},
+		{
+			"publication_id": "GID000031134",
+			"evidence_id": "GID000028666"
+		},
+		{
+			"publication_id": "GID000004618"
+		}
+	],
+	"externalCrossReferences": [{
+			"externalCrossReference_id": "Prosite",
+			"objectId": "PS00356"
+		},
+		{
+			"externalCrossReference_id": "Protein Ontology",
+			"objectId": "PRO_000022163"
+		},
+		{
+			"externalCrossReference_id": "NCBI Reference Sequences Database",
+			"objectId": "NP_417194"
+		},
+		{
+			"externalCrossReference_id": "MODBASE",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "Pfam",
+			"objectId": "PF00356"
+		},
+		{
+			"externalCrossReference_id": "Protein Data Bank",
+			"objectId": "3BRQ"
+		},
+		{
+			"externalCrossReference_id": "Pride",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "InterPro",
+			"objectId": "IPR010982"
+		},
+		{
+			"externalCrossReference_id": "Smart",
+			"objectId": "SM00354"
+		},
+		{
+			"externalCrossReference_id": "SWISS-MODEL",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "UniProt",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "EcoliWiki",
+			"objectId": "b2714"
+		},
+		{
+			"externalCrossReference_id": "Protein Model Portal",
+			"objectId": "P24242"
+		}
+	],
 	"schemaVersion": 1.0
 }

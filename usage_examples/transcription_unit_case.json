@@ -1,43 +1,19 @@
 {
-    "regulondbId": "ECK120051389",
+    "_id": "ECK120051389",
     "name": "ycgZ-ymgA-ariR-ymgC",
-    "promoter": {
-        "regulondbId": "ECK125109145",
-        "name": "ycgZp"
-    },
-    "genes": [
-        {
-            "regulondbId": "ECK120003199",
-            "name": "ycgZ"
-        },
-        {
-            "regulondbId": "ECK120003200",
-            "name": "ymgA"
-        },
-        {
-            "regulondbId": "ECK120003201",
-            "name": "ariR"
-        },
-        {
-            "regulondbId": "ECK120003202",
-            "name": "ymgC"
-        }
-    ],
+    "promoter_id": "ECK125109145",
+    "gene_ids": [ "ECK120003199", "ECK120003200", "ECK120003201", "ECK120003202" ],
     "note": "<i>ycgZ-ymgA-ariR-ymgC</i> constitutes an operon. YmgA and AriR activate production of the biofilm matrix substance colanic acid as well as acid resistance genes and the biofilm-associated <i>bdm</i> gene and they downregulate adhesive curli fimbriae |CITS:[17222132][17609140][17765265][19172264]|. YcgZ appears to counteract the activities of YmgA and YmgB |CITS:[19240136]|.<br>Expression of this operon is under the control of &sigma;<sup>38</sup> (rpoS) RNA polymerase and  repressed by <i>ycgE</i>, which is transcribed divergently on the opposite strand |CITS:[19240136][ 15716429]|.<br>",
-    "organismId": "ECK12",
+    "organism_id": "ECK12",
     "evidenceReferences": [
         {
-            "publicationId": "GID000030094",
-            "sourceId": 19240136,
-            "externalDatabaseId": "GID000000048",
-            "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/19240136",
-            "evidenceId": "GID000000024"
+            "publication_id": "GID000030094",
+            "externalCrossReference_id": "GID000000048",
+            "evidence_id": "GID000000024"
         },
         {
-            "publicationId": "GID000030094",
-            "sourceId": 19240136,
-            "externalDatabaseId": "GID000000048",
-            "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/19240136"
+            "publication_id": "GID000030094",
+            "externalCrossReference_id": "GID000000048"
         }
     ],
     "schemaVersion": 1.0

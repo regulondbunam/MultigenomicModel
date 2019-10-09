@@ -3,18 +3,15 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-				"regulondbId",
+				"_id",
 				"name",
-				"products",
-				"conformations",
-				"organismId"
+				"product_ids",
+				"conformation_ids",
+				"organism_id",
+				"schema"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "objectId",
-					"description": ""
-				},
-				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -32,14 +29,15 @@
 				"consensusSequence": {
 					"bsonType": "array",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "string"
-					},
-					"description": ""
+					}
 				},
 				"symmetry": {
 					"bsonType": "array",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "string",
 						"enum": [
@@ -48,8 +46,7 @@
 							"direct-repeat",
 							null
 						]
-					},
-					"description": ""
+					}
 				},
 				"note": {
 					"bsonType": "string",
@@ -59,74 +56,9 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"organismId": {
+				"organism_id": {
 					"bsonType": "string",
 					"description": ""
-				},
-				"synonyms": {
-					"bsonType": "array",
-					"uniqueItems": true,
-					"items": {
-						"bsonType": "string"
-					},
-					"description": ""
-				},
-				"evidenceReferences": {
-					"bsonType": "array",
-					"description": "",
-					"uniqueItems": true,
-					"items": {
-						"bsonType": "object",
-						"properties": {
-							"publicationId": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"sourceId": {
-								"bsonType": "int",
-								"description": ""
-							},
-							"externalDatabaseId": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"publicationUrl": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"evidenceId": {
-								"bsonType": "string",
-								"description": ""
-							}
-						}
-					}
-				},
-				"externalDatabases": {
-					"bsonType": "array",
-					"description": "",
-					"uniqueItems": true,
-					"items": {
-						"bsonType": "object",
-						"required": [
-							"name",
-							"url",
-							"externaldbObjectId"
-						],
-						"properties": {
-							"name": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"url": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"externaldbObjectId": {
-								"bsonType": "string",
-								"description": ""
-							}
-						}
-					}
 				},
 				"products": {
 					"bsonType": "array",
@@ -134,38 +66,76 @@
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
-						"properties": {
-							"regulondbId": {
+						"required": ["product_id"],
+						"properties":{
+							"product_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"name": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"coefficient": {
+							"componentCoefficient": {
 								"bsonType": "int",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
-				"conformations": {
+				"conformation_ids": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,
 					"items": {
+						"bsonType": "string"
+					}
+				},
+				"synonyms": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"description": "",
+					"items": {
+						"bsonType": "string"
+					}
+				},
+				"evidenceReferences": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"description": "",
+					"items": {
 						"bsonType": "object",
 						"properties": {
-							"regulondbId": {
+							"publication_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"name": {
+							"evidence_id": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
+					}
+				},
+				"externalCrossReferences": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"description": "",
+					"items": {
+						"bsonType": "object",
+						"required": [
+							"externalCrossReference_id",
+							"objectId"
+						],
+						"properties": {
+							"externalCrossReference_id": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"objectId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						},
+						"additionalProperties": false
 					}
 				},
 				"schemaVersion": {

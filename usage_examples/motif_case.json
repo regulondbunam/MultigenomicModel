@@ -1,12 +1,12 @@
 {
-    "regulondbId": "ECK125224774",
-    "productRegulonDBId": "ECK120004526",
-    "leftPosition": 197,
-    "rightPosition": 216,
-    "sequence": "IASVAQHVCLSPSRLSHLFR",
-    "note": "UniProt: H-T-H motif.",
-    "internalComment": "test",
-    "organismId": "ECK12",
-    "dataSource": "UniProt 2015-08",
-    "schemaVersion": 1.0
+	"_id": "ECK125224774",
+	"product": "ECK120004526",
+	"leftEndPosition": 197,
+	"rightEndPosition": 216,
+	"sequence": "IASVAQHVCLSPSRLSHLFR",
+	"note": "UniProt: H-T-H motif.",
+	"internalComment": "test",
+	"organism_id": "ECK12",
+	"dataSource": "UniProt 2015-08",
+	"schemaVersion": 1.0
 }

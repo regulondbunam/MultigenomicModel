@@ -1,28 +1,30 @@
 {
-	"validator": { 
-		"$jsonSchema": { 
+	"validator": {
+		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-				"regulondbId",
+				"_id",
 				"gcContent",
-				"organismId",
+				"organism_id",
 				"type",
 				"centisomePosition",
 				"schemaVersion"
 			],
 			"oneOf": [{
-					"required": [ "leftPosition", "rightPosition", "sequence", "strand"]
+					"required": ["leftEndPosition", "rightEndPosition", "sequence", "strand"],
+					"not": {
+						"required": ["fragments"]
+					}
 				},
 				{
-					"required": [ "fragments" ]
+					"required": ["fragments"],
+					"not": {
+						"required": ["leftEndPosition", "rightEndPosition"]
+					}
 				}
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "objectId",
-					"description": ""
-				},
-				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -30,10 +32,10 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"leftPosition": {
+				"leftEndPosition": {
 					"bsonType": "int"
 				},
-				"rightPosition": {
+				"rightEndPosition": {
 					"bsonType": "int"
 				},
 				"fragments": {
@@ -42,8 +44,8 @@
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"leftPosition",
-							"rightPosition",
+							"leftEndPosition",
+							"rightEndPosition",
 							"strand"
 						],
 						"properties": {
@@ -52,11 +54,11 @@
 								"enum": ["reverse", "forward"],
 								"description": ""
 							},
-							"leftPosition": {
+							"leftEndPosition": {
 								"bsonType": "int",
 								"description": ""
 							},
-							"rightPosition": {
+							"rightEndPosition": {
 								"bsonType": "int",
 								"description": ""
 							},
@@ -71,10 +73,10 @@
 							"synonyms": {
 								"bsonType": "array",
 								"uniqueItems": true,
+								"description": "",
 								"items": {
 									"bsonType": "string"
-								},
-								"description": ""
+								}
 							},
 							"centisomePosition": {
 								"bsonType": "double",
@@ -87,27 +89,20 @@
 								"items": {
 									"bsonType": "object",
 									"properties": {
-										"publicationId": {
+										"publication_id": {
 											"bsonType": "string",
 											"description": ""
 										},
-										"sourceId": {
-											"bsonType": "int",
-											"description": ""
-										},
-										"externalDatabaseId": {
+										"externalCrossReference_id": {
 											"bsonType": "string",
 											"description": ""
 										},
-										"publicationUrl": {
-											"bsonType": "string",
-											"description": ""
-										},
-										"evidenceId": {
+										"evidence_id": {
 											"bsonType": "string",
 											"description": ""
 										}
-									}
+									},
+									"additionalProperties": false
 								}
 							}
 						}
@@ -135,7 +130,7 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"organismId": {
+				"organism_id": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -168,88 +163,63 @@
 				"synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "string"
-					},
-					"description": ""
+					}
 				},
 				"evidenceReferences": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "object",
 						"properties": {
-							"publicationId": {
+							"publication_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"sourceId": {
-								"bsonType": "int",
-								"description": ""
-							},
-							"externalDatabaseId": {
+							"externalCrossReference_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"publicationUrl": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"evidenceId": {
+							"evidence_id": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
-				"externalDatabases": {
+				"externalCrossReferences": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"name",
-							"url",
-							"externaldbObjectId"
+							"externalCrossReference_id",
+							"objectId"
 						],
 						"properties": {
-							"name": {
+							"externalCrossReference_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"url": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"externaldbObjectId": {
+							"objectId": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
-				"products": {
+				"product_ids": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
-						"bsonType": "object",
-						"required": [
-							"regulondbId",
-							"name"
-						],
-						"properties": {
-							"regulondbId": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"name": {
-								"bsonType": "string",
-								"description": ""
-							}
-						}
+						"bsonType": "string"
 					}
 				},
 				"schemaVersion": {
