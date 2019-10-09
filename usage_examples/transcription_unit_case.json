@@ -8,12 +8,10 @@
     "evidenceReferences": [
         {
             "publication_id": "GID000030094",
-            "externalCrossReference_id": "GID000000048",
             "evidence_id": "GID000000024"
         },
         {
-            "publication_id": "GID000030094",
-            "externalCrossReference_id": "GID000000048"
+            "publication_id": "GID000030094"
         }
     ],
     "schemaVersion": 1.0

@@ -15,17 +15,14 @@
     "organism_id": "ECK12",
     "evidenceReferences": [
         {
-            "publication_id": "GID000027564",
-            "externalCrossReference_id": "GID000000048",
+            "publication_id": "GID000027564"
         },
         {
             "publication_id": "GID000027564",
-            "externalCrossReference_id": "GID000000048",
             "evidence_id": "GID000000006"
         },
         {
             "publication_id": "GID000041933",
-            "externalCrossReference_id": "GID000000048",
             "evidence_id": "GID000000023"
         }
     ],
@@ -45,17 +42,14 @@
                 "evidenceReferences": [
                     {
                         "publication_id": "GID000041933",
-                        "externalCrossReference_id": "GID000000048",
                         "evidence_id": "GID000000012"
                     },
                     {
                         "publication_id": "GID000030094",
-                        "externalCrossReference_id": "GID000000048",
                         "evidence_id": "GID000000036"
                     },
                     {
                         "publication_id": "GID000027564",
-                        "externalCrossReference_id": "GID000000048",
                         "evidence_id": "GID000000012"
                     }
                 ]
@@ -63,7 +57,6 @@
             "evidenceReferences": [
                 {
                     "publication_id": "GID000018240",
-                    "externalCrossReference_id": "GID000000048",
                     "evidence_id": "GID000000013"
                 }
             ]
