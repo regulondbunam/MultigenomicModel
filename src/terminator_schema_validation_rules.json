@@ -8,7 +8,7 @@
 				"sequence",
 				"class",
 				"transcriptionUnit_id",
-                "schemaVersion"
+        "schemaVersion"
 			],
 			"properties": {
 				"_id": {

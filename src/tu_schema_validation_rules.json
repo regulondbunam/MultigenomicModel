@@ -1,12 +1,12 @@
 {
-	"validator": { 
-		"$jsonSchema": { 
+	"validator": {
+		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
 				"_id",
-                "organism_id",
+				"organism_id",
 				"gene_ids",
-                "schemaVersion"
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
@@ -16,23 +16,23 @@
 				"name": {
 					"bsonType": "string",
 					"description": ""
-                },
-                "promoter_id": {
-                    "bsonType": "string",
+				},
+				"promoter_id": {
+					"bsonType": "string",
 					"description": ""
-                },
-				"terminator_id":{
+				},
+				"terminator_id": {
 					"bsonType": "string",
 					"description": ""
 				},
 				"gene_ids": {
-                    "bsonType": "array",
-                    "uniqueItems": true,
-                    "items": {
-                        "bsonType": "string"
-                    }
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					}
 				},
-                "note": {
+				"note": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -43,8 +43,8 @@
 				"organism_id": {
 					"bsonType": "string",
 					"description": ""
-                },
-                "synonyms": {
+				},
+				"synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
 					"description": "",

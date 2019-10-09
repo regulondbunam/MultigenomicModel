@@ -6,7 +6,7 @@
 				"_id",
 				"organism_id",
 				"gene_id",
-                "schemaVersion"
+        "schemaVersion"
 			],
 			"properties": {
 				"_id": {

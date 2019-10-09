@@ -6,7 +6,7 @@
 				"_id",
 				"regulatoryInteraction_ids",
 				"organism_id",
-                "schemaVersion"
+        "schemaVersion"
 			],
 			"properties": {
 				"_id": {

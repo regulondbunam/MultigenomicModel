@@ -5,18 +5,18 @@
 			"required": [
                 "_id",
                 "name",
-				"organism_id",
+				        "organism_id",
                 "schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
-					"description": ""
-                },
-                "name": {
-                    "bsonType": "string",
-                    "description": ""
-                },
+            "bsonType": "string",
+            "description": ""
+        },
+        "name": {
+            "bsonType": "string",
+            "description": ""
+        },
 				"note": {
 					"bsonType": "string",
 					"description": ""
