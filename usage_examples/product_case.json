@@ -14,12 +14,10 @@
 		"AraC"
 	],
 	"evidenceReferences": [{
-			"publication_id": "GID000005302",
-			"externalCrossReference_id": "GID000000048"
+			"publication_id": "GID000005302"
 		},
 		{
-			"publication_id": "GID000023518",
-			"externalCrossReference_id": "GID000000048"
+			"publication_id": "GID000023518"
 		}
 	],
 	"externalCrossReferences": [{

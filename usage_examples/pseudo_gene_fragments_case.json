@@ -29,12 +29,10 @@
 		"ECK0544"
 	],
 	"evidenceReferences": [{
-			"publication_id": "GID000022632",
-			"externalCrossReference_id": "GID000000048"
+			"publication_id": "GID000022632"
 		},
 		{
-			"publication_id": "GID000019177",
-			"externalCrossReference_id": "GID000000048"
+			"publication_id": "GID000019177"
 		}
 	],
 	"externalCrossReferences": [{

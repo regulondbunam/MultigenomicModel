@@ -13,8 +13,7 @@
     "organism_id": "ECK12",
     "evidenceReferences": [
         {
-            "publication_id": "GID000023515",
-            "externalCrossReference_id": "GID000000048"
+            "publication_id": "GID000023515"
         }
     ],
     "schemaVersion": 1.0

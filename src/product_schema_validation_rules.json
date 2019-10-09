@@ -99,10 +99,6 @@
 								"bsonType": "string",
 								"description": ""
 							},
-							"externalCrossReference_id": {
-								"bsonType": "string",
-								"description": ""
-							},
 							"evidence_id": {
 								"bsonType": "string",
 								"description": ""

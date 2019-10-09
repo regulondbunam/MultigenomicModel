@@ -93,10 +93,6 @@
 											"bsonType": "string",
 											"description": ""
 										},
-										"externalCrossReference_id": {
-											"bsonType": "string",
-											"description": ""
-										},
 										"evidence_id": {
 											"bsonType": "string",
 											"description": ""
@@ -176,10 +172,6 @@
 						"bsonType": "object",
 						"properties": {
 							"publication_id": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"externalCrossReference_id": {
 								"bsonType": "string",
 								"description": ""
 							},
