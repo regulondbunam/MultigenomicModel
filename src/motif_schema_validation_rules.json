@@ -3,41 +3,27 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-				"regulondbId",
-				"productRegulondbId",
-				"leftPosition",
-				"rightPosition",
+				"_id",
+				"product_id",
+				"leftEndPosition",
+				"rightEndPosition",
 				"sequence",
-				"organismId"
+				"organism_id"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "objectId",
-					"description": ""
-				},
-				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"product": {
-					"bsonType": "object",
-					"description": "",
-					"properties": {
-						"regulondbId": {
-							"bsonType": "string",
-							"description": ""
-						},
-						"name": {
-							"bsonType": "string",
-							"description": ""
-						}
-					}
+				"product_id": {
+					"bsonType": "string",
+					"description": ""
 				},
-				"leftPosition": {
+				"leftEndPosition": {
 					"bsonType": "int",
 					"description": ""
 				},
-				"rightPosition": {
+				"rightEndPosition": {
 					"bsonType": "int",
 					"description": ""
 				},
@@ -57,7 +43,7 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"organismId": {
+				"organism_id": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -84,36 +70,32 @@
 				"synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "string"
-					},
-					"description": ""
+					}
 				},
-				"externalDatabases": {
+				"externalCrossReferences": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"name",
-							"url",
-							"externaldbObjectId"
+							"externalCrossReference_id",
+							"objectId"
 						],
 						"properties": {
-							"databaseName": {
+							"externalCrossReference_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"databaseUrl": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"externaldbObjectId": {
+							"objectId": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
 				"schemaVersion": {
@@ -122,8 +104,8 @@
 				}
 			},
 			"additionalProperties": false
-		},
-		"validationLevel": "strict",
-		"validationAction": "error"
-	}
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
 }

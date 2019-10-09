@@ -1,12 +1,12 @@
 {
-	"regulondbId": "ECK120002581",
+	"_id": "ECK120002581",
 	"name": "sraF",
-	"leftPosition": 3238374,
-	"rightPosition": 3238561,
+	"leftEndPosition": 3238374,
+	"rightEndPosition": 3238561,
 	"strand": "forward",
 	"sequence": "GCAAAGGGGAGTAACTTCATTGCCGGTCGATCGTCATTACGATGTGTGAAAAAACACATCCGGTCACCGGGCAACCCGAAAGGAATACGCAGACGTATTCCTTTTTTGTTGTAAGTGAGACCTTGCCGGAAGGCGAGGTCTATGCATAAAAAGCAGCGGCTGACGTCTTCCGACGTTGGCCGTTTTTT",
 	"gcContent": 49.47,
-	"organismId": "ECK12",
+	"organism_id": "ECK12",
 	"type": "phantom",
 	"centisomePosition": 69.754776,
 	"synonyms": [
@@ -18,30 +18,24 @@
 		"ECK3078"
 	],
 	"evidenceReferences": [{
-		"publicationId": "GID000002550",
-		"sourceId": 11448770,
-		"externalDatabaseId": "GID000000048",
-		"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/11448770"
+		"publication_id": "GID000002550",
+		"externalCrossReference_id": "GID000000048"
 	}],
-	"externalDatabases": [{
-			"name": "PortEco",
-			"url": "http://porteco.org/AjaxSearch.jsp?searchString=psrN",
-			"externaldbObjectId": "psrN"
+	"externalCrossReferences": [{
+			"externalCrossReference_id": "PortEco",
+			"objectId": "psrN"
 		},
 		{
-			"name": "ASAP",
-			"url": "http://asap.ahabs.wisc.edu/asap/feature_info.php?FeatureID=ABE-0047268",
-			"externaldbObjectId": "ABE-0047268"
+			"externalCrossReference_id": "ASAP",
+			"objectId": "ABE-0047268"
 		},
 		{
-			"name": "EchoBASE",
-			"url": "http://www.york.ac.uk/res/thomas/Gene.cfm?recordID=EB4535",
-			"externaldbObjectId": "EB4535"
+			"externalCrossReference_id": "EchoBASE",
+			"objectId": "EB4535"
 		},
 		{
-			"name": "RegulonDB",
-			"url": "http://regulondb.ccg.unam.mx/search?term=b4448&organism=ECK12&type=All",
-			"externaldbObjectId": "b4448"
+			"externalCrossReference_id": "RegulonDB",
+			"objectId": "b4448"
 		}
 	],
 	"schemaVersion": 1.0

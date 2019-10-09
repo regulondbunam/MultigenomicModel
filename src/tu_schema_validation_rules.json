@@ -1,69 +1,37 @@
 {
-	"validator": {
-		"$jsonSchema": {
+	"validator": { 
+		"$jsonSchema": { 
 			"bsonType": "object",
 			"required": [
-				"regulondbId",
-				"organismId",
-				"genes"
+				"_id",
+                "organism_id",
+				"gene_ids"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "objectId",
-					"description": ""
-				},
-				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
 				"name": {
 					"bsonType": "string",
 					"description": ""
+                },
+                "promoter_id": {
+                    "bsonType": "string",
+					"description": ""
+                },
+				"terminator_id":{
+					"bsonType": "string",
+					"description": ""
 				},
-				"promoter": {
-					"bsonType": "object",
-					"properties": {
-						"regulondbId": {
-							"bsonType": "string",
-							"description": ""
-						},
-						"name": {
-							"bsonType": "string",
-							"description": ""
-						}
-					}
+				"gene_ids": {
+                    "bsonType": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "bsonType": "string"
+                    }
 				},
-				"genes": {
-					"bsonType": "array",
-					"uniqueItems": true,
-					"items": {
-						"bsonType": "object",
-						"properties": {
-							"regulondbId": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"name": {
-								"bsonType": "string",
-								"description": ""
-							}
-						}
-					}
-				},
-				"terminators": {
-					"bsonType": "array",
-					"uniqueItems": true,
-					"items": {
-						"bsonType": "object",
-						"properties": {
-							"regulondbId": {
-								"bsonType": "string",
-								"description": ""
-							}
-						}
-					}
-				},
-				"note": {
+                "note": {
 					"bsonType": "string",
 					"description": ""
 				},
@@ -71,17 +39,17 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"organismId": {
+				"organism_id": {
 					"bsonType": "string",
 					"description": ""
-				},
-				"synonyms": {
+                },
+                "synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "string"
-					},
-					"description": ""
+					}
 				},
 				"evidenceReferences": {
 					"bsonType": "array",
@@ -90,54 +58,43 @@
 					"items": {
 						"bsonType": "object",
 						"properties": {
-							"publicationId": {
+							"publication_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"sourceId": {
-								"bsonType": "int",
-								"description": ""
-							},
-							"externalDatabaseId": {
+							"externalCrossReference_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"publicationUrl": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"evidenceId": {
+							"evidence_id": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
-				"externalDatabases": {
+				"externalCrossReferences": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"name",
-							"url",
-							"externaldbObjectId"
+							"externalCrossReference_id",
+							"objectId"
 						],
 						"properties": {
-							"name": {
+							"externalCrossReference_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"url": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"externaldbObjectId": {
+							"objectId": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
 				"schemaVersion": {

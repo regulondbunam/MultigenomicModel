@@ -1,12 +1,12 @@
 {
-	"regulondbId": "ECK120000050",
+	"_id": "ECK120000050",
 	"name": "araC",
-	"leftPosition": 70387,
-	"rightPosition": 71265,
+	"leftEndPosition": 70387,
+	"rightEndPosition": 71265,
 	"sequence": "ATGGCTGAAGCGCAAAATGATCCCCTGCTGCCGGGATACTCGTTTAACGCCCATCTGGTGGCGGGTTTAACGCCGATTGAGGCCAACGGTTATCTCGATTTTTTTATCGACCGACCGCTGGGAATGAAAGGTTATATTCTCAATCTCACCATTCGCGGTCAGGGGGTGGTGAAAAATCAGGGACGAGAATTTGTCTGCCGACCGGGTGATATTTTGCTGTTCCCGCCAGGAGAGATTCATCACTACGGTCGTCATCCGGAGGCTCGCGAATGGTATCACCAGTGGGTTTACTTTCGTCCGCGCGCCTACTGGCATGAATGGCTTAACTGGCCGTCAATATTTGCCAATACGGGTTTCTTTCGCCCGGATGAAGCGCACCAGCCGCATTTCAGCGACCTGTTTGGGCAAATCATTAACGCCGGGCAAGGGGAAGGGCGCTATTCGGAGCTGCTGGCGATAAATCTGCTTGAGCAATTGTTACTGCGGCGCATGGAAGCGATTAACGAGTCGCTCCATCCACCGATGGATAATCGGGTACGCGAGGCTTGTCAGTACATCAGCGATCACCTGGCAGACAGCAATTTTGATATCGCCAGCGTCGCACAGCATGTTTGCTTGTCGCCGTCGCGTCTGTCACATCTTTTCCGCCAGCAGTTAGGGATTAGCGTCTTAAGCTGGCGCGAGGACCAACGCATTAGTCAGGCGAAGCTGCTTTTGAGCACTACCCGGATGCCTATCGCCACCGTCGGTCGCAATGTTGGTTTTGACGATCAACTCTATTTCTCGCGAGTATTTAAAAAATGCACCGGGGCCAGCCCGAGCGAGTTTCGTGCCGGTTGTGAAGAAAAAGTGAATGATGTAGCCGTCAAGTTGTCATAA",
 	"strand": "forward",
 	"gcContent": 52.56,
-	"organismId": "ECK12",
+	"organism_id": "ECK12",
 	"type": "gene",
 	"centisomePosition": 1.5164213,
 	"interrupted": false,
@@ -21,45 +21,35 @@
 		"ECK0065",
 		"EG10054"
 	],
-	"externalDatabases": [{
-			"name": "String",
-			"url": "http://string-db.org/newstring_cgi/show_network_section.pl?identifier=511145.b3075",
-			"externaldbObjectId": "511145.b3075"
+	"externalCrossReferences": [{
+			"externalCrossReference_id": "String",
+			"objectId": "511145.b3075"
 		},
 		{
-			"name": "ASAP",
-			"url": "http://asap.ahabs.wisc.edu/asap/feature_info.php?FeatureID=ABE-0010099",
-			"externaldbObjectId": "ABE-0010099"
+			"externalCrossReference_id": "ASAP",
+			"objectId": "ABE-0010099"
 		},
 		{
-			"name": "OU-Microarray",
-			"url": "https://genexpdb.okstate.edu/databases/genexpdb/?query=b3075",
-			"externaldbObjectId": "b3075"
+			"externalCrossReference_id": "OU-Microarray",
+			"objectId": "b3075"
 		},
 		{
-			"name": "Coli Genetic Stock Center",
-			"url": "http://cgsc.biology.yale.edu/Site.php?ID=829",
-			"externaldbObjectId": "829"
+			"externalCrossReference_id": "Coli Genetic Stock Center",
+			"objectId": "829"
 		},
 		{
-			"name": "PortEco",
-			"url": "http://porteco.org/AjaxSearch.jsp?searchString=ebgR",
-			"externaldbObjectId": "ebgR"
+			"externalCrossReference_id": "PortEco",
+			"objectId": "ebgR"
 		},
 		{
-			"name": "EchoBASE",
-			"url": "http://www.york.ac.uk/res/thomas/Gene.cfm?recordID=EB0250",
-			"externaldbObjectId": "EB0250"
+			"externalCrossReference_id": "EchoBASE",
+			"objectId": "EB0250"
 		},
 		{
-			"name": "RegulonDB",
-			"url": "http://regulondb.ccg.unam.mx/search?term=b3075&organism=ECK12&type=All",
-			"externaldbObjectId": "b3075"
+			"externalCrossReference_id": "RegulonDB",
+			"objectId": "b3075"
 		}
 	],
-	"products": [{
-		"regulondbId": "ECK120004526",
-		"name": "DNA-binding transcriptional dual regulator AraC"
-	}],
+	"product_ids": ["ECK120004526"],
 	"schemaVersion": 1.0
 }

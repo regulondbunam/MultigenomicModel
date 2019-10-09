@@ -1,17 +1,17 @@
 {
-	"regulondbId": "ECK120000652",
+	"_id": "ECK120000652",
 	"name": "nmpC",
 	"fragments": [{
-			"leftPosition": 575786,
-			"rightPosition": 576825,
+			"leftEndPosition": 575786,
+			"rightEndPosition": 576825,
 			"strand": "reverse",
 			"name": "nmpC_1",
 			"centisomePosition": 12.404764,
 			"sequence": "ATGAAAAAATTAACAGTGGCAATTTCTGCTGTAGCTGCATCAGTACTAATGGCGATGTCTGCTCAGGCAGCTGAAATTTATAATAAAGACAGTAACAAGCTGGATCTGTACGGGAAAGTTAATGCTAAGCACTACTTCTCCTCTAATGATGCAGATGATGGTGATACTACTTATGCCCGTCTTGGCTTCAAAGGTGAAACCCAAATCAACGATCAACTGACTGGTTTCGGTCAGTGGGAATATGAATTCAAAGGCAACCGCGCTGAATCTCAAGGTTCCTCCAAAGATAAAACCCGTCTTGCCTTCGCTGGCCTGAAATTCGGTGACTACGGCTCCATCGATTACGGCCGTAACTACGGTGTAGCATACGACATCGGTGCGTGGACTGACGTCCTGCCAGAATTCGGTGGTGACACTTGGACTCAAACCGACGTGTTCATGACTCAACGTGCAACTGGTGTTGCAACCTATCGTAACAACGACTTCTTTGGTCTGGTTGATGGTCTGAACTTTGCTGCTCAGTACCAAGGCAAAAACGATCGTAGCGATTTCGATAACTACACTGAAGGTAACGGTGATGGCTTCGGTTTCTCTGCTACCTATGAATACGAAGGATTCGGTATCGGTGCAACTTATGCGAAATCTGATCGTACCGACACTCAAGTTAATGCAGGGAAAGTTCTTCCTGAAGTATTTGCTTCCGGTAAAAATGCAGAAGTTTGGGCCGCAGGTCTGAAATATGACGCTAACAACATTTACCTGGCCACTACCTATTCTGAAACCCAGAATATGACTGTATTTGCTGATCACTTCGTTGCTAATAAAGCCCAAAACTTCGAAGCTGTTGCACAATATCAGTTCGATTTCGGTCTGCGTCCGTCCGTTGCTTACCTGCAATCTAAAGGTAAGGATCTTGGAGTATGGGGCGATCAGGACTTAGTCAAATATGTTGATGTAGGTGCAACCTATTACTTCAACAAAAATATGTCTACTTTCGTTGATTACAAAATCAACCTGCTTGACAAAAATGACTTCACTAA"
 		},
 		{
-			"leftPosition": 574529,
-			"rightPosition": 574586,
+			"leftEndPosition": 574529,
+			"rightEndPosition": 574586,
 			"strand": "reverse",
 			"name": "nmpC_2",
 			"centisomePosition": 12.377684,
@@ -20,7 +20,7 @@
 	],
 	"sequence": "ATGAAAAAATTAACAGTGGCAATTTCTGCTGTAGCTGCATCAGTACTAATGGCGATGTCTGCTCAGGCAGCTGAAATTTATAATAAAGACAGTAACAAGCTGGATCTGTACGGGAAAGTTAATGCTAAGCACTACTTCTCCTCTAATGATGCAGATGATGGTGATACTACTTATGCCCGTCTTGGCTTCAAAGGTGAAACCCAAATCAACGATCAACTGACTGGTTTCGGTCAGTGGGAATATGAATTCAAAGGCAACCGCGCTGAATCTCAAGGTTCCTCCAAAGATAAAACCCGTCTTGCCTTCGCTGGCCTGAAATTCGGTGACTACGGCTCCATCGATTACGGCCGTAACTACGGTGTAGCATACGACATCGGTGCGTGGACTGACGTCCTGCCAGAATTCGGTGGTGACACTTGGACTCAAACCGACGTGTTCATGACTCAACGTGCAACTGGTGTTGCAACCTATCGTAACAACGACTTCTTTGGTCTGGTTGATGGTCTGAACTTTGCTGCTCAGTACCAAGGCAAAAACGATCGTAGCGATTTCGATAACTACACTGAAGGTAACGGTGATGGCTTCGGTTTCTCTGCTACCTATGAATACGAAGGATTCGGTATCGGTGCAACTTATGCGAAATCTGATCGTACCGACACTCAAGTTAATGCAGGGAAAGTTCTTCCTGAAGTATTTGCTTCCGGTAAAAATGCAGAAGTTTGGGCCGCAGGTCTGAAATATGACGCTAACAACATTTACCTGGCCACTACCTATTCTGAAACCCAGAATATGACTGTATTTGCTGATCACTTCGTTGCTAATAAAGCCCAAAACTTCGAAGCTGTTGCACAATATCAGTTCGATTTCGGTCTGCGTCCGTCCGTTGCTTACCTGCAATCTAAAGGTAAGGATCTTGGAGTATGGGGCGATCAGGACTTAGTCAAATATGTTGATGTAGGTGCAACCTATTACTTCAACAAAAATATGTCTACTTTCGTTGATTACAAAATCAACCTGCTTGACAAAAATGACTTCACTAAAGCACTCGGTGTAAGCACTGATGACATCGTTGCTGTAGGTCTGGTTTACCAGTTCTAA",
 	"gcContent": 44.17,
-	"organismId": "ECK12",
+	"organism_id": "ECK12",
 	"type": "pseudo",
 	"centisomePosition": 12.4041605,
 	"synonyms": [
@@ -29,62 +29,47 @@
 		"ECK0544"
 	],
 	"evidenceReferences": [{
-			"publicationId": "GID000022632",
-			"sourceId": 3017988,
-			"externalDatabaseId": "GID000000048",
-			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/3017988"
+			"publication_id": "GID000022632",
+			"externalCrossReference_id": "GID000000048"
 		},
 		{
-			"publicationId": "GID000019177",
-			"sourceId": 8057841,
-			"externalDatabaseId": "GID000000048",
-			"publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/8057841"
+			"publication_id": "GID000019177",
+			"externalCrossReference_id": "GID000000048"
 		}
 	],
-	"externalDatabases": [{
-			"name": "ASAP",
-			"url": "http://asap.ahabs.wisc.edu/asap/feature_info.php?FeatureID=ABE-0001888",
-			"externaldbObjectId": "ABE-0001888"
+	"externalCrossReferences": [{
+			"externalCrossReference_id": "ASAP",
+			"objectId": "ABE-0001888"
 		},
 		{
-			"name": "OU-Microarray",
-			"url": "https://genexpdb.okstate.edu/databases/genexpdb/?query=b0553",
-			"externaldbObjectId": "b0553"
+			"externalCrossReference_id": "OU-Microarray",
+			"objectId": "b0553"
 		},
 		{
-			"name": "Coli Genetic Stock Center",
-			"url": "http://cgsc.biology.yale.edu/Site.php?ID=447",
-			"externaldbObjectId": "447"
+			"externalCrossReference_id": "Coli Genetic Stock Center",
+			"objectId": "447"
 		},
 		{
-			"name": "PortEco",
-			"url": "http://porteco.org/AjaxSearch.jsp?searchString=nmpC",
-			"externaldbObjectId": "nmpC"
+			"externalCrossReference_id": "PortEco",
+			"objectId": "nmpC"
 		},
 		{
-			"name": "UniProt",
-			"url": "https://www.uniprot.org/uniprot/P21420",
-			"externaldbObjectId": "P21420"
+			"externalCrossReference_id": "UniProt",
+			"objectId": "P21420"
 		},
 		{
-			"name": "EcoliWiki",
-			"url": "http://ecoliwiki.net/colipedia/index.php/b0553",
-			"externaldbObjectId": "b0553"
+			"externalCrossReference_id": "EcoliWiki",
+			"objectId": "b0553"
 		},
 		{
-			"name": "EchoBASE",
-			"url": "http://www.york.ac.uk/res/thomas/Gene.cfm?recordID=EB0653",
-			"externaldbObjectId": "EB0653"
+			"externalCrossReference_id": "EchoBASE",
+			"objectId": "EB0653"
 		},
 		{
-			"name": "RegulonDB",
-			"url": "http://regulondb.ccg.unam.mx/search?term=b0553&organism=ECK12&type=All",
-			"externaldbObjectId": "b0553"
+			"externalCrossReference_id": "RegulonDB",
+			"objectId": "b0553"
 		}
 	],
-	"products": [{
-		"regulondbId": "ECK120005128",
-		"name": "DLP12 prophage; putative outer membrane porin NmpC"
-	}],
+	"product_ids": ["ECK120005128"],
 	"schemaVersion": 1.0
 }

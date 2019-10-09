@@ -3,29 +3,27 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-				"regulondbId",
-				"organismId"
+				"_id",
+				"regulatoryInteraction_ids",
+				"organism_id"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "objectId",
-					"description": ""
-				},
-				"regulondbId": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"leftPosition": {
+				"leftEndPosition": {
 					"bsonType": "int",
 					"description": ""
 				},
-				"rightPosition": {
+				"rightEndPosition": {
 					"bsonType": "int",
 					"description": ""
 				},
 				"sequence": {
 					"bsonType": "string",
-					"description": ""
+					"description": "",
+					"pattern": "^[ATCGatcg]+$"
 				},
 				"length": {
 					"bsonType": "int",
@@ -39,68 +37,53 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"organismId": {
+				"organism_id": {
 					"bsonType": "string",
 					"description": ""
 				},
 				"evidenceReferences": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "object",
 						"properties": {
-							"publicationId": {
+							"publication_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"sourceId": {
-								"bsonType": "int",
-								"description": ""
-							},
-							"externalDatabaseId": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"publicationUrl": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"evidenceId": {
+							"evidence_id": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
-				"externalDatabases": {
+				"externalCrossReferences": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
+					"description": "",
 					"items": {
 						"bsonType": "object",
 						"required": [
-							"name",
-							"url",
-							"externaldbObjectId"
+							"externalCrossReference_id",
+							"objectId"
 						],
 						"properties": {
-							"name": {
+							"externalCrossReference_id": {
 								"bsonType": "string",
 								"description": ""
 							},
-							"url": {
-								"bsonType": "string",
-								"description": ""
-							},
-							"externaldbObjectId": {
+							"objectId": {
 								"bsonType": "string",
 								"description": ""
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
-				"regulatoryInteraction": {
+				"regulatoryInteraction_ids": {
 					"bsonType": "array",
 					"description": "",
 					"uniqueItems": true,

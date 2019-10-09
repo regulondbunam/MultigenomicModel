@@ -1,111 +1,70 @@
 {
-    "regulondbId": "ECK125109145",
+    "_id": "ECK125109145",
     "name": "ycgZp",
-    "strand": "forward",
-    "pos1": 1215752,
+    "transcriptionStartSite": {
+        "leftEndPosition": 1215716,
+        "rightEndPosition": 1215745,
+        "range": -29,
+        "type": "primary"
+    },
+    "strand": "forward",    
     "sequence": "gcaaaaaattaatttatcattctgtacacatatttcgtacaagtttgctattgttacttcActtaacattgattaacattt",
-    "organismId": "ECK12",
+    "sigmaFactor_id": "ECK12T000000",
+    "transcriptionUnit_ids": [ "ECK120051389" ],
+    "regulatoryInteraction_ids": [ "ECK125258023" ],
+    "organism_id": "ECK12",
     "evidenceReferences": [
         {
-            "publicationId": "GID000027564",
-            "sourceId": 18158297,
-            "externalDatabaseId": "GID000000048",
-            "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/18158297"
+            "publication_id": "GID000027564",
+            "externalCrossReference_id": "GID000000048",
         },
         {
-            "publicationId": "GID000027564",
-            "sourceId": 18158297,
-            "externalDatabaseId": "GID000000048",
-            "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/18158297",
-            "evidenceId": "GID000000006"
+            "publication_id": "GID000027564",
+            "externalCrossReference_id": "GID000000048",
+            "evidence_id": "GID000000006"
         },
         {
-            "publicationId": "GID000041933",
-            "sourceId": 22783906,
-            "externalDatabaseId": "GID000000048",
-            "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/22783906",
-            "evidenceId": "GID000000023"
+            "publication_id": "GID000041933",
+            "externalCrossReference_id": "GID000000048",
+            "evidence_id": "GID000000023"
         }
     ],
     "promoterFeatures": [
         {
-            "regulondbId": "ECK125257156",
-            "box10Left": 1215735,
-            "box10Right": 1215745,
-            "box10Sequence": "TTTGCTATTGT",
-            "box35Left": 1215716,
-            "box35Right": 1215721,
-            "box35Sequence": "TACACA",
+            "minus10Signal":{
+                "leftEndPosition": 1215735,
+                "rightEndPosition": 1215745,
+                "sequence": "TTTGCTATTGT"
+            },
+            "minus35Signal":{
+                "leftEndPosition": 1215716,
+                "rightEndPosition": 1215721,
+                "sequence": "TACACA"
+            },
             "bindsSigmaFactor": {
-                "sigmaFactorRegulondbId": "ECK12T000000",
-                "name": "Sigma70",
                 "evidenceReferences": [
                     {
-                        "publicationId": "GID000041933",
-                        "sourceId": 22783906,
-                        "externalDatabaseId": "GID000000048",
-                        "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/22783906",
-                        "evidenceId": "GID000000012"
+                        "publication_id": "GID000041933",
+                        "externalCrossReference_id": "GID000000048",
+                        "evidence_id": "GID000000012"
                     },
                     {
-                        "publicationId": "GID000030094",
-                        "sourceId": 19240136,
-                        "externalDatabaseId": "GID000000048",
-                        "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/19240136",
-                        "evidenceId": "GID000000036"
+                        "publication_id": "GID000030094",
+                        "externalCrossReference_id": "GID000000048",
+                        "evidence_id": "GID000000036"
                     },
                     {
-                        "publicationId": "GID000027564",
-                        "sourceId": 18158297,
-                        "externalDatabaseId": "GID000000048",
-                        "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/18158297",
-                        "evidenceId": "GID000000012"
-                    }
-                ]
-            }
-        },
-        {
-            "regulondbId": "ECK125162435",
-            "box10Left": 1215735,
-            "box10Right": 1215745,
-            "box10Sequence": "TTTGCTATTGT",
-            "box35Left": 1215716,
-            "box35Right": 1215721,
-            "box35Sequence": "TACACA",
-            "bindsSigmaFactor": {
-                "sigmaFactorRegulondbId": "ECK12T000001",
-                "name": "Sigma38",
-                "evidenceReferences": [
-                    {
-                        "publicationId": "GID000041933",
-                        "sourceId": 22783906,
-                        "externalDatabaseId": "GID000000048",
-                        "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/22783906",
-                        "evidenceId": "GID000000012"
-                    },
-                    {
-                        "publicationId": "GID000030094",
-                        "sourceId": 19240136,
-                        "externalDatabaseId": "GID000000048",
-                        "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/19240136",
-                        "evidenceId": "GID000000036"
-                    },
-                    {
-                        "publicationId": "GID000027564",
-                        "sourceId": 18158297,
-                        "externalDatabaseId": "GID000000048",
-                        "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/18158297",
-                        "evidenceId": "GID000000012"
+                        "publication_id": "GID000027564",
+                        "externalCrossReference_id": "GID000000048",
+                        "evidence_id": "GID000000012"
                     }
                 ]
             },
             "evidenceReferences": [
                 {
-                    "publicationId": "GID000018240",
-                    "sourceId": 14529615,
-                    "externalDatabaseId": "GID000000048",
-                    "publicationUrl": "http://www.ncbi.nlm.nih.gov/pubmed/14529615",
-                    "evidenceId": "GID000000013"
+                    "publication_id": "GID000018240",
+                    "externalCrossReference_id": "GID000000048",
+                    "evidence_id": "GID000000013"
                 }
             ]
         }
