@@ -8,11 +8,11 @@ Enlaces relacionados al proyecto:
 https://www.lucidchart.com/documents/view/9063872b-f15f-4260-8e9f-292b6e6c09ac/0_0
 
 
-*2. Diagrama proceso de docuentación*  
+*2. Diagrama proceso de documentación*  
 https://www.lucidchart.com/documents/view/6f5f365e-feed-4835-8dbf-bc9a5829c564
 
 
-*3. Read The Docs*  
+*3. Manual de documentación del Modelo Multigenómico de RegulonDB*  
 https://multigenomic-model-of-regulondb.readthedocs.io/en/latest/MultigenomicModel_Manual_v0.1.html
 
 
