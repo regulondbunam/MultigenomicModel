@@ -1,0 +1,20 @@
+{
+    "_id": "ECK120010831",
+    "transcriptionTerminationSite": {
+        "leftEndPosition": 3754906,
+        "rightEndPosition": 3754941,
+        "range": -35,
+        "type": "primary"
+    },
+    "sequence": "tcaggttcccGTAGGCATGATAAGACGCGTAAGCGTCGCATCAGGCaatgaatacc",
+    "class": "rho-independent",
+    "transcriptionUnit_id": "ECK120009330",
+    "note": "A sequence with characteristics of a rho-independent transcription terminator within 54 bp downstream of the <i>aldB</i> stop codon is not present, although a repeated extragenic palindromic sequence is located 32 bp downstream of the stop codon.",
+    "organism_id": "ECK12",
+    "evidenceReferences": [
+        {
+            "publication_id": "GID000023515"
+        }
+    ],
+    "schemaVersion": 1.0
+}

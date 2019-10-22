@@ -1,0 +1,41 @@
+{
+	"_id": "ECK120002581",
+	"name": "sraF",
+	"leftEndPosition": 3238374,
+	"rightEndPosition": 3238561,
+	"strand": "forward",
+	"sequence": "GCAAAGGGGAGTAACTTCATTGCCGGTCGATCGTCATTACGATGTGTGAAAAAACACATCCGGTCACCGGGCAACCCGAAAGGAATACGCAGACGTATTCCTTTTTTGTTGTAAGTGAGACCTTGCCGGAAGGCGAGGTCTATGCATAAAAAGCAGCGGCTGACGTCTTCCGACGTTGGCCGTTTTTT",
+	"gcContent": 49.47,
+	"organism_id": "ECK12",
+	"type": "phantom",
+	"centisomePosition": 69.754776,
+	"synonyms": [
+		"psrA14",
+		"tpk1",
+		"IS160",
+		"psrN",
+		"b4448",
+		"ECK3078"
+	],
+	"evidenceReferences": [{
+		"publication_id": "GID000002550"
+	}],
+	"externalCrossReferences": [{
+			"externalCrossReference_id": "PortEco",
+			"objectId": "psrN"
+		},
+		{
+			"externalCrossReference_id": "ASAP",
+			"objectId": "ABE-0047268"
+		},
+		{
+			"externalCrossReference_id": "EchoBASE",
+			"objectId": "EB4535"
+		},
+		{
+			"externalCrossReference_id": "RegulonDB",
+			"objectId": "b4448"
+		}
+	],
+	"schemaVersion": 1.0
+}

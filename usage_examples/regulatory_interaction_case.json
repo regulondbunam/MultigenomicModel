@@ -1,0 +1,39 @@
+{
+    "_id": "ECK120051661",
+    "centerPosition": -72.5,
+    "function": "repressor",
+    "type": "mechanistic",
+    "conformation_id": "ECK125269373",
+    "regulatedEntity": {
+        "promoter_id": "ECK120016938"
+    },
+    "site_id": "ECK120026357",
+    "organism_id": "ECK12",
+    "evidenceReferences": [
+        {
+            "publication_id": "GID000004618"
+            
+        },
+        {
+            "publication_id": "GID000031134"
+           
+        },
+        {
+            "publication_id": "GID000004618",
+            "evidence_id": "GID000000020"
+        },
+        {
+            "publication_id": "GID000031134",
+            "evidence_id": "GID000000030"
+        },
+        {
+            "publication_id": "GID000031134",
+            "evidence_id": "GID000000009"
+        },
+        {
+            "publication_id": "GID000031134",
+            "evidence_id": "GID000000020"
+        }
+    ],
+    "schemaVersion": 1.0
+}

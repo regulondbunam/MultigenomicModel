@@ -1,0 +1,54 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+                "_id",
+                "name",
+				"organism_id",
+                "schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string",
+					"description": ""
+                },
+                "name": {
+                    "bsonType": "string",
+					"description": ""
+                },
+                "typeObject": {
+                    "bsonType": "array",
+					"uniqueItems": true,
+					"description": "",
+					"items": {
+						"bsonType": "string"
+					}
+                },
+                "code": {
+                    "bsonType": "string",
+					"description": ""
+                },
+                "note": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"internalComment": {
+					"bsonType": "string",
+					"description": ""
+                },
+                "organism_id": {
+                    "bsonType": "string",
+					"description": ""
+                },
+				"schemaVersion": {
+					"bsonType": "double",
+					"description": ""
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

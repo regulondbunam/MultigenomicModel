@@ -1,0 +1,85 @@
+{
+	"_id": "ECK120004526",
+	"name": "DNA-binding transcriptional dual regulator AraC",
+	"molecularWeight": 33.384,
+	"isoelectricPoint": 6.956,
+	"location": "cytosol",
+	"sequence": "MAEAQNDPLLPGYSFNAHLVAGLTPIEANGYLDFFIDRPLGMKGYILNLTIRGQGVVKNQGREFVCRPGDILLFPPGEIHHYGRHPEAREWYHQWVYFRPRAYWHEWLNWPSIFANTGFFRPDEAHQPHFSDLFGQIINAGQGEGRYSELLAINLLEQLLLRRMEAINESLHPPMDNRVREACQYISDHLADSNFDIASVAQHVCLSPSRLSHLFRQQLGISVLSWREDQRISQAKLLLSTTRMPIATVGRNVGFDDQLYFSRVFKKCTGASPSEFRAGCEEKVNDVAVKLS",
+	"note": "The \"<b>ara</b>binose regulator,\" AraC, is a transcription factor that regulates transcription of several genes and operons involved in arabinose catabolism and transport. It coregulates with another transcriptional regulator, CRP; both are transcription factors involved in l-arabinose degradation. These regulators bind cooperatively to activate transcription of five operons related to transport, catabolism, and autoregulation of l-arabinose. Transcription of these operons is induced when <i>E. coli</i> is grown in the absence of glucose and when the physiological inducer, l-arabinose, binds to the AraC regulator. In the absence of glucose, cellular cyclic AMP levels are high and cyclic AMP forms a dimeric complex with CRP to coregulate with AraC |CITS:[9409145][1744033][6319708][1400237][9600836][2231717][6377308]|.\n\nAraC binds to five target sites in the <i>araB</i>p region. AraC binds to the less-conserved site (-42.5) with less strength; this binding occurs only in the presence of arabinose, and it is absolutely required for expression of <i>araB</i>p |CITS:[2237403][3279415][2962192][3520549][8428590]|. AraC binding to the distal site (-123.5) has been shown to down-regulate expression of <i>araB</i>p and <i>araC</i>p |CITS:[1560456][3279415]|. \n\nIn the absence of arabinose, AraC is unable to activate <i>araB</i>p, but it regulates its own expression by repressing <i>araC</i>p and <i>araB</i>p simultaneously |CITS:[2237403][3279415][3520549]|. Arabinose triggers AraC-dependent activation of <i>araB</i>p and relieves AraC-dependent repression of <i>araC</i>p |CITS:[3279415][3520549]|. The <i>araBAD</i> operon is located upstream of <i>araC</i> and in the opposite direction.\n\nIn the presence of arabinose, this regulator activates transcription by overlapping the -35 box of the core promoters, and the central position of the binding site is located near bp -41.5. The binding targets for AraC consist of 17-nucleotide-long direct repeat sequences that possess conserved motifs; each monomer binds to one of these conserved sequences |CITS:[9409145][8980677]|. \n\nThe AraC regulator belongs to the AraC/XylS family and occurs as both a monomer and a homodimer. It is composed of two domains. The solution structure of the C-terminal DNA-binding domain has been solved. It consists of two helix-turn-helix regions connected by an &alpha;-helix |CITS:[19422057]|. The N-terminal domain is responsible for dimerization and L-arabinose binding |CITS:[9409145][8451183]|. A new domain, between the dimerization domain and DNA-binding domains of the dimeric AraC protein, facilitates repression of the <i>araBAD</i> operon by AraC in the absence of arabinose |CITS:[22383259]|. Its crystal structure |CITS:[9367758][9103202]| reveals that the sugar molecule is bound within a &beta;-barrel, buried by the N-terminal arm of the protein. It has been suggested that this N-terminal arm plays a key role in the regulation of the arabinose-dependent DNA-binding properties of the protein. In the absence of arabinose it interacts with the DNA-binding domain and constrains this domain, and it releases it in the presence of arabinose |CITS:[9103202][18561170]|. This interaction appears to be affected by a mutation in the interdomain linker |CITS: [21840981]|. On the other hand, the function of AraC is largely unaffected by several other mutations in the interdomain linker |CITS:[26800223]|",
+	"organism_id": "ECK12",
+	"molecularWeightKd": 33.384,
+	"componentOf": "PC00003",
+	"gene_id": "ECK120000050",
+	"synonyms": [
+		"AraC"
+	],
+	"evidenceReferences": [{
+			"publication_id": "GID000005302"
+		},
+		{
+			"publication_id": "GID000023518"
+		}
+	],
+	"externalCrossReferences": [{
+			"externalCrossReference_id": "Prosite",
+			"objectId": "PS00041"
+		},
+		{
+			"externalCrossReference_id": "Protein Ontology",
+			"objectId": "PRO_000022116"
+		},
+		{
+			"externalCrossReference_id": "NCBI Reference Sequences Database",
+			"objectId": "NP_414606"
+		},
+		{
+			"externalCrossReference_id": "Database of Interacting Proteins",
+			"objectId": "DIP-9125N"
+		},
+		{
+			"externalCrossReference_id": "Pfam",
+			"objectId": "PF12833"
+		},
+		{
+			"externalCrossReference_id": "Protein Data Bank",
+			"objectId": "2ARC"
+		},
+		{
+			"externalCrossReference_id": "Pride",
+			"objectId": "P0A9E0"
+		},
+		{
+			"externalCrossReference_id": "MODBASE",
+			"objectId": "P0A9E0"
+		},
+		{
+			"externalCrossReference_id": "InterPro",
+			"objectId": "IPR009057"
+		},
+		{
+			"externalCrossReference_id": "Prints",
+			"objectId": "PR00032"
+		},
+		{
+			"externalCrossReference_id": "Smart",
+			"objectId": "SM00342"
+		},
+		{
+			"externalCrossReference_id": "SWISS-MODEL",
+			"objectId": "P0A9E0"
+		},
+		{
+			"externalCrossReference_id": "UniProt",
+			"objectId": "P0A9E0"
+		},
+		{
+			"externalCrossReference_id": "EcoliWiki",
+			"objectId": "b0064"
+		},
+		{
+			"externalCrossReference_id": "Protein Model Portal",
+			"objectId": "P0A9E0"
+		}
+	],
+	"schemaVersion": 1.0
+}

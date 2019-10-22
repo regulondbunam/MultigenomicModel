@@ -1,0 +1,96 @@
+{
+	"_id": "ECK120026318",
+	"name": "AscG",
+	"siteLength": [
+		6,
+		14
+	],
+	"consensusSequence": [
+		"GTTTCA",
+		"TGAAACCGGTTTCA"
+	],
+	"symmetry": [
+		"asymmetric",
+		"inverted-repeat"
+	],
+	"note": "The AscG, \"<b>A</b>rbutin-<b>s</b>alicin-<b>c</b>ellibiose,\" transcriptional regulator represses the expression of a cryptic operon (<i>ascFB</i>) whose genes are involved in transport and utilization of the &beta;-glucoside sugars arbutin, salicin, and cellibiose. This operon is activated only when the repressor is inactivated through the interruption of the gene by an insertion sequence |CITS:[1630307]|. AscG also regulates <i>prpBC</i> for propionate catabolism |CITS:[19633077]|. \n\nAscG is a GalR-type transcription factor and has a helix-turn-helix motif |CITS:[1630307][19633077]|. AscG recognizes and binds the consensus palindromic sequence TGAAACCGGTTTCA |CITS:[19633077]|.\n\nThe <i>ascG</i> gene is transcribed divergently from the operon it regulates |CITS:[1630307]|. <i>ascG</i> is paralogous to <i>galR</i> |CITS:[19633077]|. A high level of AscG is always present in wild-type <i>Escherichia coli</i> cells |CITS:[19633077]|.",
+	"organism_id": "ECK12",
+	"products": [{
+		"product_id": "ECK120004559"
+	}],
+	"conformation_ids": [ "ECK125269373" ],
+	"synonyms": [
+		"DNA-binding transcriptional repressor AscG",
+		"Sac"
+	],
+	"evidenceReferences": [{
+			"publication_id": "GID000004618",
+			"evidence_id": "GID000000020"
+		},
+		{
+			"publication_id": "GID000004618",
+			"evidence_id": "GID000000007"
+		},
+		{
+			"publication_id": "GID000031134",
+			"evidence_id": "GID000028666"
+		},
+		{
+			"publication_id": "GID000004618"
+		}
+	],
+	"externalCrossReferences": [{
+			"externalCrossReference_id": "Prosite",
+			"objectId": "PS00356"
+		},
+		{
+			"externalCrossReference_id": "Protein Ontology",
+			"objectId": "PRO_000022163"
+		},
+		{
+			"externalCrossReference_id": "NCBI Reference Sequences Database",
+			"objectId": "NP_417194"
+		},
+		{
+			"externalCrossReference_id": "MODBASE",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "Pfam",
+			"objectId": "PF00356"
+		},
+		{
+			"externalCrossReference_id": "Protein Data Bank",
+			"objectId": "3BRQ"
+		},
+		{
+			"externalCrossReference_id": "Pride",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "InterPro",
+			"objectId": "IPR010982"
+		},
+		{
+			"externalCrossReference_id": "Smart",
+			"objectId": "SM00354"
+		},
+		{
+			"externalCrossReference_id": "SWISS-MODEL",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "UniProt",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "EcoliWiki",
+			"objectId": "b2714"
+		},
+		{
+			"externalCrossReference_id": "Protein Model Portal",
+			"objectId": "P24242"
+		}
+	],
+	"schemaVersion": 1.0
+}

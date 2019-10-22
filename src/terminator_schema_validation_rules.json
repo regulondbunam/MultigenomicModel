@@ -1,0 +1,124 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"transcriptionTerminationSite",
+				"sequence",
+				"class",
+				"transcriptionUnit_id",
+        "schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"transcriptionTerminationSite":{
+					"bsonType": "object",
+					"description": "",
+					"required": ["leftEndPosition", "rightEndPosition", "type"],
+					"properties": {
+						"leftEndPosition":{
+							"bsonType": "int",
+							"description": ""
+						},
+						"rightEndPosition":{
+							"bsonType": "int",
+							"description": ""
+						},
+						"range":{
+							"bsonType": "int",
+							"description": ""
+						},
+						"type": {
+							"bsonType": "string",
+							"description": "",
+							"enum": ["primary", "secondary", "tertiary"]
+						}
+					},
+					"additionalProperties": false
+				},
+				"sequence": {
+					"bsonType": "string",
+					"description": "",
+					"pattern": "^[ATCGatcg]+$"
+				},
+				"class": {
+					"bsonType": "string",
+					"description": "",
+					"enum": [
+						"rho-independent",
+						"rho-dependent"
+					]
+				},
+				"transcriptionUnit_id": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"note": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"internalComment": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"organism_id": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"evidenceReferences": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"description": "",
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"publication_id": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"evidence_id": {
+								"bsonType": "string",
+								"description": ""
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"externalCrossReferences": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"description": "",
+					"items": {
+						"bsonType": "object",
+						"required": [
+							"externalCrossReference_id",
+							"objectId"
+						],
+						"properties": {
+							"externalCrossReference_id": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"objectId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"schemaVersion": {
+					"bsonType": "double",
+					"description": ""
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

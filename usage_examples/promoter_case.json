@@ -1,0 +1,66 @@
+{
+    "_id": "ECK125109145",
+    "name": "ycgZp",
+    "transcriptionStartSite": {
+        "leftEndPosition": 1215716,
+        "rightEndPosition": 1215745,
+        "range": -29,
+        "type": "primary"
+    },
+    "strand": "forward",    
+    "sequence": "gcaaaaaattaatttatcattctgtacacatatttcgtacaagtttgctattgttacttcActtaacattgattaacattt",
+    "sigmaFactor_id": "ECK12T000000",
+    "transcriptionUnit_ids": [ "ECK120051389" ],
+    "regulatoryInteraction_ids": [ "ECK125258023" ],
+    "organism_id": "ECK12",
+    "evidenceReferences": [
+        {
+            "publication_id": "GID000027564"
+        },
+        {
+            "publication_id": "GID000027564",
+            "evidence_id": "GID000000006"
+        },
+        {
+            "publication_id": "GID000041933",
+            "evidence_id": "GID000000023"
+        }
+    ],
+    "promoterFeatures": [
+        {
+            "minus10Signal":{
+                "leftEndPosition": 1215735,
+                "rightEndPosition": 1215745,
+                "sequence": "TTTGCTATTGT"
+            },
+            "minus35Signal":{
+                "leftEndPosition": 1215716,
+                "rightEndPosition": 1215721,
+                "sequence": "TACACA"
+            },
+            "bindsSigmaFactor": {
+                "evidenceReferences": [
+                    {
+                        "publication_id": "GID000041933",
+                        "evidence_id": "GID000000012"
+                    },
+                    {
+                        "publication_id": "GID000030094",
+                        "evidence_id": "GID000000036"
+                    },
+                    {
+                        "publication_id": "GID000027564",
+                        "evidence_id": "GID000000012"
+                    }
+                ]
+            },
+            "evidenceReferences": [
+                {
+                    "publication_id": "GID000018240",
+                    "evidence_id": "GID000000013"
+                }
+            ]
+        }
+    ],
+    "schemaVersion": 1.0
+}

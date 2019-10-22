@@ -1,0 +1,89 @@
+{
+	"_id": "ECK125269373",
+	"finalState": "AscG",
+	"type": "Active",
+	"organism_id": "ECK12",
+	"synonyms": ["Sac"],
+	"transcriptionFactor_id": "ECK120026318",
+	"regulatoryInteraction_ids": [
+            "ECK120051479", 
+            "ECK120051473", 
+            "ECK120051475",
+            "ECK120051477",
+            "ECK120051467",
+            "ECK120051661",
+            "ECK120051471",
+            "ECK125145791",
+            "ECK125145793"
+    ],
+	"evidenceReferences": [{
+			"publication_id": "GID000004618",
+			"evidence_id": "GID000000020"
+		},
+		{
+			"publication_id": "GID000004618",
+			"evidence_id": "GID000000007"
+		},
+		{
+			"publication_id": "GID000031134",
+			"evidence_id": "GID000028666"
+		},
+		{
+			"publication_id": "GID000004618"
+		}
+	],
+	"externalCrossReferences": [{
+			"externalCrossReference_id": "Prosite",
+			"objectId": "PS00356"
+		},
+		{
+			"externalCrossReference_id": "Protein Ontology",
+			"objectId": "PRO_000022163"
+		},
+		{
+			"externalCrossReference_id": "NCBI Reference Sequences Database",
+			"objectId": "NP_417194"
+		},
+		{
+			"externalCrossReference_id": "MODBASE",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "Pfam",
+			"objectId": "PF00356"
+		},
+		{
+			"externalCrossReference_id": "Protein Data Bank",
+			"objectId": "3BRQ"
+		},
+		{
+			"externalCrossReference_id": "Pride",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "InterPro",
+			"objectId": "IPR010982"
+		},
+		{
+			"externalCrossReference_id": "Smart",
+			"objectId": "SM00354"
+		},
+		{
+			"externalCrossReference_id": "SWISS-MODEL",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "UniProt",
+			"objectId": "P24242"
+		},
+		{
+			"externalCrossReference_id": "EcoliWiki",
+			"objectId": "b2714"
+		},
+		{
+			"externalCrossReference_id": "Protein Model Portal",
+			"objectId": "P24242"
+		}
+	],
+	"schemaVersion": 1.0
+}

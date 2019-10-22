@@ -1,0 +1,112 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"product_id",
+				"leftEndPosition",
+				"rightEndPosition",
+				"sequence",
+				"organism_id",
+        "schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"product_id": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"leftEndPosition": {
+					"bsonType": "int",
+					"description": ""
+				},
+				"rightEndPosition": {
+					"bsonType": "int",
+					"description": ""
+				},
+				"sequence": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"description": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"note": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"internalComment": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"organism_id": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"dataSource": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"residueNumber": {
+					"bsonType": "double",
+					"description": ""
+				},
+				"attachedGroup": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"homologyMotif": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"alternateSequence": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"synonyms": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"description": "",
+					"items": {
+						"bsonType": "string"
+					}
+				},
+				"externalCrossReferences": {
+					"bsonType": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"required": [
+							"externalCrossReference_id",
+							"objectId"
+						],
+						"properties": {
+							"externalCrossReference_id": {
+								"bsonType": "string",
+								"description": ""
+							},
+							"objectId": {
+								"bsonType": "string",
+								"description": ""
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"schemaVersion": {
+					"bsonType": "double",
+					"description": ""
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}
