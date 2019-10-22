@@ -32,6 +32,10 @@
 					"bsonType": "string",
 					"description": ""
 				},
+				"bnumber": {
+					"bsonType": "string",
+					"description": ""
+				},
 				"leftEndPosition": {
 					"bsonType": "int"
 				},
