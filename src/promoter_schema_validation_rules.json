@@ -17,20 +17,20 @@
 					"bsonType": "string",
 					"description": ""
 				},
-				"transcriptionStartSite":{
+				"transcriptionStartSite": {
 					"bsonType": "object",
 					"description": "",
 					"required": ["leftEndPosition", "rightEndPosition", "type"],
 					"properties": {
-						"leftEndPosition":{
+						"leftEndPosition": {
 							"bsonType": "int",
 							"description": ""
 						},
-						"rightEndPosition":{
+						"rightEndPosition": {
 							"bsonType": "int",
 							"description": ""
 						},
-						"range":{
+						"range": {
 							"bsonType": "int",
 							"description": ""
 						},
@@ -96,6 +96,11 @@
 					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
 								"bsonType": "string",
@@ -135,13 +140,13 @@
 				"promoterFeatures": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"required": [ "minus10Signal" ],
+					"required": ["minus10Signal"],
 					"items": {
 						"properties": {
 							"minus10Signal": {
 								"bsonType": "object",
 								"description": "",
-								"required": [ "leftEndPosition",  "rightEndPosition", "sequence"],
+								"required": ["leftEndPosition", "rightEndPosition", "sequence"],
 								"properties": {
 									"leftEndPosition": {
 										"bsonType": "int",
@@ -162,7 +167,7 @@
 							"minus35Signal": {
 								"bsonType": "object",
 								"description": "",
-								"required": [ "leftEndPosition",  "rightEndPosition", "sequence"],
+								"required": ["leftEndPosition", "rightEndPosition", "sequence"],
 								"properties": {
 									"leftEndPosition": {
 										"bsonType": "int",
@@ -194,6 +199,11 @@
 										"description": "",
 										"items": {
 											"bsonType": "object",
+											"anyOf": [{
+												"required": ["publication_id"]
+											}, {
+												"required": ["evidence_id"]
+											}],
 											"properties": {
 												"publication_id": {
 													"bsonType": "string",
@@ -215,6 +225,11 @@
 								"description": "",
 								"items": {
 									"bsonType": "object",
+									"anyOf": [{
+										"required": ["publication_id"]
+									}, {
+										"required": ["evidence_id"]
+									}],
 									"properties": {
 										"publication_id": {
 											"bsonType": "string",

@@ -67,7 +67,7 @@
 					"items": {
 						"bsonType": "object",
 						"required": ["product_id"],
-						"properties":{
+						"properties": {
 							"product_id": {
 								"bsonType": "string",
 								"description": ""
@@ -102,6 +102,11 @@
 					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
 								"bsonType": "string",

@@ -49,10 +49,9 @@
 				},
 				"regulatedEntity": {
 					"bsonType": "object",
-					"oneOf": [
-						{
+					"oneOf": [{
 							"required": ["gene_id"],
-							"not":{
+							"not": {
 								"required": ["transcriptionUnit_id", "promoter_id", "srna_id"]
 							}
 						},
@@ -80,7 +79,7 @@
 							"bsonType": "string",
 							"description": ""
 						},
-						"transcriptionUnit_id":{
+						"transcriptionUnit_id": {
 							"bsonType": "string",
 							"description": ""
 						},
@@ -109,6 +108,11 @@
 					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
 								"bsonType": "string",

@@ -3,35 +3,35 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-                "_id",
-                "name",
-                "schemaVersion"
+				"_id",
+				"name",
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
 					"bsonType": "string",
 					"description": ""
-                },
-                "name": {
-                    "bsonType": "string",
+				},
+				"name": {
+					"bsonType": "string",
 					"description": ""
-                },
-                "description": {
-                    "bsonType": "string",
+				},
+				"description": {
+					"bsonType": "string",
 					"description": ""
-                },
-                "url": {
-                    "bsonType": "string",
+				},
+				"url": {
+					"bsonType": "string",
 					"description": ""
-                },
-                "note": {
+				},
+				"note": {
 					"bsonType": "string",
 					"description": ""
 				},
 				"internalComment": {
 					"bsonType": "string",
 					"description": ""
-                },
+				},
 				"schemaVersion": {
 					"bsonType": "double",
 					"description": ""

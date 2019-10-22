@@ -8,27 +8,27 @@
 				"sequence",
 				"class",
 				"transcriptionUnit_id",
-        "schemaVersion"
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
 					"bsonType": "string",
 					"description": ""
 				},
-				"transcriptionTerminationSite":{
+				"transcriptionTerminationSite": {
 					"bsonType": "object",
 					"description": "",
 					"required": ["leftEndPosition", "rightEndPosition", "type"],
 					"properties": {
-						"leftEndPosition":{
+						"leftEndPosition": {
 							"bsonType": "int",
 							"description": ""
 						},
-						"rightEndPosition":{
+						"rightEndPosition": {
 							"bsonType": "int",
 							"description": ""
 						},
-						"range":{
+						"range": {
 							"bsonType": "int",
 							"description": ""
 						},
@@ -75,6 +75,11 @@
 					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
 								"bsonType": "string",

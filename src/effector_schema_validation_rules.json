@@ -3,20 +3,20 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-                "_id",
-                "name",
-				        "organism_id",
-                "schemaVersion"
+				"_id",
+				"name",
+				"organism_id",
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-            "bsonType": "string",
-            "description": ""
-        },
-        "name": {
-            "bsonType": "string",
-            "description": ""
-        },
+					"bsonType": "string",
+					"description": ""
+				},
+				"name": {
+					"bsonType": "string",
+					"description": ""
+				},
 				"note": {
 					"bsonType": "string",
 					"description": ""
@@ -31,26 +31,31 @@
 				},
 				"synonyms": {
 					"bsonType": "array",
-                    "uniqueItems": true,
-                    "description": "",
-					"items": {
-						"bsonType": "string"
-					}
-                },
-                "conformation_ids": {
-                    "bsonType": "array",
 					"uniqueItems": true,
 					"description": "",
 					"items": {
 						"bsonType": "string"
 					}
-                },
+				},
+				"conformation_ids": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"description": "",
+					"items": {
+						"bsonType": "string"
+					}
+				},
 				"evidenceReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
 					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
 								"bsonType": "string",
@@ -86,7 +91,7 @@
 						},
 						"additionalProperties": false
 					}
-                },
+				},
 				"schemaVersion": {
 					"bsonType": "double",
 					"description": ""

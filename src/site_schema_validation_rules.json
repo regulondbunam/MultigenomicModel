@@ -6,7 +6,7 @@
 				"_id",
 				"regulatoryInteraction_ids",
 				"organism_id",
-        "schemaVersion"
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
@@ -48,6 +48,11 @@
 					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
 								"bsonType": "string",

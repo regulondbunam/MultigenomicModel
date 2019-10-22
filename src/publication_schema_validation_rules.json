@@ -3,38 +3,38 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-                "_id",
-                "schemaVersion"
+				"_id",
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
 					"bsonType": "string",
 					"description": ""
-                },
-                "referenceId": {
-                    "bsonType": "int",
+				},
+				"referenceId": {
+					"bsonType": "int",
 					"description": ""
-                },
-                "externalCrossReference_id": {
-                    "bsonType": "string",
+				},
+				"externalCrossReference_id": {
+					"bsonType": "string",
 					"description": ""
-                },
-                "author": {
-                    "bsonType": "string",
-                    "description": ""
-                },
-                "title": {
-                    "bsonType": "string",
-                    "description": ""
-                },
-                "source": {
-                    "bsonType": "string",
-                    "description": ""
-                },
-                "year": {
-                    "bsonType": "int",
-                    "description": ""
-                },
+				},
+				"author": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"title": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"source": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"year": {
+					"bsonType": "int",
+					"description": ""
+				},
 				"note": {
 					"bsonType": "string",
 					"description": ""
