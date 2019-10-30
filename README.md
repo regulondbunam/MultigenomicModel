@@ -13,6 +13,6 @@ https://www.lucidchart.com/documents/view/6f5f365e-feed-4835-8dbf-bc9a5829c564
 
 
 *3. Manual de documentación del Modelo Multigenómico de RegulonDB*  
-https://multigenomic-model-of-regulondb.readthedocs.io/en/latest/MultigenomicModel_Manual_v0.1.html
+https://multigenomic-model-of-regulondb.readthedocs.io/en/latest/index.html
 
 
