@@ -1,0 +1,346 @@
+### gene
+
+_Description_  
+
+Esta colección representa al objeto Gene dentro de la regulación transcripcional de un organismo. Un gen posee una serie de propiedades que permiten identificarlo y diferenciarlo de otros, así como de característica que permiten establecer relaciones con otros objetos.  
+
+_Attributes_  
+ 
+__regulondbId__  
+
+
+  * Type: string  
+
+  * URI PRO:
+
+  * Synonyms: identifier  
+
+  * Usage: requerido  
+
+  * URI [values]: PREGUNTAR A CITLALLI
+
+  * Example:  
+
+      ```xml
+      RDBECOLIGN00001
+      ```
+
+  * Comments: Para conocer más detalle sobre la definición de los identificadores, consultar la sección: Identifiers en el manual de RegulonDB.  
+
+
+__name__  
+
+  * Type: string  
+
+  * Synonyms: name  
+
+  * Usage: opcional  
+
+  * Example:
+
+      ```xml
+      araC
+      ```
+
+  * Comments:  
+    En el caso del nombre de genes se sigue una nomenclatura de nombrado donde se define que la última letra se debe especificar en mayúscula.  
+
+
+__1.3 leftPosition__
+
+  * Type: int  
+
+  * Synonyms: genome left position  
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      70387
+      ```
+
+  * Comments:  
+
+
+ 
+ __1.4 rightPosition__
+
+  * Type: int
+
+  * Synonyms: genome right position  
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      71265
+      ```
+
+  * Comments 
+
+
+__1.5 sequence__
+
+  * Type: string
+
+  * Synonyms:  
+    
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      ATGGCTGAAGCGCAAAATGATCCCCTGCTGCCGGGATACTCGTTTAACGCCCATCTGGTGGCGGGTTTAACGCCGATTGAGGCCAACGGTTATCTCGATTTTTTTATCGACCGACCGCTGGGAATGAAAGGTTATATTCTCAATCTCACCATTCGCGGTCAGGGGGTGGTGAAAAATCAGGGACGAGAATTTGTCTGCCGACCGGGTGATATTTTGCTGTTCCCGCCAGGAGAGATTCATCACTACGGTCGTCATCCGGAGGCTCGCGAATGGTATCACCAGTGGGTTTACTTTCGTCCGCGCGCCTACTGGCATGAATGGCTTAACTGGCCGTCAATATTTGCCAATACGGGTTTCTTTCGCCCGGATGAAGCGCACCAGCCGCATTTCAGCGACCTGTTTGGGCAAATCATTAACGCCGGGCAAGGGGAAGGGCGCTATTCGGAGCTGCTGGCGATAAATCTGCTTGAGCAATTGTTACTGCGGCGCATGGAAGCGATTAACGAGTCGCTCCATCCACCGATGGATAATCGGGTACGCGAGGCTTGTCAGTACATCAGCGATCACCTGGCAGACAGCAATTTTGATATCGCCAGCGTCGCACAGCATGTTTGCTTGTCGCCGTCGCGTCTGTCACATCTTTTCCGCCAGCAGTTAGGGATTAGCGTCTTAAGCTGGCGCGAGGACCAACGCATTAGTCAGGCGAAGCTGCTTTTGAGCACTACCCGGATGCCTATCGCCACCGTCGGTCGCAATGTTGGTTTTGACGATCAACTCTATTTCTCGCGAGTATTTAAAAAATGCACCGGGGCCAGCCCGAGCGAGTTTCGTGCCGGTTGTGAAGAAAAAGTGAATGATGTAGCCGTCAAGTTGTCATAA
+      ```
+
+  * Comments:  
+
+__1.6 strand__
+
+  * Type: string  
+
+  * Synonyms:  
+
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      forward
+      ```
+
+  * Comments: Los valores permitidos para este atributo son: "forward", "reverse", null.  
+
+
+ __1.7 gcContent__
+
+  * Type: double
+
+  * Synonyms:  
+    
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      52.56
+      ```
+
+  * Comments:  
+
+
+__1.8 organismId__
+
+  * Type: string
+
+  * Synonyms: organism identifier  
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      ECK12
+      ```
+
+  * Comments: 
+
+  __1.9 type__
+
+  * Type: string
+
+  * Synonyms:   
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      gene
+      ```
+
+  * Comments: Los valores permitidos para este atributo son: pseudo, phantom, gene y truncated.  
+
+
+__1.10 centisomePosition__
+
+  * Type: double  
+
+  * Synonyms:  
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      1.5164213
+      ```
+
+  * Comments:   
+
+
+__1.11 interrupted__
+
+  * Type: bool  
+
+  * Synonyms:  
+
+  * Usage: opcional  
+
+  * Example:
+
+      ```xml
+      false
+      ```
+
+  * Comments:  
+
+__1.12 multifunDirectParents__
+
+  * Type: array  
+
+  * Synonyms:  
+
+  * Usage: opcional  
+
+  * Example:
+
+      ```xml
+      carbon compounds, Transcription related, operon, repressor
+      ```
+
+  * Comments:  
+
+
+__1.13 gene_note__
+
+  * Type: string  
+
+  * Synonyms:  
+
+  * Usage: opcional  
+
+  * Example:
+
+      ```xml
+      
+      ```
+
+  * Comments:  
+
+
+__1.14 gene_internal_comment__
+
+  * Type: string
+
+  * Synonyms:  
+
+
+  * Usage: opcional  
+
+  * Example:
+
+      ```xml
+      
+      ```
+
+  * Comments:  
+
+
+__1.15 synonyms__
+
+  * Type: string
+
+  * Synonyms: identifier
+
+  * Usage:  
+    
+  * Example:
+
+      ```xml
+      RDBECOLIGN00065, RDBECOLIGN10054
+      ```
+
+  * Comments:  
+
+
+ __1.16 external_databases__  
+
+  * Type: string
+
+  * Synonyms:   
+    
+  * Usage: opcional
+
+  * Example:
+
+      ```xml
+      ASAP, http://.......
+      ```
+
+  * Comments:  
+
+
+__1.17 schema_version__
+
+  * Type: string
+
+  * Synonyms:  
+    
+  * Usage: opcional  
+
+  * Example:
+
+      ```xml
+      1
+      ```
+
+  * Comments: Este atributo es usado para controlar internamente las modificaciones que se hagan en la colección, así como con el uso del modelo por parte de la aplicación Web de RegulonDB.  
+
+
+__1.18 multifun_parents__
+
+  * Type: string  
+
+  * Synonyms: multifun family  
+
+  * Usage: opcional  
+
+  * Example:
+
+      ```xml
+      
+      ```
+
+  * Comments:   
+
+  __1.19 schemaVersion__
+
+  * Type: double  
+
+  * Synonyms:
+
+  * Usage: requerido  
+
+  * Example:
+
+      ```xml
+      1.0
+      ```
+
+  * Comments: Este campo es utilizado de manera interna para llevar el control de las versiones del esquema de las colecciones de RegulonDB por el sistema de base de datos MongoDB.  
+
+
+
+_Desing patterns_  
+
+_Comments:_  
+
+_Example:_  
+
+```xml
+Example
+```

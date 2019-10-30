@@ -1,6 +1,6 @@
-Need help
+¿Necesitas ayuda?
 =========
-If you have a trouble please email regulodb@ccg.unam.mx
+Si tienes alguna duda, sugerencia, pregunta o comentario, por favor escribe a: regulodb@ccg.unam.mx
 
 
 Need further help
