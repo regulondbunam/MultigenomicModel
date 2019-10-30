@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>gene &mdash; Multigenomic Model of RegulonDB 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Multigenomic Model of RegulonDB
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="MultigenomicModel_Manual_v0.1.html">Multigenomic Model of RegulonDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html#contacto">Contacto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">¿Necesitas ayuda?</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Multigenomic Model of RegulonDB</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>gene</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/geneCollection.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gene">
+<h1>gene<a class="headerlink" href="#gene" title="Permalink to this headline">¶</a></h1>
+<p>Esta colección representa al objeto <strong>Gene</strong> dentro de la regulación transcripcional de un organismo. Un gen representa un segmento corto de ADN, y tiene como objetivo desempeñar una función especial. Posee una serie de propiedades que permiten identificarlo y diferenciarlo de otros, así como de características que permiten establecer relaciones con otros objetos.</p>
+<hr class="docutils" />
+<div class="section" id="propiedades">
+<h2>Propiedades<a class="headerlink" href="#propiedades" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<div class="section" id="id">
+<h3>_id<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: string</li>
+<li>URI PRO: NA</li>
+<li>Synonyms: identifier</li>
+<li>Description: Este campo tiene como función identificar a un gen en particular, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.</li>
+<li>Required: si</li>
+<li>URI [values]: NA</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> RDBECOLIGN00001 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: Para conocer más detalle sobre la definición de los identificadores, consultar la sección: Identificadores en el manual de RegulonDB.</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="name">
+<h3>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: string</li>
+<li>URI PRO: string</li>
+<li>Synonyms: NA</li>
+<li>Description: Indica el nombre oficial de un gen.</li>
+<li>Required: no</li>
+<li>URI [values]: NA</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> araC 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: En algunos casos habrá genes que no tengan un nombre asociado por lo que este campo pudiera presentarse vacío.</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="bnumber">
+<h3>bnumber<a class="headerlink" href="#bnumber" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: string</li>
+<li>URI PRO: string</li>
+<li>Synonyms: identifier</li>
+<li>Description: Este campo tiene como función identificar de forma alterna a un gen. Los valores de este campo son tomados de fuentes externas a RegulonDB.</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> b0064 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: NA</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="leftendposition">
+<h3>leftEndPosition<a class="headerlink" href="#leftendposition" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: int</li>
+<li>URI PRO: string</li>
+<li>Synonyms: genome left position</li>
+<li>Description: Indica la posición izquierda del objeto Gen.</li>
+<li>Required: no</li>
+<li>URI [values]: NA</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 70387 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: NA</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="rightendposition">
+<h3>rightEndPosition<a class="headerlink" href="#rightendposition" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: int</li>
+<li>URI PRO: string</li>
+<li>Synonyms: genome right position</li>
+<li>Description: Indica la posición derecha del objeto Gen.</li>
+<li>Required: no</li>
+<li>URI [values]: NA</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 71265 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: NA</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="fragments">
+<h3>fragments<a class="headerlink" href="#fragments" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: array</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: Indica que un gene está conformado por múltiples segmentos. Las características de estos genes son definidas por medio de un objeto con las propiedades: strand, leftEndPosition, rightEndPosition, name, bnumber, synonyms, centisomePosition y evidenceReferences.</li>
+<li>Required: no</li>
+<li>URI [values]: NA</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [&quot;forward&quot;, 70387, 71265, &quot;araC&quot;, bnumber, [&quot;b0064&quot;,&quot;ECK0065&quot;,&quot;EG10054&quot;],1.5164213,[{&quot;publication_id&quot;: &quot;GID000027564&quot;},{&quot;publication_id&quot;: &quot;GID000027564&quot;,&quot;evidence_id&quot;: &quot;GID000000006&quot;}]] 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: Para el caso de genes fragmentados las propiedades obligatorias son: strand, leftEndPosition y rightEndPosition</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="strand">
+<h3>strand<a class="headerlink" href="#strand" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: string</li>
+<li>URI PRO: string</li>
+<li>Synonyms: direction</li>
+<li>Description: Indica la orientación del Gene.</li>
+<li>Required: no</li>
+<li>URI [values]: forward, reverse</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> forward 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="sequence">
+<h3>sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: string</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: Indica la sequencia de ADN del Gen.</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> ATGGCTGAAGCGCAAAATGATCCCCTGCTGCCGGGATACTCGTTTAACGCCCATCTGGTGGCGGGTTTAACGCCGATTGAGGCCAACGGTTATCTCGATTTTTTTATCGACCGACCGCTGGGAATGAAAGGTTATATTCTCAATCTCACCATTCGCGGTCAGGGGGTGGTGAAAAATCAGGGACGAGAATTTGTCTGCCGACCGGGTGATATTTTGCTGTTCCCGCCAGGAGAGATTCATCACTACGGTCGTCATCCGGAGGCTCGCGAATGGTATCACCAGTGGGTTTACTTTCGTCCGCGCGCCTACTGGCATGAATGGCTTAACTGGCCGTCAATATTTGCCAATACGGGTTTCTTTCGCCCGGATGAAGCGCACCAGCCGCATTTCAGCGACCTGTTTGGGCAAATCATTAACGCCGGGCAAGGGGAAGGGCGCTATTCGGAGCTGCTGGCGATAAATCTGCTTGAGCAATTGTTACTGCGGCGCATGGAAGCGATTAACGAGTCGCTCCATCCACCGATGGATAATCGGGTACGCGAGGCTTGTCAGTACATCAGCGATCACCTGGCAGACAGCAATTTTGATATCGCCAGCGTCGCACAGCATGTTTGCTTGTCGCCGTCGCGTCTGTCACATCTTTTCCGCCAGCAGTTAGGGATTAGCGTCTTAAGCTGGCGCGAGGACCAACGCATTAGTCAGGCGAAGCTGCTTTTGAGCACTACCCGGATGCCTATCGCCACCGTCGGTCGCAATGTTGGTTTTGACGATCAACTCTATTTCTCGCGAGTATTTAAAAAATGCACCGGGGCCAGCCCGAGCGAGTTTCGTGCCGGTTGTGAAGAAAAAGTGAATGATGTAGCCGTCAAGTTGTCATAA 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="gccontent">
+<h3>gcContent<a class="headerlink" href="#gccontent" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: double</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: Representa el porcentaje de pares de Guanina-Citosina en la secuencia de ADN del Gen.</li>
+<li>Required: si</li>
+<li>URI [values]: NA</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 52.56 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: NA</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="note">
+<h3>note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: string</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: string</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> The expression of the gene is analyzed through a transcriptional fusion (i.e. lacZ), and  a difference in expression levels is observed when the regulatory protein is present  (wild type) vs in its absence.  Note that this evidence does not eliminate the possiblity of an indirect effect of the regulator on the regulated gene. 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="internalcomment">
+<h3>internalComment<a class="headerlink" href="#internalcomment" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: string</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: string</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> string 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="organism-id">
+<h3>organism_id<a class="headerlink" href="#organism-id" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: string</li>
+<li>URI PRO: string</li>
+<li>Synonyms: organism identifier</li>
+<li>Description: Indica el identificador del organismo estudiado.</li>
+<li>Required: si</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> ECK12 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="type">
+<h3>type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: string</li>
+<li>URI PRO: string</li>
+<li>Synonyms: kind</li>
+<li>Description: Indica el tipo de gene anotado.</li>
+<li>Required: si</li>
+<li>URI [values]: pseudo, phantom, gene, truncated</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> phantom 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="centisomeposition">
+<h3>centisomePosition<a class="headerlink" href="#centisomeposition" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: double</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: Indica la posición central del gene en el cromosoma</li>
+<li>Required: si</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 1.5164213 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="interrupted">
+<h3>interrupted<a class="headerlink" href="#interrupted" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: bool</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: string</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> false 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="multifundirectparents">
+<h3>multifunDirectParents<a class="headerlink" href="#multifundirectparents" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: array</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: Descripción de las funciones celulares del producto del Gene.</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [&quot;carbon compounds&quot;, &quot;Transcription related&quot;, &quot;operon&quot;, &quot;repressor&quot;] 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="synonyms">
+<h3>synonyms<a class="headerlink" href="#synonyms" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: array</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: Indica los identificadores de aquellos genes con los que se le conoce al gene.</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [&quot;RDBECOLIGN00065&quot;, &quot;RDBECOLIGN10054&quot;] 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="evidencereferences">
+<h3>evidenceReferences<a class="headerlink" href="#evidencereferences" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: array</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: string</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [{&quot;publication_id&quot;: &quot;GID000027564&quot;},{&quot;publication_id&quot;: &quot;GID000027564&quot;,&quot;evidence_id&quot;: &quot;GID000000006&quot;}] 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="externalcrossreferences">
+<h3>externalCrossReferences<a class="headerlink" href="#externalcrossreferences" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: array</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: Indica las referencias relacionadas con el Gene. Este campo es de tipo objeto por lo que se encuentra compuesto por dos propiedades: externalCrossReference_id y objectId.</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [{&quot;externalCrossReference_id&quot;:&quot;OU-Microarray&quot;,&quot;objectId&quot;:&quot;b3075&quot;}] 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="product-ids">
+<h3>product_ids<a class="headerlink" href="#product-ids" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: array</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: Identificador del producto obtenido de la expresión del Gene.</li>
+<li>Required: no</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [&quot;ECK120004526&quot;] 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="schemaversion">
+<h3>schemaVersion<a class="headerlink" href="#schemaversion" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bsonType: double</li>
+<li>URI PRO: string</li>
+<li>Synonyms: string</li>
+<li>Description: Permite identificar la versión del esquema de la colección.</li>
+<li>Required: si</li>
+<li>URI [values]: string</li>
+<li>Example:</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 1.0 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Comments: string</li>
+</ul>
+<hr class="docutils" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, adminpgc
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -4,11 +4,10 @@
 Welcome to Multigenomic Model of RegulonDB's documentation!
 ===========================================================
 
-Guide
-^^^^^
+
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 6
    :caption: Contents:
 
 
@@ -16,10 +15,6 @@ Guide
    license
    help
    
+   
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

@@ -1,0 +1,8 @@
+{
+	"title":"#",
+	"subtitle":"##",
+	"properties":"###",
+	"element_properties":"*",
+	"sections":"---",
+	"code":"```xml \n $CODE$ \n```"
+}
