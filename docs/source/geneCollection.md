@@ -6,8 +6,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 ## Propiedades
 ---
 ### _id
-* bsonType: string
 * URI PRO: NA
+* Type: string
 * Synonyms: identifier
 * Description: Este campo tiene como función identificar a un gen en particular, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.
 * Required: si
@@ -19,8 +19,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: Para conocer más detalle sobre la definición de los identificadores, consultar la sección: Identificadores en el manual de RegulonDB.
 ---
 ### name
-* bsonType: string
 * URI PRO: string
+* Type: string
 * Synonyms: NA
 * Description: Indica el nombre oficial de un gen.
 * Required: no
@@ -32,8 +32,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: En algunos casos habrá genes que no tengan un nombre asociado por lo que este campo pudiera presentarse vacío.
 ---
 ### bnumber
-* bsonType: string
 * URI PRO: string
+* Type: string
 * Synonyms: identifier
 * Description: Este campo tiene como función identificar de forma alterna a un gen. Los valores de este campo son tomados de fuentes externas a RegulonDB.
 * Required: no
@@ -45,8 +45,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: NA
 ---
 ### leftEndPosition
-* bsonType: int
 * URI PRO: string
+* Type: int
 * Synonyms: genome left position
 * Description: Indica la posición izquierda del objeto Gen.
 * Required: no
@@ -58,8 +58,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: NA
 ---
 ### rightEndPosition
-* bsonType: int
 * URI PRO: string
+* Type: int
 * Synonyms: genome right position
 * Description: Indica la posición derecha del objeto Gen.
 * Required: no
@@ -71,8 +71,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: NA
 ---
 ### fragments
-* bsonType: array
 * URI PRO: string
+* Type: array
 * Synonyms: string
 * Description: Indica que un gene está conformado por múltiples segmentos. Las características de estos genes son definidas por medio de un objeto con las propiedades: strand, leftEndPosition, rightEndPosition, name, bnumber, synonyms, centisomePosition y evidenceReferences.
 * Required: no
@@ -84,8 +84,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: Para el caso de genes fragmentados las propiedades obligatorias son: strand, leftEndPosition y rightEndPosition
 ---
 ### strand
-* bsonType: string
 * URI PRO: string
+* Type: string
 * Synonyms: direction
 * Description: Indica la orientación del Gene.
 * Required: no
@@ -97,8 +97,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### sequence
-* bsonType: string
 * URI PRO: string
+* Type: string
 * Synonyms: string
 * Description: Indica la sequencia de ADN del Gen.
 * Required: no
@@ -110,8 +110,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### gcContent
-* bsonType: double
 * URI PRO: string
+* Type: double
 * Synonyms: string
 * Description: Representa el porcentaje de pares de Guanina-Citosina en la secuencia de ADN del Gen.
 * Required: si
@@ -123,8 +123,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: NA
 ---
 ### note
-* bsonType: string
 * URI PRO: string
+* Type: string
 * Synonyms: string
 * Description: string
 * Required: no
@@ -136,8 +136,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### internalComment
-* bsonType: string
 * URI PRO: string
+* Type: string
 * Synonyms: string
 * Description: string
 * Required: no
@@ -149,8 +149,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### organism_id
-* bsonType: string
 * URI PRO: string
+* Type: string
 * Synonyms: organism identifier
 * Description: Indica el identificador del organismo estudiado.
 * Required: si
@@ -162,8 +162,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### type
-* bsonType: string
 * URI PRO: string
+* Type: string
 * Synonyms: kind
 * Description: Indica el tipo de gene anotado.
 * Required: si
@@ -175,8 +175,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### centisomePosition
-* bsonType: double
 * URI PRO: string
+* Type: double
 * Synonyms: string
 * Description: Indica la posición central del gene en el cromosoma
 * Required: si
@@ -188,8 +188,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### interrupted
-* bsonType: bool
 * URI PRO: string
+* Type: bool
 * Synonyms: string
 * Description: string
 * Required: no
@@ -201,8 +201,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### multifunDirectParents
-* bsonType: array
 * URI PRO: string
+* Type: array
 * Synonyms: string
 * Description: Descripción de las funciones celulares del producto del Gene.
 * Required: no
@@ -214,8 +214,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### synonyms
-* bsonType: array
 * URI PRO: string
+* Type: array
 * Synonyms: string
 * Description: Indica los identificadores de aquellos genes con los que se le conoce al gene.
 * Required: no
@@ -227,8 +227,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### evidenceReferences
-* bsonType: array
 * URI PRO: string
+* Type: array
 * Synonyms: string
 * Description: string
 * Required: no
@@ -240,8 +240,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### externalCrossReferences
-* bsonType: array
 * URI PRO: string
+* Type: array
 * Synonyms: string
 * Description: Indica las referencias relacionadas con el Gene. Este campo es de tipo objeto por lo que se encuentra compuesto por dos propiedades: externalCrossReference_id y objectId.
 * Required: no
@@ -253,8 +253,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### product_ids
-* bsonType: array
 * URI PRO: string
+* Type: array
 * Synonyms: string
 * Description: Identificador del producto obtenido de la expresión del Gene.
 * Required: no
@@ -266,8 +266,8 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: string
 ---
 ### schemaVersion
-* bsonType: double
 * URI PRO: string
+* Type: double
 * Synonyms: string
 * Description: Permite identificar la versión del esquema de la colección.
 * Required: si
