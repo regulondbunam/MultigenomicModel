@@ -52,18 +52,6 @@
                         "Comments": "En algunos casos habrá genes que no tengan un nombre asociado por lo que este campo pudiera presentarse vacío."
                     }
                 },
-                "bnumber": {
-                    "bsonType": "string",
-                    "description": "",
-                    "annotation": {
-                        "Synonyms": "identifier",
-                        "Description": "Este campo tiene como función identificar de forma alterna a un gen. Los valores de este campo son tomados de fuentes externas a RegulonDB.",
-                        "URI": "[value]",
-                        "Required": "string",
-                        "Example": "b0064",
-                        "Comments": "[value]"
-                    }
-                },
                 "leftEndPosition": {
                     "bsonType": "int",
                     "annotation": {
@@ -109,22 +97,6 @@
                             "rightEndPosition": {
                                 "bsonType": "int",
                                 "description": ""
-                            },
-                            "name": {
-                                "bsonType": "string",
-                                "description": ""
-                            },
-                            "bnumber": {
-                                "bsonType": "string",
-                                "description": ""
-                            },
-                            "synonyms": {
-                                "bsonType": "array",
-                                "uniqueItems": true,
-                                "description": "",
-                                "items": {
-                                    "bsonType": "string"
-                                }
                             },
                             "centisomePosition": {
                                 "bsonType": "double",
@@ -257,7 +229,7 @@
                     "description": "",
                     "annotation": {
                         "Synonyms": "[value]",
-                        "Description": "Indica la posición central del gene en el cromosoma",
+                        "Description": "Indica la posición del gene en el cromosoma en unidades de centisoma",
                         "URI": "[value]",
                         "Required": "[value]",
                         "Example": "1.5164213",
@@ -269,14 +241,14 @@
                     "description": "",
                     "annotation": {
                         "Synonyms": "[value]",
-                        "Description": "[value]",
+                        "Description": "Este campo se usa para genes que tienen un codón de parada. Un gene interrumpido será definido por dos marcos genéticos que describen las dos mitades del gen. ",
                         "URI": "[value]",
                         "Required": "[value]",
                         "Example": "false",
                         "Comments": "[value]"
                     }
                 },
-                "multifunDirectParents": {
+                "ontologyClass_ids": {
                     "bsonType": "array",
                     "uniqueItems": true,
                     "items": {
@@ -363,22 +335,6 @@
                         "URI": "[value]",
                         "Required": "[value]",
                         "Example": "[{\"externalCrossReference_id\":\"OU-Microarray\",\"objectId\":\"b3075\"}]",
-                        "Comments": "[value]"
-                    }
-                },
-                "product_ids": {
-                    "bsonType": "array",
-                    "uniqueItems": true,
-                    "description": "",
-                    "items": {
-                        "bsonType": "string"
-                    },
-                    "annotation": {
-                        "Synonyms": "[value]",
-                        "Description": "Identificador del producto obtenido de la expresión del Gen.",
-                        "URI [values]": "[value]",
-                        "Required": "[value]",
-                        "Example": "[\"ECK120004526\"]",
                         "Comments": "[value]"
                     }
                 },
