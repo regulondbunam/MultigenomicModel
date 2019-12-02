@@ -3,20 +3,25 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-                "_id",
-                "name",
-				        "organism_id",
-                "schemaVersion"
+				"_id",
+				"name",
+				"type",
+				"organism_id",
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-            "bsonType": "string",
-            "description": ""
-        },
-        "name": {
-            "bsonType": "string",
-            "description": ""
-        },
+					"bsonType": "string",
+					"description": ""
+				},
+				"name": {
+					"bsonType": "string",
+					"description": ""
+				},
+				"type": {
+					"bsonType": "string",
+					"enum": ["metabolite", "protein"]
+				},
 				"note": {
 					"bsonType": "string",
 					"description": ""
@@ -31,20 +36,12 @@
 				},
 				"synonyms": {
 					"bsonType": "array",
-                    "uniqueItems": true,
-                    "description": "",
-					"items": {
-						"bsonType": "string"
-					}
-                },
-                "conformation_ids": {
-                    "bsonType": "array",
 					"uniqueItems": true,
 					"description": "",
 					"items": {
 						"bsonType": "string"
 					}
-                },
+				},
 				"evidenceReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
@@ -86,7 +83,7 @@
 						},
 						"additionalProperties": false
 					}
-                },
+				},
 				"schemaVersion": {
 					"bsonType": "double",
 					"description": ""
