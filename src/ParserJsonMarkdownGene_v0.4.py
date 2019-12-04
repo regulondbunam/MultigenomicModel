@@ -129,6 +129,6 @@ data.pop("collection")
 
 pathFileSchema=args.outputfile+"json_schema_validation/"+nameColection+"_schema_validation_rules.json"
 with open(pathFileSchema, 'w') as data_file:
-    data = json.dump(data, data_file)
+    data = json.dump(data, data_file, indent=4)
 
 
