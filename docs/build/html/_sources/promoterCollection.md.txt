@@ -1,7 +1,7 @@
 # promoter
 
 _Description_  
-Dentro del modelo de RegulonDB, Promoter representa una colección que permite representar los diferentes atributos y características que permiten describirlo.
+Dentro del modelo de RegulonDB, __Promoter__ representa una colección que permite representar los diferentes atributos y características que permiten describirlo.
 
 _Attributes_  
 
@@ -11,7 +11,7 @@ __2.1\_id__
 
   * Synonyms: [value]  
 
-  * Usage: [requerido, opcional]  
+  * Required: [requerido, opcional]  
 
   * Example:
 

@@ -33,8 +33,8 @@
                     "description": "",
                     "annotation": {
                         "Synonyms": "identifier",
-                        "Description": "Este campo tiene como función identificar a un gen en particular, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.",
-                        "URI": "[value]",
+                        "Description": "Identificador de un gen dentro de RegulonDB, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.",
+                        "URI": "No aplica",
                         "Required": "[value]",
                         "Example": "ECK120000050",
                         "Comments": "Para conocer más detalle sobre la definición de los identificadores, consultar la sección: Identificadores en el manual de RegulonDB."
@@ -47,9 +47,9 @@
                         "Synonyms": "[value]",
                         "Description": "Indica el nombre oficial de un gen.",
                         "URI": "[value]",
-                        "Required": "string",
+                        "Required": "[value]",
                         "Example": "araC",
-                        "Comments": "En algunos casos habrá genes que no tengan un nombre asociado por lo que este campo pudiera presentarse vacío."
+                        "Comments": "[value]"
                     }
                 },
                 "leftEndPosition": {
