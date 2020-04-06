@@ -3,49 +3,39 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-                "_id",
-                "schemaVersion"
+				"_id",
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
-					"description": ""
-                },
-                "referenceId": {
-                    "bsonType": "int",
-					"description": ""
-                },
-                "externalCrossReference_id": {
-                    "bsonType": "string",
-					"description": ""
-                },
-                "author": {
-                    "bsonType": "string",
-                    "description": ""
-                },
-                "title": {
-                    "bsonType": "string",
-                    "description": ""
-                },
-                "source": {
-                    "bsonType": "string",
-                    "description": ""
-                },
-                "year": {
-                    "bsonType": "int",
-                    "description": ""
-                },
+					"bsonType": "string"
+				},
+				"referenceId": {
+					"bsonType": "int"
+				},
+				"externalCrossReference_id": {
+					"bsonType": "string"
+				},
+				"author": {
+					"bsonType": "string"
+				},
+				"title": {
+					"bsonType": "string"
+				},
+				"source": {
+					"bsonType": "string"
+				},
+				"year": {
+					"bsonType": "int"
+				},
 				"note": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"internalComment": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"schemaVersion": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				}
 			},
 			"additionalProperties": false
