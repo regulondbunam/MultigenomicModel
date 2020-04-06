@@ -4,81 +4,62 @@
 			"bsonType": "object",
 			"required": [
 				"_id",
-				"product_id",
 				"leftEndPosition",
 				"rightEndPosition",
 				"sequence",
+				"product_id",
 				"organism_id",
-        "schemaVersion"
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"product_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"leftEndPosition": {
-					"bsonType": "int",
-					"description": ""
+					"bsonType": "int"
 				},
 				"rightEndPosition": {
-					"bsonType": "int",
-					"description": ""
+					"bsonType": "int"
 				},
 				"sequence": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
+				},
+				"type": {
+					"bsonType": "string"
 				},
 				"description": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"note": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"internalComment": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"organism_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"dataSource": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"residueNumber": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				},
 				"attachedGroup": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"homologyMotif": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"alternateSequence": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
+				},
+				"product_id": {
+					"bsonType": "string"
 				},
 				"synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "string"
 					}
 				},
 				"externalCrossReferences": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
@@ -88,20 +69,23 @@
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"objectId": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
+				"organism_id": {
+					"bsonType": "string"
+				},
+				"internalComment": {
+					"bsonType": "string"
+				},
 				"schemaVersion": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				}
 			},
 			"additionalProperties": false

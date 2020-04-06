@@ -21,23 +21,6 @@
 					"bsonType": "string",
 					"enum": ["transcription-factor", "srna", "ppgpp"]
 				},
-				"products": {
-					"bsonType": "array",
-					"uniqueItems": true,
-					"items": {
-						"bsonType": "object",
-						"required": ["product_id"],
-						"properties":{
-							"product_id": {
-								"bsonType": "string"
-							},
-							"coefficient": {
-								"bsonType": "int"
-							}
-						},
-						"additionalProperties": false
-					}
-				},
 				"siteLength": {
 					"bsonType": "array",
 					"items": {
@@ -59,13 +42,29 @@
 						"enum": [
 							"asymmetric",
 							"inverted-repeat",
-							"direct-repeat",
-							null
+							"direct-repeat"
 						]
 					}
 				},
 				"note": {
 					"bsonType": "string"
+				},
+				"products": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"required": ["product_id"],
+						"properties": {
+							"product_id": {
+								"bsonType": "string"
+							},
+							"coefficient": {
+								"bsonType": "int"
+							}
+						},
+						"additionalProperties": false
+					}
 				},
 				"synonyms": {
 					"bsonType": "array",
@@ -79,6 +78,11 @@
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
 								"bsonType": "string"

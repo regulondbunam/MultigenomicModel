@@ -7,34 +7,27 @@
 				"transcriptionTerminationSite",
 				"sequence",
 				"class",
-				"transcriptionUnit_id",
-        "schemaVersion"
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
-				"transcriptionTerminationSite":{
+				"transcriptionTerminationSite": {
 					"bsonType": "object",
-					"description": "",
 					"required": ["leftEndPosition", "rightEndPosition", "type"],
 					"properties": {
-						"leftEndPosition":{
-							"bsonType": "int",
-							"description": ""
+						"leftEndPosition": {
+							"bsonType": "int"
 						},
-						"rightEndPosition":{
-							"bsonType": "int",
-							"description": ""
+						"rightEndPosition": {
+							"bsonType": "int"
 						},
-						"range":{
-							"bsonType": "int",
-							"description": ""
+						"range": {
+							"bsonType": "int"
 						},
 						"type": {
 							"bsonType": "string",
-							"description": "",
 							"enum": ["primary", "secondary", "tertiary"]
 						}
 					},
@@ -42,47 +35,34 @@
 				},
 				"sequence": {
 					"bsonType": "string",
-					"description": "",
 					"pattern": "^[ATCGatcg]+$"
 				},
 				"class": {
 					"bsonType": "string",
-					"description": "",
 					"enum": [
 						"rho-independent",
 						"rho-dependent"
 					]
 				},
-				"transcriptionUnit_id": {
-					"bsonType": "string",
-					"description": ""
-				},
 				"note": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"internalComment": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"organism_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"evidenceReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
@@ -91,7 +71,6 @@
 				"externalCrossReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
 						"required": [
@@ -100,20 +79,23 @@
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"objectId": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
+				"organism_id": {
+					"bsonType": "string"
+				},
+				"internalComment": {
+					"bsonType": "string"
+				},
 				"schemaVersion": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				}
 			},
 			"additionalProperties": false

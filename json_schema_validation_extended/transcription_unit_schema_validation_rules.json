@@ -10,20 +10,19 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"name": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
+				},
+				"note": {
+					"bsonType": "string"
 				},
 				"promoter_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"terminator_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"gene_ids": {
 					"bsonType": "array",
@@ -32,29 +31,15 @@
 						"bsonType": "string"
 					}
 				},
-				"note": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"internalComment": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"organism_id": {
-					"bsonType": "string",
-					"description": ""
-				},
 				"synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "string"
 					}
 				},
 				"evidenceReferences": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
@@ -76,7 +61,6 @@
 				},
 				"externalCrossReferences": {
 					"bsonType": "array",
-					"description": "",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "object",
@@ -86,20 +70,23 @@
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"objectId": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
+				"organism_id": {
+					"bsonType": "string"
+				},
+				"internalComment": {
+					"bsonType": "string"
+				},
 				"schemaVersion": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				}
 			},
 			"additionalProperties": false
