@@ -3,47 +3,39 @@
 		"$jsonSchema": {
 			"bsonType": "object",
 			"required": [
-                "_id",
-                "name",
+				"_id",
+				"name",
 				"organism_id",
-                "schemaVersion"
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
-					"description": ""
-                },
-                "name": {
-                    "bsonType": "string",
-					"description": ""
-                },
-                "typeObject": {
-                    "bsonType": "array",
+					"bsonType": "string"
+				},
+				"name": {
+					"bsonType": "string"
+				},
+				"typeObject": {
+					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "string"
 					}
-                },
-                "code": {
-                    "bsonType": "string",
-					"description": ""
-                },
-                "note": {
-					"bsonType": "string",
-					"description": ""
+				},
+				"code": {
+					"bsonType": "string"
+				},
+				"note": {
+					"bsonType": "string"
 				},
 				"internalComment": {
-					"bsonType": "string",
-					"description": ""
-                },
-                "organism_id": {
-                    "bsonType": "string",
-					"description": ""
-                },
+					"bsonType": "string"
+				},
+				"organism_id": {
+					"bsonType": "string"
+				},
 				"schemaVersion": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				}
 			},
 			"additionalProperties": false

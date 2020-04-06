@@ -11,33 +11,21 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"name": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"type": {
 					"bsonType": "string",
 					"enum": ["metabolite", "protein"]
 				},
 				"note": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"internalComment": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"organism_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "string"
 					}
@@ -45,17 +33,19 @@
 				"evidenceReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
@@ -64,7 +54,6 @@
 				"externalCrossReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
 						"required": [
@@ -73,20 +62,23 @@
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"objectId": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
+				"organism_id": {
+					"bsonType": "string"
+				},
+				"internalComment": {
+					"bsonType": "string"
+				},
 				"schemaVersion": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				}
 			},
 			"additionalProperties": false
