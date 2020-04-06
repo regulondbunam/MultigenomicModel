@@ -6,85 +6,100 @@
 				"_id",
 				"organism_id",
 				"gene_id",
-        "schemaVersion"
+				"schemaVersion"
+			],
+			"oneOf": [{
+					"required": ["anticodon"],
+					"not": {
+						"required": ["molecularWeight", "molecularWeightKd", "catalyzes"]
+					}
+				},
+				{
+					"not": {
+						"required": ["anticodon"]
+					}
+				}
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"name": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"molecularWeight": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "string"
 				},
 				"isoelectricPoint": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				},
 				"location": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"anticodon": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"sequence": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"note": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"internalComment": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"organism_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"type": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
+				},
+				"organism_id": {
+					"bsonType": "string"
 				},
 				"modifiedForm": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
+				},
+				"anticodon": {
+					"bsonType": "string"
+				},
+				"molecularWeight": {
+					"bsonType": "double"
 				},
 				"molecularWeightKd": {
-					"bsonType": "double",
-					"description": ""
-				},
-				"componentOf": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "double"
 				},
 				"catalyzes": {
+					"bsonType": "string"
+				},
+				"componentOf": {
+					"bsonType": "string"
+				},
+				"codingSegments": {
+					"bsonType": "array",
+					"uniqueItems": "true",
+					"items": {
+						"bsonType": "int"
+					}
+				},
+				"spliceFormIntrons": {
+					"bsonType": "array",
+					"uniqueItems": "true",
+					"items": {
+						"bsonType": "int"
+					}
+				},
+				"productFunction": {
 					"bsonType": "string",
-					"description": ""
+					"enum": [
+						"transcriptionFactor",
+						"srna",
+						"ppgpp"
+					]
+				},
+				"siteLength": {
+					"bsonType": "int"
+				},
+				"consensusSequence": {
+					"bsonType": "string"
+				},
+				"symmetry": {
+					"bsonType": "string"
 				},
 				"gene_id": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"motif_ids": {
-					"bsonType": "array",
-					"description": "",
-					"uniqueItems": true,
-					"items": {
-						"bsonType": "string"
-					}
+					"bsonType": "string"
 				},
 				"synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "string"
 					}
@@ -92,17 +107,19 @@
 				"evidenceReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
@@ -111,7 +128,6 @@
 				"externalCrossReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
 						"required": [
@@ -120,20 +136,20 @@
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"objectId": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
+				"internalComment": {
+					"bsonType": "string"
+				},
 				"schemaVersion": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				}
 			},
 			"additionalProperties": false
