@@ -1,0 +1,77 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"name",
+				"genePositions",
+				"regulationPositions",
+				"transcriptionUnit_ids",
+				"organism_id",
+				"schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string"
+				},
+				"name": {
+					"bsonType": "string"
+				},
+				"genePositions": {
+					"bsonType": "object",
+					"required": [
+						"firstGeneLeftEndPosition",
+						"lastGeneRightEndPosition"
+					],
+					"properties": {
+						"firstGeneLeftEndPosition": {
+							"bsonType": "int"
+						},
+						"lastGeneRightEndPosition": {
+							"bsonType": "int"
+						}
+					}
+				},
+				"regulationPositions": {
+					"bsonType": "object",
+					"required": [
+						"leftEndPosition",
+						"rightEndPosition"
+					],
+					"properties": {
+						"leftEndPosition": {
+							"bsonType": "int"
+						},
+						"rightEndPosition": {
+							"bsonType": "int"
+						}
+					}
+				},
+				"strand": {
+					"bsonType": "string",
+					"enum": ["foward", "reverse"]
+				},
+				"transcriptionUnit_ids": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					}
+				},
+				"organism_id": {
+					"bsonType": "string"
+				},
+				"internalComment": {
+					"bsonType": "string"
+				},
+				"schemaVersion": {
+					"bsonType": "double"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}
