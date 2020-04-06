@@ -4,23 +4,20 @@
 			"bsonType": "object",
 			"required": [
 				"_id",
-				"conformation_id",
 				"regulatedEntity",
+				"conformation_id",
 				"organism_id",
 				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"centerPosition": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				},
 				"function": {
 					"bsonType": "string",
-					"description": "",
 					"enum": [
 						"activator",
 						"repressor",
@@ -29,94 +26,115 @@
 				},
 				"type": {
 					"bsonType": "string",
-					"description": "",
 					"enum": [
 						"mechanistic",
 						"physiological"
 					]
 				},
 				"note": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
-				"internalComment": {
-					"bsonType": "string",
-					"description": ""
+				"bindingSite": {
+					"bsonType": "object",
+					"properties": {
+						"absolutePosition": {
+							"bsonType": "double"
+						},
+						"leftEndPosition": {
+							"bsonType": "int"
+						},
+						"rightEndPosition": {
+							"bsonType": "int"
+						},
+						"sequence": {
+							"bsonType": "string",
+							"pattern": "^[ATCGatcg]+$"
+						},
+						"length": {
+							"bsonType": "int"
+						},
+						"note": {
+							"bsonType": "string"
+						},
+						"internalComment": {
+							"bsonType": "string"
+						},
+						"evidenceReferences": {
+							"bsonType": "array",
+							"uniqueItems": true,
+							"items": {
+								"bsonType": "object",
+								"anyOf": [{
+									"required": ["publication_id"]
+								}, {
+									"required": ["evidence_id"]
+								}],
+								"properties": {
+									"publication_id": {
+										"bsonType": "string"
+									},
+									"evidence_id": {
+										"bsonType": "string"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"externalCrossReferences": {
+							"bsonType": "array",
+							"uniqueItems": true,
+							"items": {
+								"bsonType": "object",
+								"required": [
+									"externalCrossReference_id",
+									"objectId"
+								],
+								"properties": {
+									"externalCrossReference_id": {
+										"bsonType": "string"
+									},
+									"objectId": {
+										"bsonType": "string"
+									}
+								},
+								"additionalProperties": false
+							}
+						}
+					}
 				},
 				"conformation_id": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"regulatedEntity": {
 					"bsonType": "object",
-					"oneOf": [
-						{
-							"required": ["gene_id"],
-							"not":{
-								"required": ["transcriptionUnit_id", "promoter_id", "srna_id"]
-							}
-						},
-						{
-							"required": ["transcriptionUnit_id"],
-							"not": {
-								"required": ["gene_id", "promoter_id", "srna_id"]
-							}
-						},
-						{
-							"required": ["promoter_id"],
-							"not": {
-								"required": ["gene_id", "transcriptionUnit_id", "srna_id"]
-							}
-						},
-						{
-							"required": ["srna_id"],
-							"not": {
-								"required": ["gene_id", "transcriptionUnit_id", "promoter_id"]
-							}
-						}
-					],
+					"required": ["_id", "type"],
 					"properties": {
-						"gene_id": {
-							"bsonType": "string",
-							"description": ""
+						"_id": {
+							"bsonType": "string"
 						},
-						"transcriptionUnit_id":{
+						"type": {
 							"bsonType": "string",
-							"description": ""
-						},
-						"promoter_id": {
-							"bsonType": "string",
-							"description": ""
-						},
-						"srna_id": {
-							"bsonType": "string",
-							"description": ""
+							"enum": ["gene", "srna", "promoter", "transcription-unit"]
 						}
 					},
 					"additionalProperties": false
 				},
-				"site_id": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"organism_id": {
-					"bsonType": "string",
-					"description": ""
-				},
 				"evidenceReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
@@ -125,7 +143,6 @@
 				"externalCrossReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
 						"required": [
@@ -134,20 +151,23 @@
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"objectId": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
+				"organism_id": {
+					"bsonType": "string"
+				},
+				"internalComment": {
+					"bsonType": "string"
+				},
 				"schemaVersion": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				}
 			},
 			"additionalProperties": false
