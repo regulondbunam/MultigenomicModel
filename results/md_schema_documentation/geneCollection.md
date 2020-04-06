@@ -27,7 +27,7 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 ```xml 
  araC 
 ```
-* Comments: En algunos casos habrá genes que no tengan un nombre asociado por lo que este campo pudiera presentarse vacío.
+* Comments: [value]
 ---
 ### leftEndPosition
 * Synonyms: genome left position
@@ -232,20 +232,4 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
  1.0 
 ```
 * Comments: [value]
-
 ---
-
-## Code
-
-[![Edit geneCollection](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/genecollection-bn1bi?fontsize=14&hidenavigation=1&theme=dark) 
-
-
-
-<iframe
-     src="https://codesandbox.io/embed/genecollection-bn1bi?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="geneCollection"
-     allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
-     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-   ></iframe>
-

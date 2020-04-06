@@ -152,21 +152,20 @@
 <h1>gene<a class="headerlink" href="#gene" title="Permalink to this headline">¶</a></h1>
 <p>Esta colección representa al objeto <strong>Gene</strong> dentro de la regulación transcripcional de un organismo. Un gen representa un segmento corto de ADN, y tiene como objetivo desempeñar una función especial. Posee una serie de propiedades que permiten identificarlo y diferenciarlo de otros, así como de características que permiten establecer relaciones con otros objetos.</p>
 <hr class="docutils" />
-<div class="section" id="propiedades">
-<h2>Propiedades<a class="headerlink" href="#propiedades" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <div class="section" id="id">
 <h3>_id<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: NA</li>
-<li>Type: string</li>
 <li>Synonyms: identifier</li>
-<li>Description: Este campo tiene como función identificar a un gen en particular, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.</li>
-<li>Required: si</li>
-<li>URI [values]: NA</li>
+<li>Type: string</li>
+<li>Description: Identificador de un gen dentro de RegulonDB, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.</li>
+<li>URI: No aplica</li>
+<li>Required: yes</li>
 <li>Example:</li>
 </ul>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> RDBECOLIGN00001 
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> ECK120000050 
 </pre></div>
 </div>
 <ul class="simple">
@@ -177,12 +176,11 @@
 <div class="section" id="name">
 <h3>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: string</li>
-<li>Synonyms: NA</li>
 <li>Description: Indica el nombre oficial de un gen.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: NA</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> araC 
@@ -193,72 +191,50 @@
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="bnumber">
-<h3>bnumber<a class="headerlink" href="#bnumber" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>URI PRO: string</li>
-<li>Type: string</li>
-<li>Synonyms: identifier</li>
-<li>Description: Este campo tiene como función identificar de forma alterna a un gen. Los valores de este campo son tomados de fuentes externas a RegulonDB.</li>
-<li>Required: no</li>
-<li>URI [values]: string</li>
-<li>Example:</li>
-</ul>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> b0064 
-</pre></div>
-</div>
-<ul class="simple">
-<li>Comments: NA</li>
-</ul>
-</div>
-<hr class="docutils" />
 <div class="section" id="leftendposition">
 <h3>leftEndPosition<a class="headerlink" href="#leftendposition" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
-<li>Type: int</li>
 <li>Synonyms: genome left position</li>
+<li>Type: int</li>
 <li>Description: Indica la posición izquierda del objeto Gen.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: NA</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 70387 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: NA</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="rightendposition">
 <h3>rightEndPosition<a class="headerlink" href="#rightendposition" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
-<li>Type: int</li>
 <li>Synonyms: genome right position</li>
+<li>Type: int</li>
 <li>Description: Indica la posición derecha del objeto Gen.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: NA</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 71265 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: NA</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="fragments">
 <h3>fragments<a class="headerlink" href="#fragments" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: array</li>
-<li>Synonyms: string</li>
 <li>Description: Indica que un gene está conformado por múltiples segmentos. Las características de estos genes son definidas por medio de un objeto con las propiedades: strand, leftEndPosition, rightEndPosition, name, bnumber, synonyms, centisomePosition y evidenceReferences.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: NA</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [&quot;forward&quot;, 70387, 71265, &quot;araC&quot;, bnumber, [&quot;b0064&quot;,&quot;ECK0065&quot;,&quot;EG10054&quot;],1.5164213,[{&quot;publication_id&quot;: &quot;GID000027564&quot;},{&quot;publication_id&quot;: &quot;GID000027564&quot;,&quot;evidence_id&quot;: &quot;GID000000006&quot;}]] 
@@ -272,289 +248,266 @@
 <div class="section" id="strand">
 <h3>strand<a class="headerlink" href="#strand" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
-<li>Type: string</li>
 <li>Synonyms: direction</li>
-<li>Description: Indica la orientación del Gene.</li>
+<li>Type: string</li>
+<li>Description: Indica la orientación del Gen.</li>
+<li>URI: forward, reverse</li>
 <li>Required: no</li>
-<li>URI [values]: forward, reverse</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> forward 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="sequence">
 <h3>sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: string</li>
-<li>Synonyms: string</li>
 <li>Description: Indica la sequencia de ADN del Gen.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: string</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> ATGGCTGAAGCGCAAAATGATCCCCTGCTGCCGGGATACTCGTTTAACGCCCATCTGGTGGCGGGTTTAACGCCGATTGAGGCCAACGGTTATCTCGATTTTTTTATCGACCGACCGCTGGGAATGAAAGGTTATATTCTCAATCTCACCATTCGCGGTCAGGGGGTGGTGAAAAATCAGGGACGAGAATTTGTCTGCCGACCGGGTGATATTTTGCTGTTCCCGCCAGGAGAGATTCATCACTACGGTCGTCATCCGGAGGCTCGCGAATGGTATCACCAGTGGGTTTACTTTCGTCCGCGCGCCTACTGGCATGAATGGCTTAACTGGCCGTCAATATTTGCCAATACGGGTTTCTTTCGCCCGGATGAAGCGCACCAGCCGCATTTCAGCGACCTGTTTGGGCAAATCATTAACGCCGGGCAAGGGGAAGGGCGCTATTCGGAGCTGCTGGCGATAAATCTGCTTGAGCAATTGTTACTGCGGCGCATGGAAGCGATTAACGAGTCGCTCCATCCACCGATGGATAATCGGGTACGCGAGGCTTGTCAGTACATCAGCGATCACCTGGCAGACAGCAATTTTGATATCGCCAGCGTCGCACAGCATGTTTGCTTGTCGCCGTCGCGTCTGTCACATCTTTTCCGCCAGCAGTTAGGGATTAGCGTCTTAAGCTGGCGCGAGGACCAACGCATTAGTCAGGCGAAGCTGCTTTTGAGCACTACCCGGATGCCTATCGCCACCGTCGGTCGCAATGTTGGTTTTGACGATCAACTCTATTTCTCGCGAGTATTTAAAAAATGCACCGGGGCCAGCCCGAGCGAGTTTCGTGCCGGTTGTGAAGAAAAAGTGAATGATGTAGCCGTCAAGTTGTCATAA 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="gccontent">
 <h3>gcContent<a class="headerlink" href="#gccontent" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: double</li>
-<li>Synonyms: string</li>
 <li>Description: Representa el porcentaje de pares de Guanina-Citosina en la secuencia de ADN del Gen.</li>
-<li>Required: si</li>
-<li>URI [values]: NA</li>
+<li>URI: [value]</li>
+<li>Required: yes</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 52.56 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: NA</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="note">
 <h3>note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: string</li>
-<li>Synonyms: string</li>
-<li>Description: string</li>
+<li>Description: Comentarios de curación relacionados al Gen.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: string</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> The expression of the gene is analyzed through a transcriptional fusion (i.e. lacZ), and  a difference in expression levels is observed when the regulatory protein is present  (wild type) vs in its absence.  Note that this evidence does not eliminate the possiblity of an indirect effect of the regulator on the regulated gene. 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="internalcomment">
 <h3>internalComment<a class="headerlink" href="#internalcomment" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: string</li>
-<li>Synonyms: string</li>
-<li>Description: string</li>
+<li>Description: Comentarios de uso interno del equipo de RegulonDB.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: string</li>
 <li>Example:</li>
 </ul>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> string 
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [value] 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="organism-id">
 <h3>organism_id<a class="headerlink" href="#organism-id" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
-<li>Type: string</li>
 <li>Synonyms: organism identifier</li>
+<li>Type: string</li>
 <li>Description: Indica el identificador del organismo estudiado.</li>
-<li>Required: si</li>
-<li>URI [values]: string</li>
+<li>URI: [value]</li>
+<li>Required: yes</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> ECK12 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="type">
 <h3>type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
-<li>Type: string</li>
 <li>Synonyms: kind</li>
+<li>Type: string</li>
 <li>Description: Indica el tipo de gene anotado.</li>
-<li>Required: si</li>
-<li>URI [values]: pseudo, phantom, gene, truncated</li>
+<li>URI: pseudo, phantom, gene, truncated</li>
+<li>Required: yes</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> phantom 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="centisomeposition">
 <h3>centisomePosition<a class="headerlink" href="#centisomeposition" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: double</li>
-<li>Synonyms: string</li>
-<li>Description: Indica la posición central del gene en el cromosoma</li>
-<li>Required: si</li>
-<li>URI [values]: string</li>
+<li>Description: Indica la posición del gene en el cromosoma en unidades de centisoma</li>
+<li>URI: [value]</li>
+<li>Required: yes</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 1.5164213 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="interrupted">
 <h3>interrupted<a class="headerlink" href="#interrupted" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: bool</li>
-<li>Synonyms: string</li>
-<li>Description: string</li>
+<li>Description: Este campo se usa para genes que tienen un codón de parada. Un gene interrumpido será definido por dos marcos genéticos que describen las dos mitades del gen.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: string</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> false 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="multifundirectparents">
-<h3>multifunDirectParents<a class="headerlink" href="#multifundirectparents" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ontologyclass-ids">
+<h3>ontologyClass_ids<a class="headerlink" href="#ontologyclass-ids" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: array</li>
-<li>Synonyms: string</li>
 <li>Description: Descripción de las funciones celulares del producto del Gene.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: string</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [&quot;carbon compounds&quot;, &quot;Transcription related&quot;, &quot;operon&quot;, &quot;repressor&quot;] 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="synonyms">
 <h3>synonyms<a class="headerlink" href="#synonyms" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: array</li>
-<li>Synonyms: string</li>
 <li>Description: Indica los identificadores de aquellos genes con los que se le conoce al gene.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: string</li>
 <li>Example:</li>
 </ul>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [&quot;RDBECOLIGN00065&quot;, &quot;RDBECOLIGN10054&quot;] 
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [&quot;b0064&quot;, &quot;ECK0065&quot;, &quot;EG10054&quot;] 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="evidencereferences">
 <h3>evidenceReferences<a class="headerlink" href="#evidencereferences" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: array</li>
-<li>Synonyms: string</li>
-<li>Description: string</li>
+<li>Description: Identificador de la publicación así como de la evidencia asociada al Gen.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: string</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [{&quot;publication_id&quot;: &quot;GID000027564&quot;},{&quot;publication_id&quot;: &quot;GID000027564&quot;,&quot;evidence_id&quot;: &quot;GID000000006&quot;}] 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="externalcrossreferences">
 <h3>externalCrossReferences<a class="headerlink" href="#externalcrossreferences" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: array</li>
-<li>Synonyms: string</li>
-<li>Description: Indica las referencias relacionadas con el Gene. Este campo es de tipo objeto por lo que se encuentra compuesto por dos propiedades: externalCrossReference_id y objectId.</li>
+<li>Description: Indica las referencias externas relacionadas con el Gene. Este campo es de tipo objeto por lo que se encuentra compuesto por dos propiedades: externalCrossReference_id y objectId.</li>
+<li>URI: [value]</li>
 <li>Required: no</li>
-<li>URI [values]: string</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [{&quot;externalCrossReference_id&quot;:&quot;OU-Microarray&quot;,&quot;objectId&quot;:&quot;b3075&quot;}] 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
-</ul>
-</div>
-<hr class="docutils" />
-<div class="section" id="product-ids">
-<h3>product_ids<a class="headerlink" href="#product-ids" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>URI PRO: string</li>
-<li>Type: array</li>
-<li>Synonyms: string</li>
-<li>Description: Identificador del producto obtenido de la expresión del Gene.</li>
-<li>Required: no</li>
-<li>URI [values]: string</li>
-<li>Example:</li>
-</ul>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> [&quot;ECK120004526&quot;] 
-</pre></div>
-</div>
-<ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="schemaversion">
 <h3>schemaVersion<a class="headerlink" href="#schemaversion" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>URI PRO: string</li>
+<li>Synonyms: [value]</li>
 <li>Type: double</li>
-<li>Synonyms: string</li>
 <li>Description: Permite identificar la versión del esquema de la colección.</li>
-<li>Required: si</li>
-<li>URI [values]: string</li>
+<li>URI: [value]</li>
+<li>Required: yes</li>
 <li>Example:</li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span> 1.0 
 </pre></div>
 </div>
 <ul class="simple">
-<li>Comments: string</li>
+<li>Comments: [value]</li>
 </ul>
+</div>
+</div>
 <hr class="docutils" />
-</div>
-</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://codesandbox.io/s/genecollection-bn1bi?fontsize=14&amp;hidenavigation=1&amp;theme=dark"><img alt="Edit geneCollection" src="https://codesandbox.io/static/img/play-codesandbox.svg" /></a></p>
+<iframe
+     src="https://codesandbox.io/embed/genecollection-bn1bi?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="geneCollection"
+     allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+   ></iframe></div>
 </div>
 
 
