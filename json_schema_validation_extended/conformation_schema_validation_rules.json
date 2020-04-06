@@ -5,80 +5,60 @@
 			"required": [
 				"_id",
 				"finalState",
+				"regulator_id",
 				"organism_id",
-                "schemaVersion"
+				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "object_id",
-					"description": ""
+					"bsonType": "string"
 				},
 				"finalState": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
 				"type": {
 					"bsonType": "string",
-					"description": "",
 					"enum": [
 						"Active",
 						"Inactive"
 					]
 				},
 				"note": {
-					"bsonType": "string",
-					"description": ""
+					"bsonType": "string"
 				},
-				"internalComment": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"transcriptionFactor_id": {
-					"bsonType": "string",
-					"description": ""
-				},
-				"regulatoryInteraction_ids": {
-					"bsonType": "array",
-					"uniqueItems": true,
-					"description": "",
-					"items": {
-						"bsonType": "string"
-					}
+				"regulator_id": {
+					"bsonType": "string"
 				},
 				"effector_ids": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "string"
 					}
-				},
-				"organism_id": {
-					"bsonType": "string",
-					"description": ""
 				},
 				"synonyms": {
 					"bsonType": "array",
 					"uniqueItems": true,
 					"items": {
 						"bsonType": "string"
-					},
-					"description": ""
+					}
 				},
 				"evidenceReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
@@ -87,7 +67,6 @@
 				"externalCrossReferences": {
 					"bsonType": "array",
 					"uniqueItems": true,
-					"description": "",
 					"items": {
 						"bsonType": "object",
 						"required": [
@@ -96,20 +75,23 @@
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							},
 							"objectId": {
-								"bsonType": "string",
-								"description": ""
+								"bsonType": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
+				"organism_id": {
+					"bsonType": "string"
+				},
+				"internalComment": {
+					"bsonType": "string"
+				},
 				"schemaVersion": {
-					"bsonType": "double",
-					"description": ""
+					"bsonType": "double"
 				}
 			},
 			"additionalProperties": false
