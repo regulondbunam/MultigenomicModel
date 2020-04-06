@@ -1,0 +1,46 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"name",
+				"terms",
+				"schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string"
+				},
+				"name": {
+					"bsonType": "string"
+				},
+				"description": {
+					"bsonType": "string"
+				},
+				"terms": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"required": ["term_id", "order"],
+						"properties": {
+							"term_id": {
+								"bsonType": "string"
+							},
+							"order": {
+								"bsonType": "int"
+							}
+						}
+					}
+				},
+				"schemaVersion": {
+					"bsonType": "double"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

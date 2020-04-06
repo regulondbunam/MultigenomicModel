@@ -1,0 +1,61 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"control_gc_phases_id",
+				"experimental_gc_phases_id",
+				"schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string"
+				},
+				"control_gc_phases_id": {
+					"bsonType": "string"
+				},
+				"experimental_gc_phases_id": {
+					"bsonType": "string"
+				},
+				"note": {
+					"bsonType": "string"
+				},
+				"variable": {
+					"bsonType": "string"
+				},
+				"results": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"required": ["_id", "identifiers_id", "effect"],
+						"properties": {
+							"_id": {
+								"bsonType": "string"
+							},
+							"identifiers_id": {
+								"bsonType": "int"
+							},
+							"identifiers_type": {
+								"bsonType": "string"
+							},
+							"effect": {
+								"bsonType": "string"
+							},
+							"note": {
+								"bsonType": "string"
+							}
+						}
+					}
+				},
+				"schemaVersion": {
+					"bsonType": "double"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

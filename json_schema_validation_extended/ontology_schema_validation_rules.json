@@ -1,0 +1,48 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"name",
+				"type",
+				"url",
+				"schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string"
+				},
+				"name": {
+					"bsonType": "string"
+				},
+				"type": {
+					"bsonType": "string",
+					"enum": ["external", "local"]
+				},
+				"url": {
+					"bsonType": "string"
+				},
+				"description": {
+					"bsonType": "string"
+				},
+				"applyTo": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					}
+				},
+				"label": {
+					"bsonType": "string"
+				},
+				"schemaVersion": {
+					"bsonType": "double"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

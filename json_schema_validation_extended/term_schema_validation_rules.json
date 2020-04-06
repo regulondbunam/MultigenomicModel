@@ -1,0 +1,58 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"name",
+				"url",
+				"ontology_id",
+				"schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string"
+				},
+				"name": {
+					"bsonType": "string"
+				},
+				"description": {
+					"bsonType": "string"
+				},
+				"synonyms": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					}
+				},
+				"isA": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					}
+				},
+				"has": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					}
+				},
+				"url": {
+					"bsonType": "string"
+				},
+				"ontology_id": {
+					"bsonType": "string"
+				},
+				"schemaVersion": {
+					"bsonType": "double"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}
