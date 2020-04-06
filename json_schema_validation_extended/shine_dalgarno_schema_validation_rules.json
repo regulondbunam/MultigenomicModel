@@ -1,0 +1,49 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"distanceToGene",
+				"gene_id",
+				"organism_id",
+				"schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string"
+				},
+				"leftEndPosition": {
+					"bsonType": "int"
+				},
+				"rightEndPosition": {
+					"bsonType": "int"
+				},
+				"sequence": {
+					"bsonType": "string"
+				},
+				"note": {
+					"bsonType": "string"
+				},
+				"distanceToGene": {
+					"bsonType": "int"
+				},
+				"gene_id": {
+					"bsonType": "string"
+				},
+				"organism_id": {
+					"bsonType": "string"
+				},
+				"internalComment": {
+					"bsonType": "string"
+				},
+				"schemaVersion": {
+					"bsonType": "double"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}
