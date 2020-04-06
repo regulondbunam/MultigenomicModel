@@ -1,0 +1,52 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"organism_id",
+				"schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string"
+				},
+				"leftEndPosition": {
+					"bsonType": "int"
+				},
+				"rightEndPosition": {
+					"bsonType": "int"
+				},
+				"strand": {
+					"bsonType": "string",
+					"enum": ["forward", "reverse"]
+				},
+				"sequence": {
+					"bsonType": "string",
+					"pattern": "^[ATCGatcg]+$"
+				},
+				"type": {
+					"bsonType": "string"
+				},
+				"description": {
+					"bsonType": "string"
+				},
+				"score": {
+					"bsonType": "double"
+				},
+				"gene_id": {
+					"bsonType": "string"
+				},
+				"organism_id": {
+					"bsonType": "string"
+				},
+				"schemaVersion": {
+					"bsonType": "double"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}
