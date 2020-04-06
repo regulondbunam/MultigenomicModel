@@ -1,0 +1,88 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"bsonType": "object",
+			"required": [
+				"_id",
+				"objectType",
+				"schemaVersion"
+			],
+			"properties": {
+				"_id": {
+					"bsonType": "string"
+				},
+				"sourceInformation": {
+					"bsonType": "object",
+					"required": [
+						"sourceObjectId",
+						"sourceDatabaseId",
+						"sourceName",
+						"sourceURL"
+					],
+					"properties": {
+						"sourceObjectId": {
+							"bsonType": "string"
+						},
+						"sourceId": {
+							"bsonType": "string"
+						},
+						"sourceName": {
+							"bsonType": "string"
+						},
+						"sourceURL": {
+							"bsonType": "string"
+						}
+					}
+				},
+				"objectUniqueConstraint": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "string"
+					}
+				},
+				"objectUniqueConstraintHistory": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "object",
+						"properties": {
+							"creationDate": {
+								"bsonType": "date"
+							},
+							"uniqueDataString": {
+								"bsonType": "array",
+								"uniqueItems": true,
+								"items": {
+									"bsonType": "array"
+								}
+							},
+							"note": {
+								"bsonType": "string"
+							}
+						}
+					}
+				},
+				"type": {
+					"bsonType": "string"
+				},
+				"creationDate": {
+					"bsonType": "date"
+				},
+				"updateHistory": {
+					"bsonType": "array",
+					"uniqueItems": true,
+					"items": {
+						"bsonType": "date"
+					}
+				},
+				"schemaVersion": {
+					"bsonType": "double"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}
