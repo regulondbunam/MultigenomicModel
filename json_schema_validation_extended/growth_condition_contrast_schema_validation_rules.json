@@ -4,19 +4,22 @@
 			"type": "object",
 			"required": [
 				"_id",
-				"control_gc_phases_id",
-				"experimental_gc_phases_id",
+				"control_gc_phrases_id",
+				"experimental_gc_phrases_id",
 				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
-				"control_gc_phases_id": {
-					"type": "string"
+				"control_gc_phrases_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
-				"experimental_gc_phases_id": {
-					"type": "string"
+				"experimental_gc_phrases_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"note": {
 					"type": "string"
@@ -29,15 +32,17 @@
 					"uniqueItems": true,
 					"items": {
 						"type": "object",
-						"required": ["_id", "identifiers_id", "effect"],
+						"required": ["_id", "identifier_id", "effect"],
 						"properties": {
 							"_id": {
-								"type": "string"
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							},
-							"identifiers_id": {
-								"type": "string"
+							"identifier_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							},
-							"identifiers_type": {
+							"identifier_type": {
 								"type": "string"
 							},
 							"effect": {
@@ -46,7 +51,8 @@
 							"note": {
 								"type": "string"
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
 				"schemaVersion": {

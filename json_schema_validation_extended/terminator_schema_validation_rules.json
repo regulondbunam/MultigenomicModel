@@ -6,25 +6,28 @@
 				"_id",
 				"transcriptionTerminationSite",
 				"sequence",
-				"class",
-				"schemaVersion"
+				"class"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"transcriptionTerminationSite": {
 					"type": "object",
 					"required": ["leftEndPosition", "rightEndPosition", "type"],
 					"properties": {
 						"leftEndPosition": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						},
 						"rightEndPosition": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						},
 						"range": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						},
 						"type": {
 							"type": "string",
@@ -89,7 +92,8 @@
 					}
 				},
 				"organism_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"internalComment": {
 					"type": "string"

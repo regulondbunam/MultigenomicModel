@@ -5,13 +5,13 @@
 			"required": [
 				"_id",
 				"regulatedEntity",
-				"conformation_id",
-				"organism_id",
-				"schemaVersion"
+				"regulatorEntity",
+				"organism_id"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"centerPosition": {
 					"type": "number"
@@ -34,7 +34,7 @@
 				"note": {
 					"type": "string"
 				},
-				"bindingSite": {
+				"transcriptionFactorRegulatorySite": {
 					"type": "object",
 					"properties": {
 						"absolutePosition": {
@@ -100,24 +100,40 @@
 								"additionalProperties": false
 							}
 						}
-					}
-				},
-				"conformation_id": {
-					"type": "string"
+					},
+					"additionalProperties": false
 				},
 				"regulatedEntity": {
 					"type": "object",
 					"required": ["_id", "type"],
 					"properties": {
 						"_id": {
-							"type": "string"
+							"type": "string",
+							"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 						},
 						"type": {
 							"type": "string",
-							"enum": ["gene", "srna", "promoter", "transcription-unit"]
+							"enum": ["gene", "srna", "promoter", "transcriptionUnit"]
 						}
 					},
 					"additionalProperties": false
+				},
+				"regulatorEntity": {
+					"type": "object",
+					"required": ["_id", "type"],
+					"properties": {
+
+					},
+					"additionalProperties": {
+						"id": {
+							"type": "string",
+							"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+						},
+						"type": {
+							"type": "string",
+							"enum": ["regulatorComplex", "regulatoryContinuant", "product"]
+						}
+					}
 				},
 				"evidenceReferences": {
 					"type": "array",
@@ -165,9 +181,6 @@
 				},
 				"internalComment": {
 					"type": "string"
-				},
-				"schemaVersion": {
-					"type": "number"
 				}
 			},
 			"additionalProperties": false

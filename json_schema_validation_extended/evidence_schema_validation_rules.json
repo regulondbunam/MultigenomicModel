@@ -4,15 +4,17 @@
 			"type": "object",
 			"required": [
 				"_id",
-				"name",
-				"organism_id",
-				"schemaVersion"
+				"name"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"name": {
+					"type": "string"
+				},
+				"code": {
 					"type": "string"
 				},
 				"typeObject": {
@@ -22,16 +24,10 @@
 						"type": "string"
 					}
 				},
-				"code": {
-					"type": "string"
-				},
 				"note": {
 					"type": "string"
 				},
 				"internalComment": {
-					"type": "string"
-				},
-				"organism_id": {
 					"type": "string"
 				},
 				"schemaVersion": {

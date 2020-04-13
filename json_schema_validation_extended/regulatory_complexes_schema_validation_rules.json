@@ -5,23 +5,43 @@
 			"required": [
 				"_id",
 				"name",
-				"type",
+				"regulator_id",
 				"organism_id",
 				"schemaVersion"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"name": {
 					"type": "string"
 				},
 				"type": {
 					"type": "string",
-					"enum": ["metabolite", "protein"]
+					"enum": [
+						"Active",
+						"Inactive"
+					]
 				},
 				"note": {
 					"type": "string"
+				},
+				"product_ids": {
+					"type": "array",
+					"uniqueItems": true,
+					"items":{
+						"type": "string",
+						"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+					}
+				},
+				"regulatoryContinuant_ids": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+					}
 				},
 				"synonyms": {
 					"type": "array",
@@ -72,7 +92,8 @@
 					}
 				},
 				"organism_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"internalComment": {
 					"type": "string"

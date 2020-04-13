@@ -5,12 +5,12 @@
 			"required": [
 				"_id",
 				"name",
-				"terms",
-				"schemaVersion"
+				"terms"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"name": {
 					"type": "string"
@@ -26,12 +26,14 @@
 						"required": ["term_id", "order"],
 						"properties": {
 							"term_id": {
-								"type": "string"
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							},
 							"order": {
 								"type": "number"
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				},
 				"schemaVersion": {

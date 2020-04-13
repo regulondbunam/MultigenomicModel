@@ -7,13 +7,12 @@
 				"name",
 				"genePositions",
 				"regulationPositions",
-				"transcriptionUnit_ids",
-				"organism_id",
-				"schemaVersion"
+				"organism_id"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"name": {
 					"type": "string"
@@ -26,10 +25,12 @@
 					],
 					"properties": {
 						"firstGeneLeftEndPosition": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						},
 						"lastGeneRightEndPosition": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						}
 					}
 				},
@@ -41,10 +42,12 @@
 					],
 					"properties": {
 						"leftEndPosition": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						},
 						"rightEndPosition": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						}
 					}
 				},
@@ -52,15 +55,35 @@
 					"type": "string",
 					"enum": ["foward", "reverse"]
 				},
-				"transcriptionUnit_ids": {
+				"type": {
+					"type": "string",
+					"enum": ["simple", "complex"]
+				},
+				"genes": {
 					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"type": "string"
+						"type": "object",
+						"properties": {
+							"gene_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"leftEndPosition": {
+								"type": "number",
+								"multipleOf": 1.0
+							},
+							"rightEndPosition": {
+								"type": "number",
+								"multipleOf": 1.0
+							}
+						}
+
 					}
 				},
 				"organism_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$",
 				},
 				"internalComment": {
 					"type": "string"

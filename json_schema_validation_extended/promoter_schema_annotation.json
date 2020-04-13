@@ -9,12 +9,13 @@
 			"required": [
 				"_id",
 				"transcriptionStartSite",
-				"organism_id",
-				"schemaVersion"
+				"sigmaFactor_id",
+				"organism_id"
 			],
 			"properties": {
 				"_id": {
 					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$",
 					"annotation": {
 						"Synonyms": "identifier",
 						"Description": "Este campo tiene como función identificar a un promotor en particular, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.",
@@ -40,13 +41,16 @@
 					"required": ["leftEndPosition", "rightEndPosition", "type"],
 					"properties": {
 						"leftEndPosition": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						},
 						"rightEndPosition": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						},
 						"range": {
-							"type": "number"
+							"type": "number",
+							"multipleOf": 1.0
 						},
 						"type": {
 							"type": "string",
@@ -103,10 +107,12 @@
 									"required": ["leftEndPosition", "rightEndPosition", "sequence", "type"],
 									"properties": {
 										"leftEndPosition": {
-											"type": "number"
+											"type": "number",
+											"multipleOf": 1.0
 										},
 										"rightEndPosition": {
-											"type": "number"
+											"type": "number",
+											"multipleOf": 1.0
 										},
 										"sequence": {
 											"type": "string",
@@ -196,6 +202,7 @@
 				},
 				"sigmaFactor_id": {
 					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Identificador del Factor Sigma asociado al Promotor.",
@@ -279,6 +286,7 @@
 				},
 				"organism_id": {
 					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Indica el identificador del organismo de referencia.",

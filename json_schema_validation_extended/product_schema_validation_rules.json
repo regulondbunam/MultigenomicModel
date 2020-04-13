@@ -5,8 +5,7 @@
 			"required": [
 				"_id",
 				"organism_id",
-				"gene_id",
-				"schemaVersion"
+				"gene_id"
 			],
 			"oneOf": [{
 					"required": ["anticodon"],
@@ -22,7 +21,8 @@
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"name": {
 					"type": "string"
@@ -40,9 +40,6 @@
 					"type": "string"
 				},
 				"type": {
-					"type": "string"
-				},
-				"organism_id": {
 					"type": "string"
 				},
 				"modifiedForm": {
@@ -77,7 +74,7 @@
 						"type": "number"
 					}
 				},
-				"productFunction": {
+				"productType": {
 					"type": "string",
 					"enum": [
 						"transcriptionFactor",
@@ -95,7 +92,15 @@
 					"type": "string"
 				},
 				"gene_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"term_ids": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
 				},
 				"synonyms": {
 					"type": "array",
@@ -144,6 +149,9 @@
 						},
 						"additionalProperties": false
 					}
+				},
+				"organism_id": {
+					"type": "string"
 				},
 				"internalComment": {
 					"type": "string"

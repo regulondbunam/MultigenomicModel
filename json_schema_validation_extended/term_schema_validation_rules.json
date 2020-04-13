@@ -6,12 +6,12 @@
 				"_id",
 				"name",
 				"url",
-				"ontology_id",
-				"schemaVersion"
+				"ontology_id"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"name": {
 					"type": "string"
@@ -44,7 +44,8 @@
 					"type": "string"
 				},
 				"ontology_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"schemaVersion": {
 					"type": "number"

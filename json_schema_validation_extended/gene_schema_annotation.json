@@ -10,8 +10,7 @@
 				"_id",
 				"type",
 				"centisomePosition",
-				"organism_id",
-				"schemaVersion"
+				"organism_id"
 			],
 			"oneOf": [{
 					"required": ["leftEndPosition", "rightEndPosition", "sequence", "strand"],
@@ -29,6 +28,7 @@
 			"properties": {
 				"_id": {
 					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$",
 					"annotation": {
 						"Synonyms": "identifier",
 						"Description": "Este campo tiene como función identificar a un gen en particular, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.",
@@ -51,6 +51,7 @@
 				},
 				"leftEndPosition": {
 					"type": "number",
+					"multipleOf": 1.0,
 					"annotation": {
 						"Synonyms": "genome left position",
 						"Description": "Indica la posición izquierda del objeto Gen.",
@@ -62,6 +63,7 @@
 				},
 				"rightEndPosition": {
 					"type": "number",
+					"multipleOf": 1.0,
 					"annotation": {
 						"Synonyms": "genome right position",
 						"Description": "Indica la posición derecha del objeto Gen.",
@@ -87,10 +89,12 @@
 								"enum": ["forward", "reverse"]
 							},
 							"leftEndPosition": {
-								"type": "number"
+								"type": "number",
+								"multipleOf": 1.0
 							},
 							"rightEndPosition": {
-								"type": "number"
+								"type": "number",
+								"multipleOf": 1.0
 							},
 							"sequence": {
 								"type": "string",
@@ -195,7 +199,7 @@
 						"Comments": "[value]"
 					}
 				},
-				"ontologyClass_ids": {
+				"term_ids": {
 					"type": "array",
 					"uniqueItems": true,
 					"items": {

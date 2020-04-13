@@ -3,18 +3,19 @@
 		"$jsonSchema": {
 			"type": "object",
 			"required": [
-				"_id",
-				"schemaVersion"
+				"_id"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"referenceId": {
 					"type": "number"
 				},
 				"externalCrossReference_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"author": {
 					"type": "string"

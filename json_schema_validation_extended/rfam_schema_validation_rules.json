@@ -4,18 +4,20 @@
 			"type": "object",
 			"required": [
 				"_id",
-				"organism_id",
-				"schemaVersion"
+				"organism_id"
 			],
 			"properties": {
 				"_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"leftEndPosition": {
-					"type": "number"
+					"type": "number",
+					"multipleOf": 1.0
 				},
 				"rightEndPosition": {
-					"type": "number"
+					"type": "number",
+					"multipleOf": 1.0
 				},
 				"strand": {
 					"type": "string",
@@ -35,10 +37,12 @@
 					"type": "number"
 				},
 				"gene_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"organism_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"schemaVersion": {
 					"type": "number"
