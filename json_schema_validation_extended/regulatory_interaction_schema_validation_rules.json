@@ -1,7 +1,7 @@
 {
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"regulatedEntity",
@@ -11,13 +11,13 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"centerPosition": {
-					"bsonType": "double"
+					"type": "number"
 				},
 				"function": {
-					"bsonType": "string",
+					"type": "string",
 					"enum": [
 						"activator",
 						"repressor",
@@ -25,45 +25,45 @@
 					]
 				},
 				"type": {
-					"bsonType": "string",
+					"type": "string",
 					"enum": [
 						"mechanistic",
 						"physiological"
 					]
 				},
 				"note": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"bindingSite": {
-					"bsonType": "object",
+					"type": "object",
 					"properties": {
 						"absolutePosition": {
-							"bsonType": "double"
+							"type": "number"
 						},
 						"leftEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"rightEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"sequence": {
-							"bsonType": "string",
+							"type": "string",
 							"pattern": "^[ATCGatcg]+$"
 						},
 						"length": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"note": {
-							"bsonType": "string"
+							"type": "string"
 						},
 						"internalComment": {
-							"bsonType": "string"
+							"type": "string"
 						},
 						"evidenceReferences": {
-							"bsonType": "array",
+							"type": "array",
 							"uniqueItems": true,
 							"items": {
-								"bsonType": "object",
+								"type": "object",
 								"anyOf": [{
 									"required": ["publication_id"]
 								}, {
@@ -71,30 +71,30 @@
 								}],
 								"properties": {
 									"publication_id": {
-										"bsonType": "string"
+										"type": "string"
 									},
 									"evidence_id": {
-										"bsonType": "string"
+										"type": "string"
 									}
 								},
 								"additionalProperties": false
 							}
 						},
 						"externalCrossReferences": {
-							"bsonType": "array",
+							"type": "array",
 							"uniqueItems": true,
 							"items": {
-								"bsonType": "object",
+								"type": "object",
 								"required": [
 									"externalCrossReference_id",
 									"objectId"
 								],
 								"properties": {
 									"externalCrossReference_id": {
-										"bsonType": "string"
+										"type": "string"
 									},
 									"objectId": {
-										"bsonType": "string"
+										"type": "string"
 									}
 								},
 								"additionalProperties": false
@@ -103,27 +103,27 @@
 					}
 				},
 				"conformation_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"regulatedEntity": {
-					"bsonType": "object",
+					"type": "object",
 					"required": ["_id", "type"],
 					"properties": {
 						"_id": {
-							"bsonType": "string"
+							"type": "string"
 						},
 						"type": {
-							"bsonType": "string",
+							"type": "string",
 							"enum": ["gene", "srna", "promoter", "transcription-unit"]
 						}
 					},
 					"additionalProperties": false
 				},
 				"evidenceReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"anyOf": [{
 							"required": ["publication_id"]
 						}, {
@@ -131,43 +131,43 @@
 						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
 				"externalCrossReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"required": [
 							"externalCrossReference_id",
 							"objectId"
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"objectId": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
 				"organism_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"internalComment": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"schemaVersion": {
-					"bsonType": "double"
+					"type": "number"
 				}
 			},
 			"additionalProperties": false

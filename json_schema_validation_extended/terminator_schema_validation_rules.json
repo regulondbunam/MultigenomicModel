@@ -1,7 +1,7 @@
 {
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"transcriptionTerminationSite",
@@ -11,47 +11,47 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"transcriptionTerminationSite": {
-					"bsonType": "object",
+					"type": "object",
 					"required": ["leftEndPosition", "rightEndPosition", "type"],
 					"properties": {
 						"leftEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"rightEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"range": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"type": {
-							"bsonType": "string",
+							"type": "string",
 							"enum": ["primary", "secondary", "tertiary"]
 						}
 					},
 					"additionalProperties": false
 				},
 				"sequence": {
-					"bsonType": "string",
+					"type": "string",
 					"pattern": "^[ATCGatcg]+$"
 				},
 				"class": {
-					"bsonType": "string",
+					"type": "string",
 					"enum": [
 						"rho-independent",
 						"rho-dependent"
 					]
 				},
 				"note": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"evidenceReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"anyOf": [{
 							"required": ["publication_id"]
 						}, {
@@ -59,43 +59,43 @@
 						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
 				"externalCrossReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"required": [
 							"externalCrossReference_id",
 							"objectId"
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"objectId": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
 				"organism_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"internalComment": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"schemaVersion": {
-					"bsonType": "double"
+					"type": "number"
 				}
 			},
 			"additionalProperties": false

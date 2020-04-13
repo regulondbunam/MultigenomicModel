@@ -1,7 +1,7 @@
 {
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"organism_id",
@@ -10,39 +10,39 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"name": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"note": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"promoter_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"terminator_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"gene_ids": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "string"
+						"type": "string"
 					}
 				},
 				"synonyms": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "string"
+						"type": "string"
 					}
 				},
 				"evidenceReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"anyOf": [{
 							"required": ["publication_id"]
 						}, {
@@ -50,43 +50,43 @@
 						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
 				"externalCrossReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"required": [
 							"externalCrossReference_id",
 							"objectId"
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"objectId": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
 				"organism_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"internalComment": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"schemaVersion": {
-					"bsonType": "double"
+					"type": "number"
 				}
 			},
 			"additionalProperties": false

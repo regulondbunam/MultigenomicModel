@@ -1,7 +1,7 @@
 {
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"control_gc_phases_id",
@@ -10,47 +10,47 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"control_gc_phases_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"experimental_gc_phases_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"note": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"variable": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"results": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"required": ["_id", "identifiers_id", "effect"],
 						"properties": {
 							"_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"identifiers_id": {
-								"bsonType": "int"
+								"type": "string"
 							},
 							"identifiers_type": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"effect": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"note": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						}
 					}
 				},
 				"schemaVersion": {
-					"bsonType": "double"
+					"type": "number"
 				}
 			},
 			"additionalProperties": false

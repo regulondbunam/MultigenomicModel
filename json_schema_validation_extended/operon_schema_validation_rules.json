@@ -1,7 +1,7 @@
 {
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"name",
@@ -13,60 +13,60 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"name": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"genePositions": {
-					"bsonType": "object",
+					"type": "object",
 					"required": [
 						"firstGeneLeftEndPosition",
 						"lastGeneRightEndPosition"
 					],
 					"properties": {
 						"firstGeneLeftEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"lastGeneRightEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						}
 					}
 				},
 				"regulationPositions": {
-					"bsonType": "object",
+					"type": "object",
 					"required": [
 						"leftEndPosition",
 						"rightEndPosition"
 					],
 					"properties": {
 						"leftEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"rightEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						}
 					}
 				},
 				"strand": {
-					"bsonType": "string",
+					"type": "string",
 					"enum": ["foward", "reverse"]
 				},
 				"transcriptionUnit_ids": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "string"
+						"type": "string"
 					}
 				},
 				"organism_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"internalComment": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"schemaVersion": {
-					"bsonType": "double"
+					"type": "number"
 				}
 			},
 			"additionalProperties": false

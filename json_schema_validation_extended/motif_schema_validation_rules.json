@@ -1,7 +1,7 @@
 {
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"leftEndPosition",
@@ -13,79 +13,79 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"leftEndPosition": {
-					"bsonType": "int"
+					"type": "number"
 				},
 				"rightEndPosition": {
-					"bsonType": "int"
+					"type": "number"
 				},
 				"sequence": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"type": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"description": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"note": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"dataSource": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"residueNumber": {
-					"bsonType": "double"
+					"type": "number"
 				},
 				"attachedGroup": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"homologyMotif": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"alternateSequence": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"product_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"synonyms": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "string"
+						"type": "string"
 					}
 				},
 				"externalCrossReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"required": [
 							"externalCrossReference_id",
 							"objectId"
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"objectId": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
 					}
 				},
 				"organism_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"internalComment": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"schemaVersion": {
-					"bsonType": "double"
+					"type": "number"
 				}
 			},
 			"additionalProperties": false

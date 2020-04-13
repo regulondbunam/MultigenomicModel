@@ -1,7 +1,7 @@
 {
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"objectType",
@@ -9,10 +9,10 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"sourceInformation": {
-					"bsonType": "object",
+					"type": "object",
 					"required": [
 						"sourceObjectId",
 						"sourceDatabaseId",
@@ -21,63 +21,63 @@
 					],
 					"properties": {
 						"sourceObjectId": {
-							"bsonType": "string"
+							"type": "string"
 						},
 						"sourceId": {
-							"bsonType": "string"
+							"type": "string"
 						},
 						"sourceName": {
-							"bsonType": "string"
+							"type": "string"
 						},
 						"sourceURL": {
-							"bsonType": "string"
+							"type": "string"
 						}
 					}
 				},
 				"objectUniqueConstraint": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "string"
+						"type": "string"
 					}
 				},
 				"objectUniqueConstraintHistory": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"properties": {
 							"creationDate": {
-								"bsonType": "date"
+								"type": "string"
 							},
 							"uniqueDataString": {
-								"bsonType": "array",
+								"type": "array",
 								"uniqueItems": true,
 								"items": {
-									"bsonType": "array"
+									"type": "array"
 								}
 							},
 							"note": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						}
 					}
 				},
 				"type": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"creationDate": {
-					"bsonType": "date"
+					"type": "string"
 				},
 				"updateHistory": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "date"
+						"type": "string"
 					}
 				},
 				"schemaVersion": {
-					"bsonType": "double"
+					"type": "number"
 				}
 			},
 			"additionalProperties": false

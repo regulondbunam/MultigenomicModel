@@ -1,7 +1,7 @@
 {
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"distanceToGene",
@@ -11,34 +11,34 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"leftEndPosition": {
-					"bsonType": "int"
+					"type": "number"
 				},
 				"rightEndPosition": {
-					"bsonType": "int"
+					"type": "number"
 				},
 				"sequence": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"note": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"distanceToGene": {
-					"bsonType": "int"
+					"type": "number"
 				},
 				"gene_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"organism_id": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"internalComment": {
-					"bsonType": "string"
+					"type": "string"
 				},
 				"schemaVersion": {
-					"bsonType": "double"
+					"type": "number"
 				}
 			},
 			"additionalProperties": false

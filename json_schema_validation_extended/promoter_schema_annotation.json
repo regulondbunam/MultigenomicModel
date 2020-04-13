@@ -5,7 +5,7 @@
 	},
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"transcriptionStartSite",
@@ -14,7 +14,7 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "identifier",
 						"Description": "Este campo tiene como función identificar a un promotor en particular, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.",
@@ -25,7 +25,7 @@
 					}
 				},
 				"name": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Indica el nombre oficial de un promotor",
@@ -36,20 +36,20 @@
 					}
 				},
 				"transcriptionStartSite": {
-					"bsonType": "object",
+					"type": "object",
 					"required": ["leftEndPosition", "rightEndPosition", "type"],
 					"properties": {
 						"leftEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"rightEndPosition": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"range": {
-							"bsonType": "int"
+							"type": "number"
 						},
 						"type": {
-							"bsonType": "string",
+							"type": "string",
 							"enum": ["primary", "secondary", "tertiary"]
 						}
 					},
@@ -64,7 +64,7 @@
 					"additionalProperties": false
 				},
 				"strand": {
-					"bsonType": "string",
+					"type": "string",
 					"enum": ["forward", "reverse"],
 					"annotation": {
 						"Synonyms": "[value]",
@@ -76,7 +76,7 @@
 					}
 				},
 				"sequence": {
-					"bsonType": "string",
+					"type": "string",
 					"pattern": "^[ATCGatcg]+$",
 					"annotation": {
 						"Synonyms": "[value]",
@@ -88,32 +88,32 @@
 					}
 				},
 				"promoterFeatures": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"required": ["minusSignals"],
 						"properties": {
-							"bsonType": "object",
+							"type": "object",
 							"minusSignals": {
-								"bsonType": "array",
+								"type": "array",
 								"uniqueItems": true,
 								"items": {
-									"bsonType": "object",
+									"type": "object",
 									"required": ["leftEndPosition", "rightEndPosition", "sequence", "type"],
 									"properties": {
 										"leftEndPosition": {
-											"bsonType": "int"
+											"type": "number"
 										},
 										"rightEndPosition": {
-											"bsonType": "int"
+											"type": "number"
 										},
 										"sequence": {
-											"bsonType": "string",
+											"type": "string",
 											"pattern": "^[ATCGatcg]+$"
 										},
 										"type": {
-											"bsonType": "string",
+											"type": "string",
 											"enum": ["minus10", "minus35", "minus12", "minus24"]
 										}
 									},
@@ -121,16 +121,16 @@
 								}
 							},
 							"score": {
-								"bsonType": "double"
+								"type": "number"
 							},
 							"bindsSigmaFactor": {
-								"bsonType": "object",
+								"type": "object",
 								"properties": {
 									"evidenceReferences": {
-										"bsonType": "array",
+										"type": "array",
 										"uniqueItems": true,
 										"items": {
-											"bsonType": "object",
+											"type": "object",
 											"anyOf": [{
 												"required": ["publication_id"]
 											}, {
@@ -138,10 +138,10 @@
 											}],
 											"properties": {
 												"publication_id": {
-													"bsonType": "string"
+													"type": "string"
 												},
 												"evidence_id": {
-													"bsonType": "string"
+													"type": "string"
 												}
 											},
 											"additionalProperties": false
@@ -151,10 +151,10 @@
 								"additionalProperties": false
 							},
 							"evidenceReferences": {
-								"bsonType": "array",
+								"type": "array",
 								"uniqueItems": true,
 								"items": {
-									"bsonType": "object",
+									"type": "object",
 									"anyOf": [{
 										"required": ["publication_id"]
 									}, {
@@ -162,10 +162,10 @@
 									}],
 									"properties": {
 										"publication_id": {
-											"bsonType": "string"
+											"type": "string"
 										},
 										"evidence_id": {
-											"bsonType": "string"
+											"type": "string"
 										}
 									},
 									"additionalProperties": false
@@ -184,7 +184,7 @@
 					}
 				},
 				"note": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Comentarios de curación relacionados al Promotor.",
@@ -195,7 +195,7 @@
 					}
 				},
 				"sigmaFactor_id": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Identificador del Factor Sigma asociado al Promotor.",
@@ -206,10 +206,10 @@
 					}
 				},
 				"synonyms": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "string"
+						"type": "string"
 					},
 					"annotation": {
 						"Synonyms": "[value]",
@@ -221,10 +221,10 @@
 					}
 				},
 				"evidenceReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"anyOf": [{
 							"required": ["publication_id"]
 						}, {
@@ -232,10 +232,10 @@
 						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
@@ -250,20 +250,20 @@
 					}
 				},
 				"externalCrossReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"required": [
 							"externalCrossReference_id",
 							"objectId"
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"objectId": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
@@ -278,7 +278,7 @@
 					}
 				},
 				"organism_id": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Indica el identificador del organismo de referencia.",
@@ -289,7 +289,7 @@
 					}
 				},
 				"internalComment": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Comentarios de uso interno del equipo de RegulonDB.",
@@ -300,7 +300,7 @@
 					}
 				},
 				"schemaVersion": {
-					"bsonType": "double",
+					"type": "number",
 					"annotation": {
 						"Synonyms": "",
 						"Description": "Permite identificar la versión del esquema de la colección.",

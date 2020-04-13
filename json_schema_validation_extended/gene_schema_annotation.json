@@ -5,7 +5,7 @@
 	},
 	"validator": {
 		"$jsonSchema": {
-			"bsonType": "object",
+			"type": "object",
 			"required": [
 				"_id",
 				"type",
@@ -28,7 +28,7 @@
 			],
 			"properties": {
 				"_id": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "identifier",
 						"Description": "Este campo tiene como función identificar a un gen en particular, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.",
@@ -39,7 +39,7 @@
 					}
 				},
 				"name": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Indica el nombre oficial de un gen.",
@@ -50,7 +50,7 @@
 					}
 				},
 				"leftEndPosition": {
-					"bsonType": "int",
+					"type": "number",
 					"annotation": {
 						"Synonyms": "genome left position",
 						"Description": "Indica la posición izquierda del objeto Gen.",
@@ -61,7 +61,7 @@
 					}
 				},
 				"rightEndPosition": {
-					"bsonType": "int",
+					"type": "number",
 					"annotation": {
 						"Synonyms": "genome right position",
 						"Description": "Indica la posición derecha del objeto Gen.",
@@ -72,10 +72,10 @@
 					}
 				},
 				"fragments": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"required": [
 							"strand",
 							"leftEndPosition",
@@ -83,21 +83,21 @@
 						],
 						"properties": {
 							"strand": {
-								"bsonType": "string",
+								"type": "string",
 								"enum": ["forward", "reverse"]
 							},
 							"leftEndPosition": {
-								"bsonType": "int"
+								"type": "number"
 							},
 							"rightEndPosition": {
-								"bsonType": "int"
+								"type": "number"
 							},
 							"sequence": {
-								"bsonType": "string",
+								"type": "string",
 								"pattern": "^[ATCGatcg]+$"
 							},
 							"centisomePosition": {
-								"bsonType": "double"
+								"type": "number"
 							}
 						}
 					},
@@ -111,7 +111,7 @@
 					}
 				},
 				"strand": {
-					"bsonType": "string",
+					"type": "string",
 					"enum": ["forward", "reverse"],
 					"annotation": {
 						"Synonyms": "direction",
@@ -123,7 +123,7 @@
 					}
 				},
 				"sequence": {
-					"bsonType": "string",
+					"type": "string",
 					"pattern": "^[ATCGatcg]+$",
 					"annotation": {
 						"Synonyms": "[value]",
@@ -135,7 +135,7 @@
 					}
 				},
 				"gcContent": {
-					"bsonType": "double",
+					"type": "number",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Representa el porcentaje de pares de Guanina-Citosina en la secuencia de ADN del Gen.",
@@ -146,7 +146,7 @@
 					}
 				},
 				"note": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Comentarios de curación relacionados al Gen.",
@@ -157,7 +157,7 @@
 					}
 				},
 				"type": {
-					"bsonType": "string",
+					"type": "string",
 					"enum": [
 						"pseudo",
 						"phantom",
@@ -174,7 +174,7 @@
 					}
 				},
 				"centisomePosition": {
-					"bsonType": "double",
+					"type": "number",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Indica la posición del gene en el cromosoma en unidades de centisoma",
@@ -185,7 +185,7 @@
 					}
 				},
 				"interrupted": {
-					"bsonType": "bool",
+					"type": "boolean",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Este campo se usa para genes que tienen un codón de parada. Un gene interrumpido será definido por dos marcos genéticos que describen las dos mitades del gen. ",
@@ -196,10 +196,10 @@
 					}
 				},
 				"ontologyClass_ids": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "string"
+						"type": "string"
 					},
 					"annotation": {
 						"Synonyms": "[value]",
@@ -211,10 +211,10 @@
 					}
 				},
 				"synonyms": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "string"
+						"type": "string"
 					},
 					"annotation": {
 						"Synonyms": "[value]",
@@ -226,10 +226,10 @@
 					}
 				},
 				"evidenceReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"anyOf": [{
 							"required": ["publication_id"]
 						}, {
@@ -237,10 +237,10 @@
 						}],
 						"properties": {
 							"publication_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"evidence_id": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
@@ -255,20 +255,20 @@
 					}
 				},
 				"externalCrossReferences": {
-					"bsonType": "array",
+					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"bsonType": "object",
+						"type": "object",
 						"required": [
 							"externalCrossReference_id",
 							"objectId"
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"bsonType": "string"
+								"type": "string"
 							},
 							"objectId": {
-								"bsonType": "string"
+								"type": "string"
 							}
 						},
 						"additionalProperties": false
@@ -283,7 +283,7 @@
 					}
 				},
 				"organism_id": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "organism identifier",
 						"Description": "Indica el identificador del organismo estudiado.",
@@ -294,7 +294,7 @@
 					}
 				},
 				"internalComment": {
-					"bsonType": "string",
+					"type": "string",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Comentarios de uso interno del equipo de RegulonDB.",
@@ -305,7 +305,7 @@
 					}
 				},
 				"schemaVersion": {
-					"bsonType": "double",
+					"type": "number",
 					"annotation": {
 						"Synonyms": "[value]",
 						"Description": "Permite identificar la versión del esquema de la colección.",
