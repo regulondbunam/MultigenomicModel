@@ -220,7 +220,8 @@
 					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"type": "string"
+						"type": "string",
+						"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 					},
 					"annotation": {
 						"Synonyms": "[value]",
@@ -258,10 +259,12 @@
 						}],
 						"properties": {
 							"publication_id": {
-								"type": "string"
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							},
 							"evidence_id": {
-								"type": "string"
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							}
 						},
 						"additionalProperties": false
@@ -286,7 +289,8 @@
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"type": "string"
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							},
 							"objectId": {
 								"type": "string"
@@ -305,6 +309,7 @@
 				},
 				"organism_id": {
 					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$",
 					"annotation": {
 						"Synonyms": "organism identifier",
 						"Description": "Indica el identificador del organismo estudiado.",
