@@ -2,23 +2,25 @@
 	"validator": {
 		"$jsonSchema": {
 			"type": "object",
-			"required": [
-				"_id",
-				"organism_id",
-				"gene_id"
-			],
+			"required": ["_id", "organism_id", "gene_id"],
 			"oneOf": [{
-					"required": ["anticodon"],
-					"not": {
-						"required": ["molecularWeight", "molecularWeightKd", "catalyzes"]
-					}
-				},
-				{
-					"not": {
-						"required": ["anticodon"]
-					}
+				"required": ["anticodon"],
+				"not": {
+					"anyOf": [{
+						"required": ["molecularWeight"]
+					}, {
+						"required": ["molecularWeightKd"]
+					}, {
+						"required": ["catalyzes"]
+					}]
 				}
-			],
+			}, {
+				"not": {
+					"anyOf": [{
+						"required": ["anticodon"]
+					}]
+				}
+			}],
 			"properties": {
 				"_id": {
 					"type": "string",
@@ -62,28 +64,27 @@
 				},
 				"codingSegments": {
 					"type": "array",
-					"uniqueItems": "true",
+					"uniqueItems": true,
 					"items": {
-						"type": "number"
+						"type": "number",
+						"multipleOf": 1.0
 					}
 				},
 				"spliceFormIntrons": {
 					"type": "array",
-					"uniqueItems": "true",
+					"uniqueItems": true,
 					"items": {
-						"type": "number"
+						"type": "number",
+						"multipleOf": 1.0
 					}
 				},
 				"productType": {
 					"type": "string",
-					"enum": [
-						"transcriptionFactor",
-						"srna",
-						"ppgpp"
-					]
+					"enum": ["transcriptionFactor", "srna", "ppgpp"]
 				},
 				"siteLength": {
-					"type": "number"
+					"type": "number",
+					"multipleOf": 1.0
 				},
 				"consensusSequence": {
 					"type": "string"
@@ -99,7 +100,8 @@
 					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"type": "string"
+						"type": "string",
+						"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 					}
 				},
 				"synonyms": {
@@ -121,10 +123,12 @@
 						}],
 						"properties": {
 							"publication_id": {
-								"type": "string"
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							},
 							"evidence_id": {
-								"type": "string"
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							}
 						},
 						"additionalProperties": false
@@ -135,13 +139,11 @@
 					"uniqueItems": true,
 					"items": {
 						"type": "object",
-						"required": [
-							"externalCrossReference_id",
-							"objectId"
-						],
+						"required": ["externalCrossReference_id", "objectId"],
 						"properties": {
 							"externalCrossReference_id": {
-								"type": "string"
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							},
 							"objectId": {
 								"type": "string"
@@ -151,7 +153,8 @@
 					}
 				},
 				"organism_id": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"internalComment": {
 					"type": "string"
