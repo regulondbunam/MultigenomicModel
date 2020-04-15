@@ -15,13 +15,30 @@
 			"oneOf": [{
 					"required": ["leftEndPosition", "rightEndPosition", "sequence", "strand"],
 					"not": {
-						"required": ["fragments"]
+						"anyOf":[
+							{
+								"required": ["fragments"]
+							}
+						]
 					}
 				},
 				{
 					"required": ["fragments"],
 					"not": {
-						"required": ["leftEndPosition", "rightEndPosition"]
+						"anyOf": [
+							{
+								"required": ["leftEndPosition"]
+							},
+							{
+								"required": ["rightEndPosition"]
+							},
+							{
+								"required": ["sequence"]
+							},
+							{
+								"required": ["strand"]
+							}
+						]
 					}
 				}
 			],
