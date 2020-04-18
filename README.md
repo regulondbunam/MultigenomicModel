@@ -1,6 +1,6 @@
 # Multigenomic Model of RegulonDB
 
-Repositorio para el desarrollo del Modelo de la regulación transcripcional de RegulonDB y su expansión a la multigenómica. Incluyendo el uso de mejores prácticas y los principios FAIR.
+Repositorio para el desarrollo del Modelo de la regulación transcripcional de RegulonDB y su expansión a la Multigenómica. Incluyendo el uso de mejores prácticas y los principios de FAIR software.
 
 Enlaces relacionados al proyecto:
 
