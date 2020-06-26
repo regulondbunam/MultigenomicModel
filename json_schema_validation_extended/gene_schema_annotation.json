@@ -8,7 +8,6 @@
 			"type": "object",
 			"required": [
 				"_id",
-				"type",
 				"centisomePosition",
 				"organism_id"
 			],
@@ -55,143 +54,15 @@
 						"Comments": "Para conocer más detalle sobre la definición de los identificadores, consultar la sección: Identificadores en el manual de RegulonDB."
 					}
 				},
-				"name": {
+				"bnumber":{
 					"type": "string",
 					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Indica el nombre oficial de un gen.",
-						"URI": "[value]",
-						"Required": "string",
-						"Example": "araC",
-						"Comments": "En algunos casos habrá genes que no tengan un nombre asociado por lo que este campo pudiera presentarse vacío."
-					}
-				},
-				"leftEndPosition": {
-					"type": "number",
-					"multipleOf": 1.0,
-					"annotation": {
-						"Synonyms": "genome left position",
-						"Description": "Indica la posición izquierda del objeto Gen.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "70387",
-						"Comments": "[value]"
-					}
-				},
-				"rightEndPosition": {
-					"type": "number",
-					"multipleOf": 1.0,
-					"annotation": {
-						"Synonyms": "genome right position",
-						"Description": "Indica la posición derecha del objeto Gen.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "71265",
-						"Comments": "[value]"
-					}
-				},
-				"fragments": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "object",
-						"required": [
-							"strand",
-							"leftEndPosition",
-							"rightEndPosition"
-						],
-						"properties": {
-							"strand": {
-								"type": "string",
-								"enum": ["forward", "reverse"]
-							},
-							"leftEndPosition": {
-								"type": "number",
-								"multipleOf": 1.0
-							},
-							"rightEndPosition": {
-								"type": "number",
-								"multipleOf": 1.0
-							},
-							"sequence": {
-								"type": "string",
-								"pattern": "^[ATCGatcg]+$"
-							},
-							"centisomePosition": {
-								"type": "number"
-							}
-						}
-					},
-					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Indica que un gene está conformado por múltiples segmentos. Las características de estos genes son definidas por medio de un objeto con las propiedades: strand, leftEndPosition, rightEndPosition, name, bnumber, synonyms, centisomePosition y evidenceReferences.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "[\"forward\", 70387, 71265, 1.5164213]",
-						"Comments": "Para el caso de genes fragmentados las propiedades obligatorias son: strand, leftEndPosition y rightEndPosition"
-					}
-				},
-				"strand": {
-					"type": "string",
-					"enum": ["forward", "reverse"],
-					"annotation": {
-						"Synonyms": "direction",
-						"Description": "Indica la orientación del Gen.",
-						"URI": "forward, reverse",
-						"Required": "[value]",
-						"Example": "forward",
-						"Comments": "[value]"
-					}
-				},
-				"sequence": {
-					"type": "string",
-					"pattern": "^[ATCGatcg]+$",
-					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Indica la sequencia de ADN del Gen.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "ATGGCTGAAGCGCAAAATGATCCCCTGCTGCCGGGATACTCGTTTAACGCCCATCTGGTGGCGGGTTTAACGCCGATTGAGGCCAACGGTTATCTCGATTTTTTTATCGACCGACCGCTGGGAATGAAAGGTTATATTCTCAATCTCACCATTCGCGGTCAGGGGGTGGTGAAAAATCAGGGACGAGAATTTGTCTGCCGACCGGGTGATATTTTGCTGTTCCCGCCAGGAGAGATTCATCACTACGGTCGTCATCCGGAGGCTCGCGAATGGTATCACCAGTGGGTTTACTTTCGTCCGCGCGCCTACTGGCATGAATGGCTTAACTGGCCGTCAATATTTGCCAATACGGGTTTCTTTCGCCCGGATGAAGCGCACCAGCCGCATTTCAGCGACCTGTTTGGGCAAATCATTAACGCCGGGCAAGGGGAAGGGCGCTATTCGGAGCTGCTGGCGATAAATCTGCTTGAGCAATTGTTACTGCGGCGCATGGAAGCGATTAACGAGTCGCTCCATCCACCGATGGATAATCGGGTACGCGAGGCTTGTCAGTACATCAGCGATCACCTGGCAGACAGCAATTTTGATATCGCCAGCGTCGCACAGCATGTTTGCTTGTCGCCGTCGCGTCTGTCACATCTTTTCCGCCAGCAGTTAGGGATTAGCGTCTTAAGCTGGCGCGAGGACCAACGCATTAGTCAGGCGAAGCTGCTTTTGAGCACTACCCGGATGCCTATCGCCACCGTCGGTCGCAATGTTGGTTTTGACGATCAACTCTATTTCTCGCGAGTATTTAAAAAATGCACCGGGGCCAGCCCGAGCGAGTTTCGTGCCGGTTGTGAAGAAAAAGTGAATGATGTAGCCGTCAAGTTGTCATAA",
-						"Comments": "[value]"
-					}
-				},
-				"gcContent": {
-					"type": "number",
-					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Representa el porcentaje de pares de Guanina-Citosina en la secuencia de ADN del Gen.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "52.56",
-						"Comments": "[value]"
-					}
-				},
-				"note": {
-					"type": "string",
-					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Comentarios de curación relacionados al Gen.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "The expression of the gene is analyzed through a transcriptional fusion (i.e. lacZ), and  a difference in expression levels is observed when the regulatory protein is present  (wild type) vs in its absence.  Note that this evidence does not eliminate the possiblity of an indirect effect of the regulator on the regulated gene.",
-						"Comments": "[value]"
-					}
-				},
-				"type": {
-					"type": "string",
-					"enum": [
-						"pseudo",
-						"phantom",
-						"gene",
-						"truncated"
-					],
-					"annotation": {
-						"Synonyms": "kind",
-						"Description": "Indica el tipo de gene anotado.",
-						"URI": "pseudo, phantom, gene, truncated",
-						"Required": "[value]",
-						"Example": "phantom",
-						"Comments": "[value]"
+						"Synonyms": "",
+						"Description": "",
+						"URI": "",
+						"Required": "",
+						"Example": "",
+						"Comments": ""
 					}
 				},
 				"centisomePosition": {
@@ -202,48 +73,6 @@
 						"URI": "[value]",
 						"Required": "[value]",
 						"Example": "1.5164213",
-						"Comments": "[value]"
-					}
-				},
-				"interrupted": {
-					"type": "boolean",
-					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Este campo se usa para genes que tienen un codón de parada. Un gene interrumpido será definido por dos marcos genéticos que describen las dos mitades del gen. ",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "false",
-						"Comments": "[value]"
-					}
-				},
-				"term_ids": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "string",
-						"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
-					},
-					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Descripción de las funciones celulares del producto del Gene.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "[\"carbon compounds\", \"Transcription related\", \"operon\", \"repressor\"]",
-						"Comments": "[value]"
-					}
-				},
-				"synonyms": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "string"
-					},
-					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Indica los identificadores de aquellos genes con los que se le conoce al gene.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "[\"b0064\", \"ECK0065\", \"EG10054\"]",
 						"Comments": "[value]"
 					}
 				},
@@ -307,6 +136,115 @@
 						"Comments": "[value]"
 					}
 				},
+				"fragments": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"required": [
+							"strand",
+							"leftEndPosition",
+							"rightEndPosition"
+						],
+						"properties": {
+							"strand": {
+								"type": "string",
+								"enum": ["forward", "reverse"]
+							},
+							"leftEndPosition": {
+								"type": "number",
+								"multipleOf": 1.0
+							},
+							"rightEndPosition": {
+								"type": "number",
+								"multipleOf": 1.0
+							},
+							"sequence": {
+								"type": "string",
+								"pattern": "^[ATCGatcg]+$"
+							},
+							"centisomePosition": {
+								"type": "number"
+							}
+						},
+						"additionalProperties": false
+					},
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Indica que un gene está conformado por múltiples segmentos. Las características de estos genes son definidas por medio de un objeto con las propiedades: strand, leftEndPosition, rightEndPosition, name, bnumber, synonyms, centisomePosition y evidenceReferences.",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "[\"forward\", 70387, 71265, 1.5164213]",
+						"Comments": "Para el caso de genes fragmentados las propiedades obligatorias son: strand, leftEndPosition y rightEndPosition"
+					}
+				},
+				"gcContent": {
+					"type": "number",
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Representa el porcentaje de pares de Guanina-Citosina en la secuencia de ADN del Gen.",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "52.56",
+						"Comments": "[value]"
+					}
+				},
+				"internalComment": {
+					"type": "string",
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Comentarios de uso interno del equipo de RegulonDB.",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "[value]",
+						"Comments": "[value]"
+					}
+				},
+				"interrupted": {
+					"type": "boolean",
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Este campo se usa para genes que tienen un codón de parada. Un gene interrumpido será definido por dos marcos genéticos que describen las dos mitades del gen. ",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "false",
+						"Comments": "[value]"
+					}
+				},
+				"leftEndPosition": {
+					"type": "number",
+					"multipleOf": 1.0,
+					"annotation": {
+						"Synonyms": "genome left position",
+						"Description": "Indica la posición izquierda del objeto Gen.",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "70387",
+						"Comments": "[value]"
+					}
+				},
+				"name": {
+					"type": "string",
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Indica el nombre oficial de un gen.",
+						"URI": "[value]",
+						"Required": "string",
+						"Example": "araC",
+						"Comments": "En algunos casos habrá genes que no tengan un nombre asociado por lo que este campo pudiera presentarse vacío."
+					}
+				},
+				"note": {
+					"type": "string",
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Comentarios de curación relacionados al Gen.",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "The expression of the gene is analyzed through a transcriptional fusion (i.e. lacZ), and  a difference in expression levels is observed when the regulatory protein is present  (wild type) vs in its absence.  Note that this evidence does not eliminate the possiblity of an indirect effect of the regulator on the regulated gene.",
+						"Comments": "[value]"
+					}
+				},
 				"organism_id": {
 					"type": "string",
 					"pattern": "^RDB[A-Z]{7}[0-9]{5}$",
@@ -319,14 +257,113 @@
 						"Comments": "[value]"
 					}
 				},
-				"internalComment": {
-					"type": "string",
+				"rightEndPosition": {
+					"type": "number",
+					"multipleOf": 1.0,
 					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Comentarios de uso interno del equipo de RegulonDB.",
+						"Synonyms": "genome right position",
+						"Description": "Indica la posición derecha del objeto Gen.",
 						"URI": "[value]",
 						"Required": "[value]",
-						"Example": "[value]",
+						"Example": "71265",
+						"Comments": "[value]"
+					}
+				},
+				"sequence": {
+					"type": "string",
+					"pattern": "^[ATCGatcg]+$",
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Indica la sequencia de ADN del Gen.",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "ATGGCTGAAGCGCAAAATGATCCCCTGCTGCCGGGATACTCGTTTAACGCCCATCTGGTGGCGGGTTTAACGCCGATTGAGGCCAACGGTTATCTCGATTTTTTTATCGACCGACCGCTGGGAATGAAAGGTTATATTCTCAATCTCACCATTCGCGGTCAGGGGGTGGTGAAAAATCAGGGACGAGAATTTGTCTGCCGACCGGGTGATATTTTGCTGTTCCCGCCAGGAGAGATTCATCACTACGGTCGTCATCCGGAGGCTCGCGAATGGTATCACCAGTGGGTTTACTTTCGTCCGCGCGCCTACTGGCATGAATGGCTTAACTGGCCGTCAATATTTGCCAATACGGGTTTCTTTCGCCCGGATGAAGCGCACCAGCCGCATTTCAGCGACCTGTTTGGGCAAATCATTAACGCCGGGCAAGGGGAAGGGCGCTATTCGGAGCTGCTGGCGATAAATCTGCTTGAGCAATTGTTACTGCGGCGCATGGAAGCGATTAACGAGTCGCTCCATCCACCGATGGATAATCGGGTACGCGAGGCTTGTCAGTACATCAGCGATCACCTGGCAGACAGCAATTTTGATATCGCCAGCGTCGCACAGCATGTTTGCTTGTCGCCGTCGCGTCTGTCACATCTTTTCCGCCAGCAGTTAGGGATTAGCGTCTTAAGCTGGCGCGAGGACCAACGCATTAGTCAGGCGAAGCTGCTTTTGAGCACTACCCGGATGCCTATCGCCACCGTCGGTCGCAATGTTGGTTTTGACGATCAACTCTATTTCTCGCGAGTATTTAAAAAATGCACCGGGGCCAGCCCGAGCGAGTTTCGTGCCGGTTGTGAAGAAAAAGTGAATGATGTAGCCGTCAAGTTGTCATAA",
+						"Comments": "[value]"
+					}
+				},
+				"strand": {
+					"type": "string",
+					"enum": ["forward", "reverse"],
+					"annotation": {
+						"Synonyms": "direction",
+						"Description": "Indica la orientación del Gen.",
+						"URI": "forward, reverse",
+						"Required": "[value]",
+						"Example": "forward",
+						"Comments": "[value]"
+					}
+				},
+				"synonyms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					},
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Indica los identificadores de aquellos genes con los que se le conoce al gene.",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "[\"b0064\", \"ECK0065\", \"EG10054\"]",
+						"Comments": "[value]"
+					}
+				},
+				"terms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"name": {
+								"type": "string"
+							},
+							"parents": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+										},
+										"name": {
+											"type": "string"
+										}
+									},
+									"additionalProperties": false
+								}
+							}
+						},
+						"additionalProperties": false
+					},
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Descripción de las funciones celulares del producto del Gene.",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "[\"carbon compounds\", \"Transcription related\", \"operon\", \"repressor\"]",
+						"Comments": "[value]"
+					}
+				},
+				"type": {
+					"type": "string",
+					"enum": [
+						"pseudo",
+						"phantom",
+						"gene",
+						"truncated"
+					],
+					"annotation": {
+						"Synonyms": "kind",
+						"Description": "Indica el tipo de gene anotado.",
+						"URI": "pseudo, phantom, gene, truncated",
+						"Required": "[value]",
+						"Example": "phantom",
 						"Comments": "[value]"
 					}
 				},
