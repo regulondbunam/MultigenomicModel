@@ -11,11 +11,24 @@
 					"type": "string",
 					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
+				"code": {
+					"type": "string"
+				},
+				"internalComment": {
+					"type": "string"
+				},
 				"name": {
 					"type": "string"
 				},
-				"code": {
+				"note": {
 					"type": "string"
+				},
+				"pertainsTo": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}	
 				},
 				"typeObject": {
 					"type": "array",
@@ -23,12 +36,6 @@
 					"items": {
 						"type": "string"
 					}
-				},
-				"note": {
-					"type": "string"
-				},
-				"internalComment": {
-					"type": "string"
 				},
 				"schemaVersion": {
 					"type": "number"
