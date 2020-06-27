@@ -46,7 +46,7 @@
 						"type": "array",
 						"uniqueItems": true,
 						"items": {
-							"type": "int",
+							"type": "number",
 							"multipleOf": 1.0
 						}
 					}
