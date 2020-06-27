@@ -4,14 +4,25 @@
 			"type": "object",
 			"required": [
 				"_id",
-				"name",
-				"type",
-				"url"
+				"name"
 			],
 			"properties": {
 				"_id": {
 					"type": "string",
 					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"applyTo": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"description": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
 				},
 				"name": {
 					"type": "string"
@@ -21,19 +32,6 @@
 					"enum": ["external", "local"]
 				},
 				"url": {
-					"type": "string"
-				},
-				"description": {
-					"type": "string"
-				},
-				"applyTo": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "string"
-					}
-				},
-				"label": {
 					"type": "string"
 				},
 				"schemaVersion": {
