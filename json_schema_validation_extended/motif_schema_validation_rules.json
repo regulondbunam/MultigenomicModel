@@ -4,61 +4,29 @@
 			"type": "object",
 			"required": [
 				"_id",
-				"leftEndPosition",
-				"rightEndPosition",
 				"sequence",
 				"product_id",
 				"organism_id"
 			],
 			"properties": {
 				"_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"alternateSequence": {
 					"type": "string"
 				},
-				"leftEndPosition": {
-					"type": "number",
-					"multipleOf": 1.0
-				},
-				"rightEndPosition": {
-					"type": "number",
-					"multipleOf": 1.0
-				},
-				"sequence": {
+				"attachedGroup": {
 					"type": "string"
 				},
-				"type": {
-					"type": "string"
-				},
-				"description": {
-					"type": "string"
-				},
-				"note": {
+				"class": {
 					"type": "string"
 				},
 				"dataSource": {
 					"type": "string"
 				},
-				"residueNumber": {
-					"type": "number"
-				},
-				"attachedGroup": {
+				"description": {
 					"type": "string"
-				},
-				"homologyMotif": {
-					"type": "string"
-				},
-				"alternateSequence": {
-					"type": "string"
-				},
-				"product_id": {
-					"type": "string",
-					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
-				},
-				"synonyms": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "string"
-					}
 				},
 				"externalCrossReferences": {
 					"type": "array",
@@ -71,7 +39,8 @@
 						],
 						"properties": {
 							"externalCrossReference_id": {
-								"type": "string"
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							},
 							"objectId": {
 								"type": "string"
@@ -80,10 +49,49 @@
 						"additionalProperties": false
 					}
 				},
-				"organism_id": {
+				"homologyMotif": {
 					"type": "string"
 				},
 				"internalComment": {
+					"type": "string"
+				},
+				"leftEndPosition": {
+					"type": "number",
+					"multipleOf": 1.0
+				},
+				"note": {
+					"type": "string"
+				},
+				"organism_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"product_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"rightEndPosition": {
+					"type": "number",
+					"multipleOf": 1.0
+				},
+				"sequence": {
+					"type": "string"
+				},
+				"residueNumber": {
+					"type": "array",
+					"items": {
+						"type": "number",
+						"multipleOf": 1.0
+					}
+				},
+				"synonyms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"type": {
 					"type": "string"
 				},
 				"schemaVersion": {
