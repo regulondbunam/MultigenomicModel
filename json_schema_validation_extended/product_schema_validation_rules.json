@@ -26,85 +26,39 @@
 					"type": "string",
 					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
-				"name": {
-					"type": "string"
-				},
-				"isoelectricPoint": {
-					"type": "number"
-				},
-				"location": {
-					"type": "string"
-				},
-				"sequence": {
-					"type": "string"
-				},
-				"note": {
-					"type": "string"
-				},
-				"type": {
-					"type": "string"
-				},
-				"modifiedForm": {
+				"abbreviatedName": {
 					"type": "string"
 				},
 				"anticodon": {
 					"type": "string"
 				},
-				"molecularWeight": {
-					"type": "number"
-				},
-				"molecularWeightKd": {
-					"type": "number"
-				},
 				"catalyzes": {
-					"type": "string"
-				},
-				"componentOf": {
-					"type": "string"
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
 				},
 				"codingSegments": {
 					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"type": "number",
-						"multipleOf": 1.0
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "int",
+							"multipleOf": 1.0
+						}
 					}
 				},
-				"spliceFormIntrons": {
+				"componentOf": {
 					"type": "array",
 					"uniqueItems": true,
 					"items": {
-						"type": "number",
-						"multipleOf": 1.0
+						"type": "string"
 					}
-				},
-				"productType": {
-					"type": "string",
-					"enum": ["transcriptionFactor", "srna", "ppgpp"]
-				},
-				"siteLength": {
-					"type": "number",
-					"multipleOf": 1.0
 				},
 				"consensusSequence": {
-					"type": "string"
-				},
-				"symmetry": {
-					"type": "string"
-				},
-				"gene_id": {
-					"type": "string",
-					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
-				},
-				"term_ids": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "string",
-						"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
-					}
-				},
-				"synonyms": {
 					"type": "array",
 					"uniqueItems": true,
 					"items": {
@@ -152,11 +106,152 @@
 						"additionalProperties": false
 					}
 				},
-				"organism_id": {
+				"gene_id": {
 					"type": "string",
 					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
 				"internalComment": {
+					"type": "string"
+				},
+				"isoelectricPoint": {
+					"type": "number"
+				},
+				"isTranscriptionFactor": {
+					"type": "boolean"
+				},
+				"locations": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"modifiedForms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"molecularWeight": {
+					"type": "number"
+				},
+				"molecularWeightsKd": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "number"
+					}
+				},
+				"name": {
+					"type": "string"
+				},
+				"note": {
+					"type": "string"
+				},
+				"organism_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"sequence": {
+					"type": "string"
+				},
+				"siteLength": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "number",
+						"multipleOf": 1.0
+					}
+				},
+				"spliceFormIntrons": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "number",
+							"multipleOf": 1.0
+						}
+					}
+				},
+				"symmetries": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"synonyms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"terms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"properties": {
+							"biologialProcess": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "object",
+									"properties": {
+										"term_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+										},
+										"term_name": {
+											"type": "string"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"cellularComponent": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "object",
+									"properties": {
+										"term_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+										},
+										"term_name": {
+											"type": "string"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"molecularFunction": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "object",
+									"properties": {
+										"term_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+										},
+										"term_name": {
+											"type": "string"
+										}
+									},
+									"additionalProperties": false
+								}
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"type": {
 					"type": "string"
 				},
 				"schemaVersion": {
