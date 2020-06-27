@@ -314,11 +314,11 @@
 					"items": {
 						"type": "object",
 						"properties": {
-							"id": {
+							"term_id": {
 								"type": "string",
 								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 							},
-							"name": {
+							"term_name": {
 								"type": "string"
 							},
 							"parents": {
@@ -327,11 +327,11 @@
 								"items": {
 									"type": "object",
 									"properties": {
-										"id": {
+										"term_id": {
 											"type": "string",
 											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 										},
-										"name": {
+										"term_name": {
 											"type": "string"
 										}
 									},
