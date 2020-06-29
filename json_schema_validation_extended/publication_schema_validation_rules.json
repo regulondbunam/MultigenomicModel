@@ -10,30 +10,34 @@
 					"type": "string",
 					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
-				"referenceId": {
-					"type": "number"
+				"authors": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
 				},
-				"externalCrossReference_id": {
-					"type": "string",
-					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				"internalComment": {
+					"type": "string"
 				},
-				"author": {
+				"note": {
+					"type": "string"
+				},
+				"pmid": {
+					"type": "number",
+					"multipleOf": 1.0
+				},
+				"source": {
 					"type": "string"
 				},
 				"title": {
 					"type": "string"
 				},
-				"source": {
+				"url": {
 					"type": "string"
 				},
 				"year": {
 					"type": "number"
-				},
-				"note": {
-					"type": "string"
-				},
-				"internalComment": {
-					"type": "string"
 				},
 				"schemaVersion": {
 					"type": "number"
