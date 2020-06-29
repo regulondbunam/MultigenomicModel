@@ -8,7 +8,6 @@
 			"type": "object",
 			"required": [
 				"_id",
-				"transcriptionStartSite",
 				"sigmaFactor_id",
 				"organism_id"
 			],
@@ -25,6 +24,77 @@
 						"Comments": "Para conocer más detalle sobre la definición de los identificadores, consultar la sección: Identificadores en el manual de RegulonDB."
 					}
 				},
+				"evidenceReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
+						"properties": {
+							"publication_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"evidence_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							}
+						},
+						"additionalProperties": false
+					},
+					"annotation": {
+						"Synonyms": "",
+						"Description": "Identificador de la publicación así como de la evidencia asociada al Promotor.",
+						"URI": "",
+						"Required": "",
+						"Example": "[{\"publication_id\": \"GID000027564\"},{\"publication_id\": \"GID000027564\",\"evidence_id\": \"GID000000006\"}]",
+						"Comments": ""
+					}
+				},
+				"externalCrossReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"required": [
+							"externalCrossReference_id",
+							"objectId"
+						],
+						"properties": {
+							"externalCrossReference_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"objectId": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					},
+					"annotation": {
+						"Synonyms": "",
+						"Description": "Bases de datos externas donde se puede localizar información asociada al Promotor.",
+						"URI": "",
+						"Required": "",
+						"Example": "",
+						"Comments": ""
+					}
+				},
+				"internalComment": {
+					"type": "string",
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Comentarios de uso interno del equipo de RegulonDB.",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "[value]",
+						"Comments": "[value]"
+					}
+				},
 				"name": {
 					"type": "string",
 					"annotation": {
@@ -36,59 +106,39 @@
 						"Comments": "[value]"
 					}
 				},
-				"transcriptionStartSite": {
-					"type": "object",
-					"required": ["leftEndPosition", "rightEndPosition", "type"],
-					"properties": {
-						"leftEndPosition": {
-							"type": "number",
-							"multipleOf": 1.0
-						},
-						"rightEndPosition": {
-							"type": "number",
-							"multipleOf": 1.0
-						},
-						"range": {
-							"type": "number",
-							"multipleOf": 1.0
-						},
-						"type": {
-							"type": "string",
-							"enum": ["primary", "secondary", "tertiary"]
-						}
-					},
-					"annotation": {
-						"Synonyms": "TSS",
-						"Description": "Representa el inicio del sitio de transcripción. Este objeto esta compuesto por las propiedades: \n leftEndPosition: Posición izquierda del sitio \n rightEndPosition: Posición derecha del sitio \n range: Rango del sitio \n type: Tipo del sitio [primary, secondary, tertiary].",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "\"leftEndPosition\": 1215716,\n\"rightEndPosition\": 1215745,\n\"range\": -29,\n\"type\": \"primary\"",
-						"Comments": "[value]"
-					},
-					"additionalProperties": false
-				},
-				"strand": {
+				"note": {
 					"type": "string",
-					"enum": ["forward", "reverse"],
 					"annotation": {
 						"Synonyms": "[value]",
-						"Description": "Indica la orientación del Promotor, ya sea forward, reverse",
+						"Description": "Comentarios de curación relacionados al Promotor.",
 						"URI": "[value]",
 						"Required": "[value]",
-						"Example": "forward",
+						"Example": "[value]",
 						"Comments": "[value]"
 					}
 				},
-				"sequence": {
+				"organism_id": {
 					"type": "string",
-					"pattern": "^[ATCGatcg]+$",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$",
 					"annotation": {
 						"Synonyms": "[value]",
-						"Description": "Indica la sequencia de ADN del Promotor.",
+						"Description": "Indica el identificador del organismo de referencia.",
 						"URI": "[value]",
 						"Required": "[value]",
-						"Example": "gcaaaaaattaatttatcattctgtacacatatttcgtacaagtttgctattgttacttcActtaacattgattaacattt",
+						"Example": "ECK12",
 						"Comments": "[value]"
+					}
+				},
+				"pos1": {
+					"type": "number",
+					"multipleOf": 1.0,
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "",
+						"URI": "",
+						"Required": "",
+						"Example": "",
+						"Comments": ""
 					}
 				},
 				"promoterFeatures": {
@@ -98,7 +148,62 @@
 						"type": "object",
 						"required": ["minusSignals"],
 						"properties": {
-							"type": "object",
+							"promoterFeature_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"bindsSigmaFactor": {
+								"type": "object",
+								"properties": {
+									"evidenceReferences": {
+										"type": "array",
+										"uniqueItems": true,
+										"items": {
+											"type": "object",
+											"anyOf": [{
+												"required": ["publication_id"]
+											}, {
+												"required": ["evidence_id"]
+											}],
+											"properties": {
+												"publication_id": {
+													"type": "string",
+													"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+												},
+												"evidence_id": {
+													"type": "string",
+													"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+												}
+											},
+											"additionalProperties": false
+										}
+									}
+								},
+								"additionalProperties": false
+							},
+							"evidenceReferences": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "object",
+									"anyOf": [{
+										"required": ["publication_id"]
+									}, {
+										"required": ["evidence_id"]
+									}],
+									"properties": {
+										"publication_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+										},
+										"evidence_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
 							"minusSignals": {
 								"type": "array",
 								"uniqueItems": true,
@@ -128,54 +233,6 @@
 							},
 							"score": {
 								"type": "number"
-							},
-							"bindsSigmaFactor": {
-								"type": "object",
-								"properties": {
-									"evidenceReferences": {
-										"type": "array",
-										"uniqueItems": true,
-										"items": {
-											"type": "object",
-											"anyOf": [{
-												"required": ["publication_id"]
-											}, {
-												"required": ["evidence_id"]
-											}],
-											"properties": {
-												"publication_id": {
-													"type": "string"
-												},
-												"evidence_id": {
-													"type": "string"
-												}
-											},
-											"additionalProperties": false
-										}
-									}
-								},
-								"additionalProperties": false
-							},
-							"evidenceReferences": {
-								"type": "array",
-								"uniqueItems": true,
-								"items": {
-									"type": "object",
-									"anyOf": [{
-										"required": ["publication_id"]
-									}, {
-										"required": ["evidence_id"]
-									}],
-									"properties": {
-										"publication_id": {
-											"type": "string"
-										},
-										"evidence_id": {
-											"type": "string"
-										}
-									},
-									"additionalProperties": false
-								}
 							}
 						},
 						"additionalProperties": false
@@ -189,14 +246,15 @@
 						"Comments": ""
 					}
 				},
-				"note": {
+				"sequence": {
 					"type": "string",
+					"pattern": "^[ATCGatcg]+$",
 					"annotation": {
 						"Synonyms": "[value]",
-						"Description": "Comentarios de curación relacionados al Promotor.",
+						"Description": "Indica la sequencia de ADN del Promotor.",
 						"URI": "[value]",
 						"Required": "[value]",
-						"Example": "[value]",
+						"Example": "gcaaaaaattaatttatcattctgtacacatatttcgtacaagtttgctattgttacttcActtaacattgattaacattt",
 						"Comments": "[value]"
 					}
 				},
@@ -209,6 +267,18 @@
 						"URI": "[value]",
 						"Required": "[value]",
 						"Example": "ECK12T000000",
+						"Comments": "[value]"
+					}
+				},
+				"strand": {
+					"type": "string",
+					"enum": ["forward", "reverse"],
+					"annotation": {
+						"Synonyms": "[value]",
+						"Description": "Indica la orientación del Promotor, ya sea forward, reverse",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "forward",
 						"Comments": "[value]"
 					}
 				},
@@ -227,85 +297,36 @@
 						"Comments": "[value]"
 					}
 				},
-				"evidenceReferences": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "object",
-						"anyOf": [{
-							"required": ["publication_id"]
-						}, {
-							"required": ["evidence_id"]
-						}],
-						"properties": {
-							"publication_id": {
-								"type": "string"
-							},
-							"evidence_id": {
-								"type": "string"
-							}
+				"transcriptionStartSite": {
+					"type": "object",
+					"required": ["leftEndPosition", "rightEndPosition", "range"],
+					"properties": {
+						"leftEndPosition": {
+							"type": "number",
+							"multipleOf": 1.0
 						},
-						"additionalProperties": false
+						"rightEndPosition": {
+							"type": "number",
+							"multipleOf": 1.0
+						},
+						"range": {
+							"type": "number",
+							"multipleOf": 1.0
+						},
+						"type": {
+							"type": "string",
+							"enum": ["primary", "secondary", "tertiary"]
+						}
 					},
 					"annotation": {
-						"Synonyms": "",
-						"Description": "Identificador de la publicación así como de la evidencia asociada al Promotor.",
-						"URI": "",
-						"Required": "",
-						"Example": "[{\"publication_id\": \"GID000027564\"},{\"publication_id\": \"GID000027564\",\"evidence_id\": \"GID000000006\"}]",
-						"Comments": ""
-					}
-				},
-				"externalCrossReferences": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "object",
-						"required": [
-							"externalCrossReference_id",
-							"objectId"
-						],
-						"properties": {
-							"externalCrossReference_id": {
-								"type": "string"
-							},
-							"objectId": {
-								"type": "string"
-							}
-						},
-						"additionalProperties": false
+						"Synonyms": "TSS",
+						"Description": "Representa el inicio del sitio de transcripción. Este objeto esta compuesto por las propiedades: \n leftEndPosition: Posición izquierda del sitio \n rightEndPosition: Posición derecha del sitio \n range: Rango del sitio \n type: Tipo del sitio [primary, secondary, tertiary].",
+						"URI": "[value]",
+						"Required": "[value]",
+						"Example": "\"leftEndPosition\": 1215716,\n\"rightEndPosition\": 1215745,\n\"range\": -29,\n\"type\": \"primary\"",
+						"Comments": "[value]"
 					},
-					"annotation": {
-						"Synonyms": "",
-						"Description": "Bases de datos externas donde se puede localizar información asociada al Promotor.",
-						"URI": "",
-						"Required": "",
-						"Example": "",
-						"Comments": ""
-					}
-				},
-				"organism_id": {
-					"type": "string",
-					"pattern": "^RDB[A-Z]{7}[0-9]{5}$",
-					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Indica el identificador del organismo de referencia.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "ECK12",
-						"Comments": "[value]"
-					}
-				},
-				"internalComment": {
-					"type": "string",
-					"annotation": {
-						"Synonyms": "[value]",
-						"Description": "Comentarios de uso interno del equipo de RegulonDB.",
-						"URI": "[value]",
-						"Required": "[value]",
-						"Example": "[value]",
-						"Comments": "[value]"
-					}
+					"additionalProperties": false
 				},
 				"schemaVersion": {
 					"type": "number",
