@@ -16,6 +16,50 @@
 				"centerPosition": {
 					"type": "number"
 				},
+				"evidenceReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
+						"properties": {
+							"publication_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"evidence_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"externalCrossReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"required": [
+							"externalCrossReference_id",
+							"objectId"
+						],
+						"properties": {
+							"externalCrossReference_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"objectId": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
 				"function": {
 					"type": "string",
 					"enum": [
@@ -24,84 +68,14 @@
 						"dual"
 					]
 				},
-				"type": {
-					"type": "string",
-					"enum": [
-						"mechanistic",
-						"physiological"
-					]
+				"internalComment": {
+					"type": "string"
 				},
 				"note": {
 					"type": "string"
 				},
-				"transcriptionFactorRegulatorySite": {
-					"type": "object",
-					"properties": {
-						"absolutePosition": {
-							"type": "number"
-						},
-						"leftEndPosition": {
-							"type": "number"
-						},
-						"rightEndPosition": {
-							"type": "number"
-						},
-						"sequence": {
-							"type": "string",
-							"pattern": "^[ATCGatcg]+$"
-						},
-						"length": {
-							"type": "number"
-						},
-						"note": {
-							"type": "string"
-						},
-						"internalComment": {
-							"type": "string"
-						},
-						"evidenceReferences": {
-							"type": "array",
-							"uniqueItems": true,
-							"items": {
-								"type": "object",
-								"anyOf": [{
-									"required": ["publication_id"]
-								}, {
-									"required": ["evidence_id"]
-								}],
-								"properties": {
-									"publication_id": {
-										"type": "string"
-									},
-									"evidence_id": {
-										"type": "string"
-									}
-								},
-								"additionalProperties": false
-							}
-						},
-						"externalCrossReferences": {
-							"type": "array",
-							"uniqueItems": true,
-							"items": {
-								"type": "object",
-								"required": [
-									"externalCrossReference_id",
-									"objectId"
-								],
-								"properties": {
-									"externalCrossReference_id": {
-										"type": "string"
-									},
-									"objectId": {
-										"type": "string"
-									}
-								},
-								"additionalProperties": false
-							}
-						}
-					},
-					"additionalProperties": false
+				"organism_id": {
+					"type": "string"
 				},
 				"regulatedEntity": {
 					"type": "object",
@@ -122,65 +96,105 @@
 					"type": "object",
 					"required": ["_id", "type"],
 					"properties": {
-
-					},
-					"additionalProperties": {
-						"id": {
+						"_id": {
 							"type": "string",
 							"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 						},
 						"type": {
 							"type": "string",
-							"enum": ["regulatorComplex", "regulatoryContinuant", "product"]
+							"enum": [
+								"regulatoryComplex",
+								"regulatoryContinuant",
+								"product"
+							]
 						}
-					}
+					},
+					"additionalProperties": false
 				},
-				"evidenceReferences": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "object",
-						"anyOf": [{
-							"required": ["publication_id"]
-						}, {
-							"required": ["evidence_id"]
-						}],
-						"properties": {
-							"publication_id": {
-								"type": "string"
-							},
-							"evidence_id": {
-								"type": "string"
+				"transcriptionFactorRegulatorySite": {
+					"type": "object",
+					"properties": {
+						"absolutePosition": {
+							"type": "number"
+						},
+						"leftEndPosition": {
+							"type": "number",
+							"multipleOf": 1.0
+						},
+						"rightEndPosition": {
+							"type": "number",
+							"multipleOf": 1.0
+						},
+						"sequence": {
+							"type": "string",
+							"pattern": "^[ATCGatcg]+$"
+						},
+						"length": {
+							"type": "number",
+							"multipleOf": 1.0
+						},
+						"note": {
+							"type": "string"
+						},
+						"internalComment": {
+							"type": "string"
+						},
+						"evidenceReferences": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "object",
+								"anyOf": [{
+									"required": ["publication_id"]
+								}, {
+									"required": ["evidence_id"]
+								}],
+								"properties": {
+									"publication_id": {
+										"type": "string",
+										"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+									},
+									"evidence_id": {
+										"type": "string",
+										"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+									}
+								},
+								"additionalProperties": false
 							}
 						},
-						"additionalProperties": false
-					}
-				},
-				"externalCrossReferences": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "object",
-						"required": [
-							"externalCrossReference_id",
-							"objectId"
-						],
-						"properties": {
-							"externalCrossReference_id": {
-								"type": "string"
-							},
-							"objectId": {
-								"type": "string"
+						"externalCrossReferences": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "object",
+								"required": [
+									"externalCrossReference_id",
+									"objectId"
+								],
+								"properties": {
+									"externalCrossReference_id": {
+										"type": "string",
+										"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+									},
+									"objectId": {
+										"type": "string"
+									}
+								},
+								"additionalProperties": false
 							}
-						},
-						"additionalProperties": false
-					}
+						}
+					},
+					"additionalProperties": false
 				},
-				"organism_id": {
-					"type": "string"
+				"type": {
+					"type": "string",
+					"enum": [
+						"mechanistic",
+						"physiological"
+					]
 				},
-				"internalComment": {
-					"type": "string"
+				"schemaVersion": {
+					"type": "number"
 				}
 			},
 			"additionalProperties": false
