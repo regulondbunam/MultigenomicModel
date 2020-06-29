@@ -5,34 +5,93 @@
 			"required": [
 				"_id",
 				"name",
-				"regulator_id",
-				"organism_id",
-				"schemaVersion"
+				"product_ids",
+				"organism_id"
 			],
 			"properties": {
 				"_id": {
 					"type": "string",
 					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
-				"name": {
+				"abbreviatedName": {
 					"type": "string"
 				},
-				"type": {
-					"type": "string",
-					"enum": [
-						"Active",
-						"Inactive"
-					]
+				"evidenceReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
+						"properties": {
+							"publication_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"evidence_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"externalCrossReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"required": [
+							"externalCrossReference_id",
+							"objectId"
+						],
+						"properties": {
+							"externalCrossReference_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"objectId": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"internalComment": {
+					"type": "string"
+				},
+				"isTranscriptionFactor": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
 				},
 				"note": {
 					"type": "string"
 				},
-				"product_ids": {
+				"organism_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"products": {
 					"type": "array",
 					"uniqueItems": true,
 					"items":{
-						"type": "string",
-						"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+						"type": "object",
+						"properties": {
+							"product_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"coefficient": {
+								"type": "number",
+								"multipleOf": 1.0
+							}
+						},
+						"additionalProperties": false
 					}
 				},
 				"regulatoryContinuant_ids": {
@@ -50,53 +109,12 @@
 						"type": "string"
 					}
 				},
-				"evidenceReferences": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "object",
-						"anyOf": [{
-							"required": ["publication_id"]
-						}, {
-							"required": ["evidence_id"]
-						}],
-						"properties": {
-							"publication_id": {
-								"type": "string"
-							},
-							"evidence_id": {
-								"type": "string"
-							}
-						},
-						"additionalProperties": false
-					}
-				},
-				"externalCrossReferences": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "object",
-						"required": [
-							"externalCrossReference_id",
-							"objectId"
-						],
-						"properties": {
-							"externalCrossReference_id": {
-								"type": "string"
-							},
-							"objectId": {
-								"type": "string"
-							}
-						},
-						"additionalProperties": false
-					}
-				},
-				"organism_id": {
+				"type": {
 					"type": "string",
-					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
-				},
-				"internalComment": {
-					"type": "string"
+					"enum": [
+						"Active",
+						"Inactive"
+					]
 				},
 				"schemaVersion": {
 					"type": "number"
