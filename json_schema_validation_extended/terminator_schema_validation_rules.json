@@ -13,9 +13,74 @@
 					"type": "string",
 					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
 				},
+				"class": {
+					"type": "string",
+					"enum": [
+						"rho-independent",
+						"rho-dependent"
+					]
+				},
+				"internalComment": {
+					"type": "string"
+				},
+				"evidenceReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
+						"properties": {
+							"publication_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"evidence_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"externalCrossReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"required": [
+							"externalCrossReference_id",
+							"objectId"
+						],
+						"properties": {
+							"externalCrossReference_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"objectId": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"note": {
+					"type": "string"
+				},
+				"organism_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"sequence": {
+					"type": "string",
+					"pattern": "^[ATCGatcg]+$"
+				},
 				"transcriptionTerminationSite": {
 					"type": "object",
-					"required": ["leftEndPosition", "rightEndPosition", "type"],
+					"required": ["leftEndPosition", "rightEndPosition"],
 					"properties": {
 						"leftEndPosition": {
 							"type": "number",
@@ -35,68 +100,6 @@
 						}
 					},
 					"additionalProperties": false
-				},
-				"sequence": {
-					"type": "string",
-					"pattern": "^[ATCGatcg]+$"
-				},
-				"class": {
-					"type": "string",
-					"enum": [
-						"rho-independent",
-						"rho-dependent"
-					]
-				},
-				"note": {
-					"type": "string"
-				},
-				"evidenceReferences": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "object",
-						"anyOf": [{
-							"required": ["publication_id"]
-						}, {
-							"required": ["evidence_id"]
-						}],
-						"properties": {
-							"publication_id": {
-								"type": "string"
-							},
-							"evidence_id": {
-								"type": "string"
-							}
-						},
-						"additionalProperties": false
-					}
-				},
-				"externalCrossReferences": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "object",
-						"required": [
-							"externalCrossReference_id",
-							"objectId"
-						],
-						"properties": {
-							"externalCrossReference_id": {
-								"type": "string"
-							},
-							"objectId": {
-								"type": "string"
-							}
-						},
-						"additionalProperties": false
-					}
-				},
-				"organism_id": {
-					"type": "string",
-					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
-				},
-				"internalComment": {
-					"type": "string"
 				},
 				"schemaVersion": {
 					"type": "number"
