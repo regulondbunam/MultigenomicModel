@@ -1,0 +1,73 @@
+{
+  "evidences": {
+    "validator": {
+      "$jsonSchema": {
+        "type": "object",
+        "required": ["_id", "name"],
+        "properties": {
+          "_id": {
+            "type": "string",
+            "pattern": "^RDB[A-Z]{8}[0-9]{5}$",
+            "annotation": {
+              "Synonyms": "NA",
+              "Description": "The identifier has the function of identifying a particular publication in RegulonDB.",
+              "URI": "NA",
+              "Required": "[value]",
+              "Example": "[value]",
+              "Comments": "NA"
+            }
+          },
+          "code": {
+            "type": "string"
+          },
+          "externalCrossReferences": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "required": ["externalCrossReferences_id", "objectId"],
+              "properties": {
+                "externalCrossReferences_id": {
+                  "type": "string",
+                  "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+                },
+                "objectId": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "head": {
+            "type": "string"
+          },
+          "internalComment": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "pertainsTo": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "type": "string"
+          },
+          "schemaVersion": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "validationLevel": "strict",
+    "validationAction": "error"
+  }
+}

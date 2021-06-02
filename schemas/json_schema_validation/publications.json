@@ -1,0 +1,68 @@
+{
+  "publications": {
+    "validator": {
+      "$jsonSchema": {
+        "type": "object",
+        "required": ["_id"],
+        "properties": {
+          "_id": {
+            "type": "string",
+            "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+          },
+          "authors": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "externalCrossReferences": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "required": ["externalCrossReferences_id", "objectId"],
+              "properties": {
+                "externalCrossReferences_id": {
+                  "type": "string",
+                  "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+                },
+                "objectId": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "internalComment": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "pmid": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "year": {
+            "type": "number"
+          },
+          "schemaVersion": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "validationLevel": "strict",
+    "validationAction": "error"
+  }
+}

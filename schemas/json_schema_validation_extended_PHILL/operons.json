@@ -1,0 +1,69 @@
+{
+  "operons": {
+    "validator": {
+      "$jsonSchema": {
+        "type": "object",
+        "required": ["_id", "name", "regulationPositions", "organisms_id"],
+        "properties": {
+          "_id": {
+            "type": "string",
+            "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+          },
+          "externalCrossReferences": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "required": ["externalCrossReferences_id", "objectId"],
+              "properties": {
+                "externalCrossReferences_id": {
+                  "type": "string",
+                  "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+                },
+                "objectId": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "internalComment": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "organisms_id": {
+            "type": "string",
+            "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+          },
+          "regulationPositions": {
+            "type": "object",
+            "required": ["leftEndPosition", "rightEndPosition"],
+            "properties": {
+              "leftEndPosition": {
+                "type": "number",
+                "multipleOf": 1.0
+              },
+              "rightEndPosition": {
+                "type": "number",
+                "multipleOf": 1.0
+              }
+            },
+            "additionalProperties": false
+          },
+          "strand": {
+            "type": "string",
+            "enum": ["forward", "reverse"]
+          },
+          "schemaVersion": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "validationLevel": "strict",
+    "validationAction": "error"
+  }
+}

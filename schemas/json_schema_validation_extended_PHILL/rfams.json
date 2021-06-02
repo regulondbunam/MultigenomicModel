@@ -1,0 +1,58 @@
+{
+	"rfams": {
+		"validator": {
+			"$jsonSchema": {
+				"type": "object",
+				"required": [
+					"_id",
+					"organisms_id"
+				],
+				"properties": {
+					"_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"description": {
+						"type": "string"
+					},
+					"genes_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"leftEndPosition": {
+						"type": "number",
+						"multipleOf": 1.0
+					},
+					"organisms_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"rightEndPosition": {
+						"type": "number",
+						"multipleOf": 1.0
+					},
+					"score": {
+						"type": "number"
+					},
+					"sequence": {
+						"type": "string",
+						"pattern": "^[ATCGatcg]+$"
+					},
+					"strand": {
+						"type": "string",
+						"enum": ["forward", "reverse"]
+					},
+					"type": {
+						"type": "string"
+					},
+					"schemaVersion": {
+						"type": "number"
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+		"validationLevel": "strict",
+		"validationAction": "error"
+	}
+}

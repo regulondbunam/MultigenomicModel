@@ -1,0 +1,39 @@
+{
+	"externalCrossReferences": {
+		"validator": {
+			"$jsonSchema": {
+				"type": "object",
+				"required": [
+					"_id"
+				],
+				"properties": {
+					"_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"description": {
+						"type": "string"
+					},
+					"internalComment": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"note": {
+						"type": "string"
+					},
+					"url": {
+						"type": "string"
+					},
+					"schemaVersion": {
+						"type": "number"
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+		"validationLevel": "strict",
+		"validationAction": "error"
+	}
+}

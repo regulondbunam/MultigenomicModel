@@ -1,0 +1,66 @@
+{
+	"regulatoryModules": {
+		"validator": {
+			"$jsonSchema": {
+				"type": "object",
+				"required": [
+					"_id",
+					"name"
+				],
+				"properties": {
+					"_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+                    "citations": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "object",
+									"anyOf": [{
+										"required": ["publications_id"]
+									}, {
+										"required": ["evidences_id"]
+									}],
+									"properties": {
+										"publications_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+										},
+										"evidences_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+                    "function": {
+                      "type": "string",
+                      "enum": ["activator", "repressor", "dual"]
+                    },
+                    "regulatedEntity_id": {
+                      "type": "string",
+                      "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+                    },
+                    "regulatedEntity_type": {
+                      "type": "string"
+                    },
+                    "regulatoryInteractions_ids": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "string"
+						}
+					},
+					"schemaVersion": {
+						"type": "number"
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+		"validationLevel": "strict",
+		"validationAction": "error"
+	}
+}
