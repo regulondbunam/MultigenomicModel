@@ -17,3 +17,5 @@ docs/.DS_Store
 docs/build/.DS_Store
 docs/build/html/.DS_Store
 docs/source/.DS_Store
+.pyc
+.vscode/
