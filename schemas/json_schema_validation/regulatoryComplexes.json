@@ -3,7 +3,7 @@
     "validator": {
       "$jsonSchema": {
         "type": "object",
-        "required": ["_id", "products", "organisms_id"],
+        "required": ["_id", "organisms_id"],
         "properties": {
           "_id": {
             "type": "string",
