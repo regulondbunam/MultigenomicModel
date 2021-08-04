@@ -3,7 +3,10 @@
     "validator": {
       "$jsonSchema": {
         "type": "object",
-        "required": ["_id", "organisms_id"],
+        "required": [
+          "_id",
+          "organisms_id"
+        ],
         "properties": {
           "_id": {
             "type": "string",
@@ -19,10 +22,14 @@
                   "type": "object",
                   "anyOf": [
                     {
-                      "required": ["publications_id"]
+                      "required": [
+                        "publications_id"
+                      ]
                     },
                     {
-                      "required": ["evidences_id"]
+                      "required": [
+                        "evidences_id"
+                      ]
                     }
                   ],
                   "properties": {
@@ -71,7 +78,12 @@
                 },
                 "type": {
                   "type": "string",
-                  "enum": ["minus10", "minus35", "minus12", "minus24"]
+                  "enum": [
+                    "minus10",
+                    "minus35",
+                    "minus12",
+                    "minus24"
+                  ]
                 }
               },
               "additionalProperties": false
@@ -87,10 +99,14 @@
               "type": "object",
               "anyOf": [
                 {
-                  "required": ["publications_id"]
+                  "required": [
+                    "publications_id"
+                  ]
                 },
                 {
-                  "required": ["evidences_id"]
+                  "required": [
+                    "evidences_id"
+                  ]
                 }
               ],
               "properties": {
@@ -106,12 +122,18 @@
               "additionalProperties": false
             }
           },
+          "confidenceLevel": {
+            "type": "string"
+          },
           "externalCrossReferences": {
             "type": "array",
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required": ["externalCrossReferences_id", "objectId"],
+              "required": [
+                "externalCrossReferences_id",
+                "objectId"
+              ],
               "properties": {
                 "externalCrossReferences_id": {
                   "type": "string",
@@ -150,7 +172,10 @@
           },
           "strand": {
             "type": "string",
-            "enum": ["forward", "reverse"]
+            "enum": [
+              "forward",
+              "reverse"
+            ]
           },
           "synonyms": {
             "type": "array",
@@ -161,7 +186,11 @@
           },
           "transcriptionStartSite": {
             "type": "object",
-            "required": ["leftEndPosition", "rightEndPosition", "range"],
+            "required": [
+              "leftEndPosition",
+              "rightEndPosition",
+              "range"
+            ],
             "properties": {
               "leftEndPosition": {
                 "type": "number",
@@ -177,7 +206,11 @@
               },
               "type": {
                 "type": "string",
-                "enum": ["primary", "secondary", "tertiary"]
+                "enum": [
+                  "primary",
+                  "secondary",
+                  "tertiary"
+                ]
               }
             },
             "additionalProperties": false

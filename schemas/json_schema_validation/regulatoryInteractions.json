@@ -3,7 +3,10 @@
     "validator": {
       "$jsonSchema": {
         "type": "object",
-        "required": ["_id", "organisms_id"],
+        "required": [
+          "_id",
+          "organisms_id"
+        ],
         "properties": {
           "_id": {
             "type": "string",
@@ -26,10 +29,14 @@
               "type": "object",
               "anyOf": [
                 {
-                  "required": ["publications_id"]
+                  "required": [
+                    "publications_id"
+                  ]
                 },
                 {
-                  "required": ["evidences_id"]
+                  "required": [
+                    "evidences_id"
+                  ]
                 }
               ],
               "properties": {
@@ -45,12 +52,18 @@
               "additionalProperties": false
             }
           },
+          "confidenceLevel": {
+            "type": "string"
+          },
           "externalCrossReferences": {
             "type": "array",
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required": ["externalCrossReferences_id", "objectId"],
+              "required": [
+                "externalCrossReferences_id",
+                "objectId"
+              ],
               "properties": {
                 "externalCrossReferences_id": {
                   "type": "string",
@@ -65,7 +78,11 @@
           },
           "function": {
             "type": "string",
-            "enum": ["activator", "repressor", "dual"]
+            "enum": [
+              "activator",
+              "repressor",
+              "dual"
+            ]
           },
           "internalComment": {
             "type": "string"
@@ -88,7 +105,10 @@
           },
           "regulatedEntity": {
             "type": "object",
-            "required": ["_id", "type"],
+            "required": [
+              "_id",
+              "type"
+            ],
             "properties": {
               "_id": {
                 "type": "string",
@@ -99,13 +119,21 @@
               },
               "type": {
                 "type": "string",
-                "enum": ["gene", "srna", "promoter", "transcriptionUnit"]
+                "enum": [
+                  "gene",
+                  "srna",
+                  "promoter",
+                  "transcriptionUnit"
+                ]
               }
             }
           },
           "regulator": {
             "type": "object",
-            "required": ["_id", "type"],
+            "required": [
+              "_id",
+              "type"
+            ],
             "properties": {
               "_id": {
                 "type": "string",
@@ -116,7 +144,11 @@
               },
               "type": {
                 "type": "string",
-                "enum": ["regulatoryComplex", "regulatoryContinuant", "product"]
+                "enum": [
+                  "regulatoryComplex",
+                  "regulatoryContinuant",
+                  "product"
+                ]
               }
             },
             "additionalProperties": false
@@ -131,7 +163,10 @@
           },
           "type": {
             "type": "string",
-            "enum": ["mechanistic", "physiological"]
+            "enum": [
+              "mechanistic",
+              "physiological"
+            ]
           },
           "schemaVersion": {
             "type": "number"

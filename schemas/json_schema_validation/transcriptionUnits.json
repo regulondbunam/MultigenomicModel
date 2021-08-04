@@ -3,7 +3,12 @@
     "validator": {
       "$jsonSchema": {
         "type": "object",
-        "required": ["_id", "organisms_id", "operons_id", "genes_ids"],
+        "required": [
+          "_id",
+          "organisms_id",
+          "operons_id",
+          "genes_ids"
+        ],
         "properties": {
           "_id": {
             "type": "string",
@@ -16,10 +21,14 @@
               "type": "object",
               "anyOf": [
                 {
-                  "required": ["publications_id"]
+                  "required": [
+                    "publications_id"
+                  ]
                 },
                 {
-                  "required": ["evidences_id"]
+                  "required": [
+                    "evidences_id"
+                  ]
                 }
               ],
               "properties": {
@@ -35,12 +44,18 @@
               "additionalProperties": false
             }
           },
+          "confidenceLevel": {
+            "type": "string"
+          },
           "externalCrossReferences": {
             "type": "array",
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required": ["externalCrossReferences_id", "objectId"],
+              "required": [
+                "externalCrossReferences_id",
+                "objectId"
+              ],
               "properties": {
                 "externalCrossReferences_id": {
                   "type": "string",

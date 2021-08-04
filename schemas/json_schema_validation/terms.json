@@ -3,7 +3,11 @@
     "validator": {
       "$jsonSchema": {
         "type": "object",
-        "required": ["_id", "ontologies_id", "name", "subClassOf"],
+        "required": [
+          "_id",
+          "ontologies_id",
+          "name"
+        ],
         "properties": {
           "_id": {
             "type": "string",
@@ -41,7 +45,10 @@
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required": ["externalCrossReferences_id", "objectId"],
+              "required": [
+                "externalCrossReferences_id",
+                "objectId"
+              ],
               "properties": {
                 "externalCrossReferences_id": {
                   "type": "string",

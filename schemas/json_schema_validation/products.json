@@ -3,20 +3,32 @@
     "validator": {
       "$jsonSchema": {
         "type": "object",
-        "required": ["_id", "organisms_id", "genes_id"],
+        "required": [
+          "_id",
+          "organisms_id",
+          "genes_id"
+        ],
         "oneOf": [
           {
-            "required": ["anticodon"],
+            "required": [
+              "anticodon"
+            ],
             "not": {
               "anyOf": [
                 {
-                  "required": ["molecularWeight"]
+                  "required": [
+                    "molecularWeight"
+                  ]
                 },
                 {
-                  "required": ["molecularWeightKd"]
+                  "required": [
+                    "molecularWeightKd"
+                  ]
                 },
                 {
-                  "required": ["catalyzes"]
+                  "required": [
+                    "catalyzes"
+                  ]
                 }
               ]
             }
@@ -25,7 +37,9 @@
             "not": {
               "anyOf": [
                 {
-                  "required": ["anticodon"]
+                  "required": [
+                    "anticodon"
+                  ]
                 }
               ]
             }
@@ -82,10 +96,14 @@
               "type": "object",
               "anyOf": [
                 {
-                  "required": ["publications_id"]
+                  "required": [
+                    "publications_id"
+                  ]
                 },
                 {
-                  "required": ["evidences_id"]
+                  "required": [
+                    "evidences_id"
+                  ]
                 }
               ],
               "properties": {
@@ -101,11 +119,17 @@
               "additionalProperties": false
             }
           },
+          "confidenceLevel": {
+            "type": "string"
+          },
           "externalCrossReferences": {
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["externalCrossReferences_id", "objectId"],
+              "required": [
+                "externalCrossReferences_id",
+                "objectId"
+              ],
               "properties": {
                 "externalCrossReferences_id": {
                   "type": "string",
@@ -228,10 +252,14 @@
                         "type": "object",
                         "anyOf": [
                           {
-                            "required": ["publications_id"]
+                            "required": [
+                              "publications_id"
+                            ]
                           },
                           {
-                            "required": ["evidences_id"]
+                            "required": [
+                              "evidences_id"
+                            ]
                           }
                         ],
                         "properties": {
@@ -271,10 +299,14 @@
                         "type": "object",
                         "anyOf": [
                           {
-                            "required": ["publications_id"]
+                            "required": [
+                              "publications_id"
+                            ]
                           },
                           {
-                            "required": ["evidences_id"]
+                            "required": [
+                              "evidences_id"
+                            ]
                           }
                         ],
                         "properties": {
@@ -314,10 +346,14 @@
                         "type": "object",
                         "anyOf": [
                           {
-                            "required": ["publications_id"]
+                            "required": [
+                              "publications_id"
+                            ]
                           },
                           {
-                            "required": ["evidences_id"]
+                            "required": [
+                              "evidences_id"
+                            ]
                           }
                         ],
                         "properties": {
