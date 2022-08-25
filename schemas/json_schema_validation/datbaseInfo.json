@@ -1,0 +1,33 @@
+{
+    "databaseInfo": {
+        "validator": {
+            "$jsonSchema": {
+                "type": "object",
+                "required": [
+                    "regulonDBVersion",
+                    "releaseDate"
+                ],
+                "properties": {
+                    "regulonDBVersion": {
+                        "type": "string"
+                    },
+                    "ecocycVersion": {
+                        "type": "string"
+                    },
+                    "lcVersion": {
+                        "type": "string"
+                    },
+                    "note": {
+                        "type": "string"
+                    },
+                    "schemaVersion": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "validationLevel": "strict",
+        "validationAction": "error"
+    }
+}
