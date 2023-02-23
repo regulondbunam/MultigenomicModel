@@ -159,10 +159,6 @@
             "type": "string",
             "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
           },
-          "pos1": {
-            "type": "number",
-            "multipleOf": 1.0
-          },
           "score": {
             "type": "number"
           },

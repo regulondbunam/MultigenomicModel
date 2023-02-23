@@ -19,7 +19,7 @@
               "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
             }
           },
-          "absoluteCenterPosition": {
+          "relativeDistSitePromoter": {
             "type": "number"
           },
           "citations": {

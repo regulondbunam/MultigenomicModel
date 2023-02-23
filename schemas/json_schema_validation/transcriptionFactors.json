@@ -155,6 +155,12 @@
           },
           "schemaVersion": {
             "type": "number"
+          },
+          "symmetry": {
+            "type": "string"
+          },
+          "family": {
+            "type": "string"
           }
         },
         "additionalProperties": false

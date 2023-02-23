@@ -3,7 +3,10 @@
     "validator": {
       "$jsonSchema": {
         "type": "object",
-        "required": ["_id", "name"],
+        "required": [
+          "_id",
+          "name"
+        ],
         "properties": {
           "_id": {
             "type": "string",
@@ -17,7 +20,10 @@
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required": ["externalCrossReferences_id", "objectId"],
+              "required": [
+                "externalCrossReferences_id",
+                "objectId"
+              ],
               "properties": {
                 "externalCrossReferences_id": {
                   "type": "string",
@@ -50,6 +56,21 @@
             }
           },
           "type": {
+            "type": "string"
+          },
+          "crossEvidenceCodeRule": {
+            "type": "number"
+          },
+          "evidenceClass": {
+            "type": "string"
+          },
+          "evidenceCategory": {
+            "type": "string"
+          },
+          "evidenceApproach": {
+            "type": "string"
+          },
+          "noteWeb": {
             "type": "string"
           },
           "schemaVersion": {
