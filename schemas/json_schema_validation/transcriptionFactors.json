@@ -143,7 +143,7 @@
             "type": "array",
             "uniqueItems": true,
             "items": {
-              "type": "string"
+              "type": "number"
             }
           },
           "synonyms": {
@@ -157,7 +157,11 @@
             "type": "number"
           },
           "symmetry": {
-            "type": "string"
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
           },
           "family": {
             "type": "string"
