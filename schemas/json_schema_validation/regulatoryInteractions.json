@@ -19,6 +19,13 @@
               "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
             }
           },
+          "additiveEvidences": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
           "relativeDistSitePromoter": {
             "type": "number"
           },
@@ -92,6 +99,13 @@
           },
           "mechanism": {
             "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "regulationClass": {
+            "type": "array",
+            "uniqueItems": true,
             "items": {
               "type": "string"
             }

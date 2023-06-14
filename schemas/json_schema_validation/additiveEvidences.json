@@ -1,0 +1,55 @@
+{
+  "additiveEvidences": {
+    "validator": {
+      "$jsonSchema": {
+        "type": "object",
+        "required": [
+          "_id",
+          "name"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string",
+            "pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+          },
+          "code": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "confidenceLevel": {
+            "type": "string"
+          },
+          "pertainsTo": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "rules": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "number"
+            }
+          },
+          "evidenceIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "schemaVersion": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "validationLevel": "strict",
+    "validationAction": "error"
+  }
+}

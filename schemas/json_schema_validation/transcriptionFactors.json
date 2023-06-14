@@ -32,6 +32,13 @@
               "additionalProperties": false
             }
           },
+          "additiveEvidences": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
           "citations": {
             "type": "array",
             "uniqueItems": false,

@@ -53,6 +53,13 @@
           "abbreviatedName": {
             "type": "string"
           },
+          "additiveEvidences": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
           "anticodon": {
             "type": "string"
           },

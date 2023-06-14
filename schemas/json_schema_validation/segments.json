@@ -14,6 +14,13 @@
           "absoluteCenterPosition": {
             "type": "number"
           },
+          "additiveEvidences": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
           "citations": {
             "type": "array",
             "uniqueItems": true,

@@ -15,6 +15,13 @@
 						"type": "string",
 						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
 					},
+					"additiveEvidences": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "string"
+						}
+					},
 					"class": {
 						"type": "string",
 						"enum": [
