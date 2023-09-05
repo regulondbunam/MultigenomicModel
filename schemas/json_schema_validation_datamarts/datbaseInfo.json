@@ -8,17 +8,492 @@
                     "releaseDate"
                 ],
                 "properties": {
+                    "lcVersion": {
+                        "type": "string"
+                    },
+                    "releaseDate": {
+                        "type": "string"
+                    },
+                    "note": {
+                        "type": "string"
+                    },
                     "regulonDBVersion": {
                         "type": "string"
                     },
                     "ecocycVersion": {
                         "type": "string"
                     },
-                    "lcVersion": {
+                    "genomeId": {
                         "type": "string"
                     },
-                    "note": {
+                    "genomeVersion": {
                         "type": "string"
+                    },
+                    "localData": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "sourceName"
+                            ],
+                            "properties": {
+                                "sourceName": {
+                                    "type": [
+                                        "string"
+                                    ]
+                                },
+                                "type": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                },
+                                "version": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                },
+                                "note": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                },
+                                "responsible": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "statistics": {
+                        "type": "object",
+                        "properties": {
+                            "transcriptionUnits": {
+                                "type": "object",
+                                "properties": {
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "evidences": {
+                                "type": "object",
+                                "properties": {
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "externalCrossReferences": {
+                                "type": "object",
+                                "properties": {
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "ontologies": {
+                                "type": "object",
+                                "properties": {
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "products": {
+                                "type": "object",
+                                "properties": {
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "publications": {
+                                "type": "object",
+                                "properties": {
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "regulatorySites": {
+                                "type": "object",
+                                "properties": {
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "transcriptionFactors": {
+                                "type": "object",
+                                "properties": {
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "motifs": {
+                                "type": "object",
+                                "properties": {
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "regulatoryComplexes": {
+                                "type": "object",
+                                "properties": {
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "segments": {
+                                "type": "object",
+                                "properties": {
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "sigmaFactors": {
+                                "type": "object",
+                                "properties": {
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "terms": {
+                                "type": "object",
+                                "properties": {
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "genes": {
+                                "properties": {
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "regulatoryContinuants": {
+                                "type": "object",
+                                "properties": {
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "regulatoryInteractions": {
+                                "type": "object",
+                                "properties": {
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "operons": {
+                                "type": "object",
+                                "properties": {
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "organisms": {
+                                "type": "object",
+                                "properties": {
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "promoters": {
+                                "type": "object",
+                                "properties": {
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "terminators": {
+                                "type": "object",
+                                "properties": {
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "regulons": {
+                                "type": "object",
+                                "properties": {
+                                    "total": {
+                                        "type": "number"
+                                    },
+                                    "weak": {
+                                        "type": "number"
+                                    },
+                                    "strong": {
+                                        "type": "number"
+                                    },
+                                    "confirmed": {
+                                        "type": "number"
+                                    },
+                                    "withoutEvidence": {
+                                        "type": "number"
+                                    }
+                                }
+                            }
+                        }
                     },
                     "schemaVersion": {
                         "type": "number"

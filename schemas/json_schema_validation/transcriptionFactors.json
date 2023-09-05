@@ -11,6 +11,9 @@
           "_id": {
             "type": "string"
           },
+          "abbreviatedName": {
+            "type": "string"
+          },
           "activeConformations": {
             "type": "array",
             "uniqueItems": true,

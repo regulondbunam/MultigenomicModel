@@ -4,8 +4,7 @@
       "$jsonSchema": {
         "type": "object",
         "required": [
-          "_id",
-          "name"
+          "_id"
         ],
         "properties": {
           "_id": {
