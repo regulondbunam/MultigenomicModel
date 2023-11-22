@@ -3,7 +3,9 @@
     "validator": {
       "$jsonSchema": {
         "type": "object",
-        "required": ["_id"],
+        "required": [
+          "_id"
+        ],
         "properties": {
           "_id": {
             "type": "string",
@@ -11,7 +13,7 @@
           },
           "authors": {
             "type": "array",
-            "uniqueItems": true,
+            "uniqueItems": false,
             "items": {
               "type": "string"
             }
@@ -21,7 +23,10 @@
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required": ["externalCrossReferences_id", "objectId"],
+              "required": [
+                "externalCrossReferences_id",
+                "objectId"
+              ],
               "properties": {
                 "externalCrossReferences_id": {
                   "type": "string",
