@@ -96,6 +96,28 @@
           "regulationType": {
             "type": "string"
           },
+          "note": {
+            "type": "string"
+          },
+          "conformations": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "type": "string",
+                },
+                "type": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
           "schemaVersion": {
             "type": "number"
           }
