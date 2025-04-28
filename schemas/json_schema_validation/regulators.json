@@ -92,10 +92,11 @@
             "uniqueItems": true,
             "items": {
               "type": "string"
-            },
-          "regulationType": {
-            "type": "string"
+            }
           },
+          "regulationType": {
+              "type": "string"
+            },
           "note": {
             "type": "string"
           },
@@ -106,7 +107,7 @@
               "type": "object",
               "properties": {
                 "_id": {
-                  "type": "string",
+                  "type": "string"
                 },
                 "type": {
                   "type": "string"
@@ -125,7 +126,7 @@
         "additionalProperties": false
       }
     },
-    "validationLevel": "strict",
-    "validationAction": "error"
+      "validationLevel": "strict",
+      "validationAction": "error"
   }
 }
