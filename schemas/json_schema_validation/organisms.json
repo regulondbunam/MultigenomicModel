@@ -5,8 +5,7 @@
 				"type": "object",
 				"required": [
 					"_id",
-					"name",
-					"sequence"
+					"name"
 				],
 				"properties": {
 					"_id": {
@@ -19,15 +18,35 @@
 					"internalComment": {
 						"type": "string"
 					},
+					"genome": {
+						"type": "string"
+					},
 					"name": {
 						"type": "string"
 					},
-					"note": {
+					"pgdbAuthors": {
+						"type": "array",
+						"uniqueItems": false,
+						"items": {
+						  "type": "string"
+						}
+				  	},
+					"pgdbCopyright": {
 						"type": "string"
 					},
-					"sequence": {
+					"pgdbName": {
 						"type": "string"
 					},
+					"strainName": {
+						"type": "string"
+					},
+					"synonyms": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+						  "type": "string"
+						}
+				  	},
 					"url": {
 						"type": "string"
 					},
