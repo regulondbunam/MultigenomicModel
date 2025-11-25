@@ -1,0 +1,106 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"type": "object",
+			"required": [
+				"_id",
+				"sequence",
+				"product_id",
+				"organism_id"
+			],
+			"properties": {
+				"_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"alternateSequence": {
+					"type": "string"
+				},
+				"attachedGroup": {
+					"type": "string"
+				},
+				"class": {
+					"type": "string"
+				},
+				"dataSource": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"externalCrossReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"required": [
+							"externalCrossReference_id",
+							"objectId"
+						],
+						"properties": {
+							"externalCrossReference_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"objectId": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"homologyMotif": {
+					"type": "string"
+				},
+				"internalComment": {
+					"type": "string"
+				},
+				"leftEndPosition": {
+					"type": "number",
+					"multipleOf": 1.0
+				},
+				"note": {
+					"type": "string"
+				},
+				"organism_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"product_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"rightEndPosition": {
+					"type": "number",
+					"multipleOf": 1.0
+				},
+				"sequence": {
+					"type": "string"
+				},
+				"residueNumber": {
+					"type": "array",
+					"items": {
+						"type": "number",
+						"multipleOf": 1.0
+					}
+				},
+				"synonyms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"type": {
+					"type": "string"
+				},
+				"schemaVersion": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

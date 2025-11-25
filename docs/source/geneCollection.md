@@ -3,80 +3,62 @@
 Esta colección representa al objeto __Gene__ dentro de la regulación transcripcional de un organismo. Un gen representa un segmento corto de ADN, y tiene como objetivo desempeñar una función especial. Posee una serie de propiedades que permiten identificarlo y diferenciarlo de otros, así como de características que permiten establecer relaciones con otros objetos.
 
 ---
-## Propiedades
+## Properties
 ---
 ### _id
-* URI PRO: NA
-* Type: string
 * Synonyms: identifier
-* Description: Este campo tiene como función identificar a un gen en particular, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.
-* Required: si
-* URI [values]: NA
+* Type: string
+* Description: Identificador de un gen dentro de RegulonDB, el cual puede ser utilizado para hacer búsquedas y relaciones con otros campos.
+* URI: No aplica
+* Required: yes
 * Example: 
 ```xml 
- RDBECOLIGN00001 
+ ECK120000050 
 ```
 * Comments: Para conocer más detalle sobre la definición de los identificadores, consultar la sección: Identificadores en el manual de RegulonDB.
 ---
 ### name
-* URI PRO: string
+* Synonyms: [value]
 * Type: string
-* Synonyms: NA
 * Description: Indica el nombre oficial de un gen.
+* URI: [value]
 * Required: no
-* URI [values]: NA
 * Example: 
 ```xml 
  araC 
 ```
-* Comments: En algunos casos habrá genes que no tengan un nombre asociado por lo que este campo pudiera presentarse vacío.
----
-### bnumber
-* URI PRO: string
-* Type: string
-* Synonyms: identifier
-* Description: Este campo tiene como función identificar de forma alterna a un gen. Los valores de este campo son tomados de fuentes externas a RegulonDB.
-* Required: no
-* URI [values]: string
-* Example: 
-```xml 
- b0064 
-```
-* Comments: NA
+* Comments: [value]
 ---
 ### leftEndPosition
-* URI PRO: string
-* Type: int
 * Synonyms: genome left position
+* Type: int
 * Description: Indica la posición izquierda del objeto Gen.
+* URI: [value]
 * Required: no
-* URI [values]: NA
 * Example: 
 ```xml 
  70387 
 ```
-* Comments: NA
+* Comments: [value]
 ---
 ### rightEndPosition
-* URI PRO: string
-* Type: int
 * Synonyms: genome right position
+* Type: int
 * Description: Indica la posición derecha del objeto Gen.
+* URI: [value]
 * Required: no
-* URI [values]: NA
 * Example: 
 ```xml 
  71265 
 ```
-* Comments: NA
+* Comments: [value]
 ---
 ### fragments
-* URI PRO: string
+* Synonyms: [value]
 * Type: array
-* Synonyms: string
 * Description: Indica que un gene está conformado por múltiples segmentos. Las características de estos genes son definidas por medio de un objeto con las propiedades: strand, leftEndPosition, rightEndPosition, name, bnumber, synonyms, centisomePosition y evidenceReferences.
+* URI: [value]
 * Required: no
-* URI [values]: NA
 * Example: 
 ```xml 
  ["forward", 70387, 71265, "araC", bnumber, ["b0064","ECK0065","EG10054"],1.5164213,[{"publication_id": "GID000027564"},{"publication_id": "GID000027564","evidence_id": "GID000000006"}]] 
@@ -84,197 +66,185 @@ Esta colección representa al objeto __Gene__ dentro de la regulación transcrip
 * Comments: Para el caso de genes fragmentados las propiedades obligatorias son: strand, leftEndPosition y rightEndPosition
 ---
 ### strand
-* URI PRO: string
-* Type: string
 * Synonyms: direction
-* Description: Indica la orientación del Gene.
+* Type: string
+* Description: Indica la orientación del Gen.
+* URI: forward, reverse
 * Required: no
-* URI [values]: forward, reverse
 * Example: 
 ```xml 
  forward 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### sequence
-* URI PRO: string
+* Synonyms: [value]
 * Type: string
-* Synonyms: string
 * Description: Indica la sequencia de ADN del Gen.
+* URI: [value]
 * Required: no
-* URI [values]: string
 * Example: 
 ```xml 
  ATGGCTGAAGCGCAAAATGATCCCCTGCTGCCGGGATACTCGTTTAACGCCCATCTGGTGGCGGGTTTAACGCCGATTGAGGCCAACGGTTATCTCGATTTTTTTATCGACCGACCGCTGGGAATGAAAGGTTATATTCTCAATCTCACCATTCGCGGTCAGGGGGTGGTGAAAAATCAGGGACGAGAATTTGTCTGCCGACCGGGTGATATTTTGCTGTTCCCGCCAGGAGAGATTCATCACTACGGTCGTCATCCGGAGGCTCGCGAATGGTATCACCAGTGGGTTTACTTTCGTCCGCGCGCCTACTGGCATGAATGGCTTAACTGGCCGTCAATATTTGCCAATACGGGTTTCTTTCGCCCGGATGAAGCGCACCAGCCGCATTTCAGCGACCTGTTTGGGCAAATCATTAACGCCGGGCAAGGGGAAGGGCGCTATTCGGAGCTGCTGGCGATAAATCTGCTTGAGCAATTGTTACTGCGGCGCATGGAAGCGATTAACGAGTCGCTCCATCCACCGATGGATAATCGGGTACGCGAGGCTTGTCAGTACATCAGCGATCACCTGGCAGACAGCAATTTTGATATCGCCAGCGTCGCACAGCATGTTTGCTTGTCGCCGTCGCGTCTGTCACATCTTTTCCGCCAGCAGTTAGGGATTAGCGTCTTAAGCTGGCGCGAGGACCAACGCATTAGTCAGGCGAAGCTGCTTTTGAGCACTACCCGGATGCCTATCGCCACCGTCGGTCGCAATGTTGGTTTTGACGATCAACTCTATTTCTCGCGAGTATTTAAAAAATGCACCGGGGCCAGCCCGAGCGAGTTTCGTGCCGGTTGTGAAGAAAAAGTGAATGATGTAGCCGTCAAGTTGTCATAA 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### gcContent
-* URI PRO: string
+* Synonyms: [value]
 * Type: double
-* Synonyms: string
 * Description: Representa el porcentaje de pares de Guanina-Citosina en la secuencia de ADN del Gen.
-* Required: si
-* URI [values]: NA
+* URI: [value]
+* Required: yes
 * Example: 
 ```xml 
  52.56 
 ```
-* Comments: NA
+* Comments: [value]
 ---
 ### note
-* URI PRO: string
+* Synonyms: [value]
 * Type: string
-* Synonyms: string
-* Description: string
+* Description: Comentarios de curación relacionados al Gen.
+* URI: [value]
 * Required: no
-* URI [values]: string
 * Example: 
 ```xml 
  The expression of the gene is analyzed through a transcriptional fusion (i.e. lacZ), and  a difference in expression levels is observed when the regulatory protein is present  (wild type) vs in its absence.  Note that this evidence does not eliminate the possiblity of an indirect effect of the regulator on the regulated gene. 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### internalComment
-* URI PRO: string
+* Synonyms: [value]
 * Type: string
-* Synonyms: string
-* Description: string
+* Description: Comentarios de uso interno del equipo de RegulonDB.
+* URI: [value]
 * Required: no
-* URI [values]: string
 * Example: 
 ```xml 
- string 
+ [value] 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### organism_id
-* URI PRO: string
-* Type: string
 * Synonyms: organism identifier
+* Type: string
 * Description: Indica el identificador del organismo estudiado.
-* Required: si
-* URI [values]: string
+* URI: [value]
+* Required: yes
 * Example: 
 ```xml 
  ECK12 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### type
-* URI PRO: string
-* Type: string
 * Synonyms: kind
+* Type: string
 * Description: Indica el tipo de gene anotado.
-* Required: si
-* URI [values]: pseudo, phantom, gene, truncated
+* URI: pseudo, phantom, gene, truncated
+* Required: yes
 * Example: 
 ```xml 
  phantom 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### centisomePosition
-* URI PRO: string
+* Synonyms: [value]
 * Type: double
-* Synonyms: string
-* Description: Indica la posición central del gene en el cromosoma
-* Required: si
-* URI [values]: string
+* Description: Indica la posición del gene en el cromosoma en unidades de centisoma
+* URI: [value]
+* Required: yes
 * Example: 
 ```xml 
  1.5164213 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### interrupted
-* URI PRO: string
+* Synonyms: [value]
 * Type: bool
-* Synonyms: string
-* Description: string
+* Description: Este campo se usa para genes que tienen un codón de parada. Un gene interrumpido será definido por dos marcos genéticos que describen las dos mitades del gen. 
+* URI: [value]
 * Required: no
-* URI [values]: string
 * Example: 
 ```xml 
  false 
 ```
-* Comments: string
+* Comments: [value]
 ---
-### multifunDirectParents
-* URI PRO: string
+### ontologyClass_ids
+* Synonyms: [value]
 * Type: array
-* Synonyms: string
 * Description: Descripción de las funciones celulares del producto del Gene.
+* URI: [value]
 * Required: no
-* URI [values]: string
 * Example: 
 ```xml 
  ["carbon compounds", "Transcription related", "operon", "repressor"] 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### synonyms
-* URI PRO: string
+* Synonyms: [value]
 * Type: array
-* Synonyms: string
 * Description: Indica los identificadores de aquellos genes con los que se le conoce al gene.
+* URI: [value]
 * Required: no
-* URI [values]: string
 * Example: 
 ```xml 
- ["RDBECOLIGN00065", "RDBECOLIGN10054"] 
+ ["b0064", "ECK0065", "EG10054"] 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### evidenceReferences
-* URI PRO: string
+* Synonyms: [value]
 * Type: array
-* Synonyms: string
-* Description: string
+* Description: Identificador de la publicación así como de la evidencia asociada al Gen.
+* URI: [value]
 * Required: no
-* URI [values]: string
 * Example: 
 ```xml 
  [{"publication_id": "GID000027564"},{"publication_id": "GID000027564","evidence_id": "GID000000006"}] 
 ```
-* Comments: string
+* Comments: [value]
 ---
 ### externalCrossReferences
-* URI PRO: string
+* Synonyms: [value]
 * Type: array
-* Synonyms: string
-* Description: Indica las referencias relacionadas con el Gene. Este campo es de tipo objeto por lo que se encuentra compuesto por dos propiedades: externalCrossReference_id y objectId.
+* Description: Indica las referencias externas relacionadas con el Gene. Este campo es de tipo objeto por lo que se encuentra compuesto por dos propiedades: externalCrossReference_id y objectId.
+* URI: [value]
 * Required: no
-* URI [values]: string
 * Example: 
 ```xml 
  [{"externalCrossReference_id":"OU-Microarray","objectId":"b3075"}] 
 ```
-* Comments: string
----
-### product_ids
-* URI PRO: string
-* Type: array
-* Synonyms: string
-* Description: Identificador del producto obtenido de la expresión del Gene.
-* Required: no
-* URI [values]: string
-* Example: 
-```xml 
- ["ECK120004526"] 
-```
-* Comments: string
+* Comments: [value]
 ---
 ### schemaVersion
-* URI PRO: string
+* Synonyms: [value]
 * Type: double
-* Synonyms: string
 * Description: Permite identificar la versión del esquema de la colección.
-* Required: si
-* URI [values]: string
+* URI: [value]
+* Required: yes
 * Example: 
 ```xml 
  1.0 
 ```
-* Comments: string
+* Comments: [value]
+
 ---
+
+## Code
+
+[![Edit geneCollection](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/genecollection-bn1bi?fontsize=14&hidenavigation=1&theme=dark) 
+
+
+
+<iframe
+     src="https://codesandbox.io/embed/genecollection-bn1bi?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="geneCollection"
+     allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+   ></iframe>

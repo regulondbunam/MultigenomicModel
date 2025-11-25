@@ -1,0 +1,63 @@
+{
+	"organisms": {
+		"validator": {
+			"$jsonSchema": {
+				"type": "object",
+				"required": [
+					"_id",
+					"name"
+				],
+				"properties": {
+					"_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"description": {
+						"type": "string"
+					},
+					"internalComment": {
+						"type": "string"
+					},
+					"genome": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"pgdbAuthors": {
+						"type": "array",
+						"uniqueItems": false,
+						"items": {
+						  "type": "string"
+						}
+				  	},
+					"pgdbCopyright": {
+						"type": "string"
+					},
+					"pgdbName": {
+						"type": "string"
+					},
+					"strainName": {
+						"type": "string"
+					},
+					"synonyms": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+						  "type": "string"
+						}
+				  	},
+					"url": {
+						"type": "string"
+					},
+					"schemaVersion": {
+						"type": "number"
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+		"validationLevel": "strict",
+		"validationAction": "error"
+	}
+}

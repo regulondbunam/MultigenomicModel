@@ -1,0 +1,68 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"type": "object",
+			"required": [
+				"_id",
+				"objectType"
+			],
+			"properties": {
+				"_id": {
+					"type": "string"
+				},
+				"history": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"properties": {
+							"creationDate": {
+								"type": "string"
+							},
+							"uniqueDataString": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "array"
+								}
+							},
+							"sourceData": {
+								"type": "object",
+								"required": [
+									"sourceId",
+									"objectId"
+								],
+								"properties": {
+									"sourceId": {
+										"type": "string"
+									},
+									"objectId": {
+										"type": "string"
+									},
+									"databaseURL": {
+										"type": "string"
+									},
+									"note": {
+										"type": "string"
+									}
+								}
+							},
+							"note": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"type": {
+					"type": "string"
+				},
+				"schemaVersion": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

@@ -1,0 +1,266 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"type": "object",
+			"required": ["_id", "organism_id", "gene_id"],
+			"oneOf": [{
+				"required": ["anticodon"],
+				"not": {
+					"anyOf": [{
+						"required": ["molecularWeight"]
+					}, {
+						"required": ["molecularWeightKd"]
+					}, {
+						"required": ["catalyzes"]
+					}]
+				}
+			}, {
+				"not": {
+					"anyOf": [{
+						"required": ["anticodon"]
+					}]
+				}
+			}],
+			"properties": {
+				"_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"abbreviatedName": {
+					"type": "string"
+				},
+				"anticodon": {
+					"type": "string"
+				},
+				"catalyzes": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"codingSegments": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "number",
+							"multipleOf": 1.0
+						}
+					}
+				},
+				"componentOf": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"consensusSequence": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"evidenceReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"anyOf": [{
+							"required": ["publication_id"]
+						}, {
+							"required": ["evidence_id"]
+						}],
+						"properties": {
+							"publication_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"evidence_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"externalCrossReferences": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"required": ["externalCrossReference_id", "objectId"],
+						"properties": {
+							"externalCrossReference_id": {
+								"type": "string",
+								"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+							},
+							"objectId": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"gene_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"internalComment": {
+					"type": "string"
+				},
+				"isoelectricPoint": {
+					"type": "number"
+				},
+				"isTranscriptionFactor": {
+					"type": "boolean"
+				},
+				"locations": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"modifiedForms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"molecularWeight": {
+					"type": "number"
+				},
+				"molecularWeightsKd": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "number"
+					}
+				},
+				"name": {
+					"type": "string"
+				},
+				"note": {
+					"type": "string"
+				},
+				"organism_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"sequence": {
+					"type": "string"
+				},
+				"siteLength": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "number",
+						"multipleOf": 1.0
+					}
+				},
+				"spliceFormIntrons": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "number",
+							"multipleOf": 1.0
+						}
+					}
+				},
+				"symmetries": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"synonyms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"terms": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"properties": {
+							"biologialProcess": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "object",
+									"properties": {
+										"term_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+										},
+										"term_name": {
+											"type": "string"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"cellularComponent": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "object",
+									"properties": {
+										"term_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+										},
+										"term_name": {
+											"type": "string"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"molecularFunction": {
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "object",
+									"properties": {
+										"term_id": {
+											"type": "string",
+											"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+										},
+										"term_name": {
+											"type": "string"
+										}
+									},
+									"additionalProperties": false
+								}
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"type": {
+					"type": "string"
+				},
+				"schemaVersion": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

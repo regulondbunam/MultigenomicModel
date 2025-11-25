@@ -1,0 +1,46 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"type": "object",
+			"required": [
+				"_id",
+				"name"
+			],
+			"properties": {
+				"_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"applyTo": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"description": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string",
+					"enum": ["external", "local"]
+				},
+				"url": {
+					"type": "string"
+				},
+				"schemaVersion": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

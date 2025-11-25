@@ -1,0 +1,51 @@
+{
+	"validator": {
+		"$jsonSchema": {
+			"type": "object",
+			"required": [
+				"_id"
+			],
+			"properties": {
+				"_id": {
+					"type": "string",
+					"pattern": "^RDB[A-Z]{7}[0-9]{5}$"
+				},
+				"authors": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"internalComment": {
+					"type": "string"
+				},
+				"note": {
+					"type": "string"
+				},
+				"pmid": {
+					"type": "number",
+					"multipleOf": 1.0
+				},
+				"source": {
+					"type": "string"
+				},
+				"title": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				},
+				"year": {
+					"type": "number"
+				},
+				"schemaVersion": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"validationLevel": "strict",
+	"validationAction": "error"
+}

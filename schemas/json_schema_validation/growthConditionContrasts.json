@@ -1,0 +1,64 @@
+{
+	"growthConditionContrasts": {
+		"validator": {
+			"$jsonSchema": {
+				"type": "object",
+				"required": [
+					"_id",
+					"control_gc_phrases_id",
+					"experimental_gc_phrases_id"
+				],
+				"properties": {
+					"_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"control_gc_phrases_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"experimental_gc_phrases_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"note": {
+						"type": "string"
+					},
+					"results": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "object",
+							"required": ["identifier_id", "effect"],
+							"properties": {
+								"identifiers_id": {
+									"type": "string",
+									"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+								},
+								"identifiers_type": {
+									"type": "string"
+								},
+								"effect": {
+									"type": "string"
+								},
+								"note": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"variable": {
+						"type": "string"
+					},
+					"schemaVersion": {
+						"type": "number"
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+		"validationLevel": "strict",
+		"validationAction": "error"
+	}
+}

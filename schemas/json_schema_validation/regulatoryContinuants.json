@@ -1,0 +1,117 @@
+{
+	"regulatoryContinuants": {
+		"validator": {
+			"$jsonSchema": {
+				"type": "object",
+				"required": [
+					"_id",
+					"name",
+					"organisms_id"
+				],
+				"properties": {
+					"_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"additiveEvidences": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "string"
+						}
+					},
+					"citations": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "object",
+							"anyOf": [
+								{
+									"required": [
+										"publications_id"
+									]
+								},
+								{
+									"required": [
+										"evidences_id"
+									]
+								}
+							],
+							"properties": {
+								"publications_id": {
+									"type": "string",
+									"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+								},
+								"evidences_id": {
+									"type": "string",
+									"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"confidenceLevel": {
+						"type": "string"
+					},
+					"externalCrossReferences": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "object",
+							"required": [
+								"externalCrossReferences_id",
+								"objectId"
+							],
+							"properties": {
+								"externalCrossReferences_id": {
+									"type": "string",
+									"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+								},
+								"objectId": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"internalComment": {
+						"type": "string"
+					},
+					"isRegulator": {
+						"type": "boolean"
+					},
+					"name": {
+						"type": "string"
+					},
+					"note": {
+						"type": "string"
+					},
+					"organisms_id": {
+						"type": "string",
+						"pattern": "^RDB[A-Z]{8}[0-9]{5}$"
+					},
+					"synonyms": {
+						"type": "array",
+						"uniqueItems": true,
+						"items": {
+							"type": "string"
+						}
+					},
+					"type": {
+						"type": "string",
+						"enum": [
+							"metabolite",
+							"protein"
+						]
+					},
+					"schemaVersion": {
+						"type": "number"
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+		"validationLevel": "strict",
+		"validationAction": "error"
+	}
+}

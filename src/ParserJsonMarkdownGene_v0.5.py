@@ -16,6 +16,7 @@ requiredNamed = parser.add_argument_group('required named arguments')
 requiredNamed.add_argument('-f', '--file', help='Input file name')
 requiredNamed.add_argument('-s', '--style', help='Input file name style')
 requiredNamed.add_argument('-o', '--outputfile', help='Outputfile file name md')
+requiredNamed.add_argument('-o', '--outputfile', help='Outputfile file name md')
 # requiredNamed.add_argument('-j', '--outputfileschema', help='Outputfile file schema js')
 
 optional = parser.add_argument_group('optional arguments')
@@ -129,6 +130,6 @@ data.pop("collection")
 
 pathFileSchema=args.outputfile+"json_schema_validation/"+nameColection+"_schema_validation_rules.json"
 with open(pathFileSchema, 'w') as data_file:
-    data = json.dump(data, data_file, indent=4)
+    data = json.dump(data, data_file)
 
 
